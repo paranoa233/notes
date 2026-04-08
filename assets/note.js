@@ -6,6 +6,7 @@ const elements = {
   articleDate: document.getElementById("article-date"),
   articleTitle: document.getElementById("article-title"),
   articleTags: document.getElementById("article-tags"),
+  articleToc: document.getElementById("article-toc"),
   article: document.getElementById("article"),
   articleNav: document.getElementById("article-nav"),
   metaDescription: document.querySelector('meta[name="description"]')
@@ -44,11 +45,20 @@ function renderTags(note) {
   });
 }
 
-function renderArticleNav(notes, currentIndex) {
+function getNavGroup(note) {
+  return note.navGroup || "default";
+}
+
+function renderArticleNav(notes, currentNote) {
   elements.articleNav.innerHTML = "";
 
-  const previous = notes[currentIndex - 1];
-  const next = notes[currentIndex + 1];
+  const sequence = notes.filter(
+    (note) => !note.excludeFromNav && getNavGroup(note) === getNavGroup(currentNote)
+  );
+  const currentIndex = sequence.findIndex((note) => note.slug === currentNote.slug);
+
+  const previous = sequence[currentIndex - 1];
+  const next = sequence[currentIndex + 1];
 
   if (previous) {
     const prevLink = document.createElement("a");
@@ -94,21 +104,90 @@ function stripLeadingTitle(markdown, title) {
   return markdown.slice(match[0].length).replace(/^\s+/, "");
 }
 
+function slugifyHeading(text, index) {
+  const slug = text
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9\u4e00-\u9fff]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+  return slug || `section-${index + 1}`;
+}
+
+function buildTableOfContents() {
+  const headings = Array.from(elements.article.querySelectorAll("h2, h3, h4"));
+  const seen = new Map();
+
+  return headings
+    .map((heading, index) => {
+      const text = heading.textContent.replace(/\s+/g, " ").trim();
+      if (!text) {
+        return null;
+      }
+
+      const baseId = slugifyHeading(text, index);
+      const currentCount = seen.get(baseId) || 0;
+      const nextCount = currentCount + 1;
+      seen.set(baseId, nextCount);
+
+      const id = nextCount === 1 ? baseId : `${baseId}-${nextCount}`;
+      heading.id = id;
+
+      return {
+        id,
+        text,
+        level: Number(heading.tagName.slice(1))
+      };
+    })
+    .filter(Boolean);
+}
+
+function renderTableOfContents(items) {
+  if (!items.length) {
+    elements.articleToc.innerHTML = "";
+    elements.articleToc.classList.add("is-hidden");
+    return;
+  }
+
+  elements.articleToc.classList.remove("is-hidden");
+  elements.articleToc.innerHTML = "";
+
+  const title = document.createElement("div");
+  title.className = "article-toc-title";
+  title.textContent = "本页目录";
+
+  const list = document.createElement("div");
+  list.className = "article-toc-list";
+
+  items.forEach((item) => {
+    const link = document.createElement("a");
+    link.className = `article-toc-link level-${item.level}`;
+    link.href = `#${item.id}`;
+    link.textContent = item.text;
+    list.appendChild(link);
+  });
+
+  elements.articleToc.append(title, list);
+}
+
 function showError(title, message) {
   setPageMeta();
   elements.articleTitle.textContent = title;
   elements.articleDate.textContent = "";
   elements.articleTags.innerHTML = "";
+  elements.articleToc.innerHTML = "";
+  elements.articleToc.classList.add("is-hidden");
   elements.articleNav.innerHTML = "";
   elements.article.innerHTML = `<div class="empty-state">${message}</div>`;
 }
 
-async function openNote(note, notes, currentIndex) {
+async function openNote(note, notes) {
   elements.articleTitle.textContent = note.title;
   elements.articleDate.textContent = note.date || "";
   renderTags(note);
   setPageMeta(note);
-  renderArticleNav(notes, currentIndex);
+  renderArticleNav(notes, note);
 
   try {
     const response = await fetch(`./notes/${note.file}`);
@@ -127,12 +206,15 @@ async function openNote(note, notes, currentIndex) {
     elements.article.innerHTML = DOMPurify.sanitize(rendered, {
       USE_PROFILES: { html: true }
     });
+    renderTableOfContents(buildTableOfContents());
 
     if (window.MathJax?.typesetPromise) {
       await window.MathJax.typesetPromise([elements.article]);
     }
   } catch (error) {
     console.error(error);
+    elements.articleToc.innerHTML = "";
+    elements.articleToc.classList.add("is-hidden");
     elements.article.innerHTML =
       '<div class="empty-state">文章读取失败。请确认对应的 Markdown 文件已经存在并成功推送。</div>';
   }
@@ -164,7 +246,7 @@ async function init() {
       window.history.replaceState({}, "", nextUrl);
     }
 
-    await openNote(notes[currentIndex], notes, currentIndex);
+    await openNote(notes[currentIndex], notes);
   } catch (error) {
     console.error(error);
     showError(
