@@ -1,3 +1,7 @@
+const SITE_TITLE = "paranoa233's notes";
+const DEFAULT_DESCRIPTION =
+  "一个以黑白灰为主、适合长期整理 Markdown 与公式的笔记站。";
+
 const state = {
   notes: [],
   keyword: "",
@@ -15,7 +19,9 @@ const elements = {
   heroSummary: document.getElementById("hero-summary"),
   article: document.getElementById("article"),
   articleTags: document.getElementById("article-tags"),
-  articleNav: document.getElementById("article-nav")
+  articleNav: document.getElementById("article-nav"),
+  metaDescription: document.querySelector('meta[name="description"]'),
+  content: document.querySelector(".content")
 };
 
 marked.setOptions({
@@ -52,6 +58,14 @@ function getFilteredNotes() {
 
 function getNoteBySlug(slug) {
   return state.notes.find((note) => note.slug === slug);
+}
+
+function setPageMeta(note) {
+  document.title = note ? `${note.title} | ${SITE_TITLE}` : SITE_TITLE;
+
+  if (elements.metaDescription) {
+    elements.metaDescription.content = note?.summary || DEFAULT_DESCRIPTION;
+  }
 }
 
 function renderTags() {
@@ -167,9 +181,11 @@ function renderArticleNav(filteredNotes, currentIndex) {
   }
 }
 
-async function openNote(slug) {
+async function openNote(slug, options = {}) {
+  const { scrollToArticle = false } = options;
   const note = getNoteBySlug(slug);
   if (!note) {
+    setPageMeta();
     elements.article.innerHTML =
       '<div class="empty-state">没有找到这篇笔记，请检查链接是否正确。</div>';
     return;
@@ -180,6 +196,7 @@ async function openNote(slug) {
   renderArticleTags(note);
   elements.heroTitle.textContent = note.title;
   elements.heroSummary.textContent = note.summary;
+  setPageMeta(note);
 
   try {
     const response = await fetch(`./notes/${note.file}`);
@@ -189,6 +206,11 @@ async function openNote(slug) {
 
     const markdown = await response.text();
     const rendered = marked.parse(markdown);
+
+    if (window.MathJax?.typesetClear) {
+      window.MathJax.typesetClear([elements.article]);
+    }
+
     elements.article.innerHTML = DOMPurify.sanitize(rendered, {
       USE_PROFILES: { html: true }
     });
@@ -200,6 +222,13 @@ async function openNote(slug) {
     const filteredNotes = getFilteredNotes();
     const currentIndex = filteredNotes.findIndex((item) => item.slug === slug);
     renderArticleNav(filteredNotes, currentIndex);
+
+    if (scrollToArticle && window.matchMedia("(max-width: 1080px)").matches) {
+      elements.content?.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
   } catch (error) {
     console.error(error);
     elements.article.innerHTML = `
@@ -224,13 +253,15 @@ function bindEvents() {
   window.addEventListener("hashchange", () => {
     const slug = getHashSlug() || state.notes[0]?.slug;
     if (slug) {
-      openNote(slug);
+      const shouldScroll = Boolean(state.currentSlug) && state.currentSlug !== slug;
+      openNote(slug, { scrollToArticle: shouldScroll });
     }
   });
 }
 
 async function init() {
   bindEvents();
+  setPageMeta();
 
   try {
     const response = await fetch("./notes/notes.json");
@@ -243,6 +274,7 @@ async function init() {
 
     const firstSlug = getHashSlug() || state.notes[0]?.slug;
     if (!firstSlug) {
+      setPageMeta();
       elements.article.innerHTML =
         '<div class="empty-state">还没有笔记。先在 <code>notes/notes.json</code> 里登记一篇吧。</div>';
       return;
@@ -256,6 +288,7 @@ async function init() {
     openNote(firstSlug);
   } catch (error) {
     console.error(error);
+    setPageMeta();
     elements.article.innerHTML = `
       <div class="empty-state">
         站点初始化失败。请检查 <code>notes/notes.json</code> 是否存在且格式正确。
