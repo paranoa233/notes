@@ -104,6 +104,22 @@ function stripLeadingTitle(markdown, title) {
   return markdown.slice(match[0].length).replace(/^\s+/, "");
 }
 
+function normalizeMathDelimiters(markdown) {
+  const parts = markdown.split(/(```[\s\S]*?```|`[^`\n]+`)/g);
+
+  return parts
+    .map((part) => {
+      if (!part || part.startsWith("```") || part.startsWith("`")) {
+        return part;
+      }
+
+      return part
+        .replace(/\\\[([\s\S]*?)\\\]/g, (_, expr) => `\n$$\n${expr.trim()}\n$$\n`)
+        .replace(/\\\(([\s\S]*?)\\\)/g, (_, expr) => `$${expr.trim()}$`);
+    })
+    .join("");
+}
+
 function slugifyHeading(text, index) {
   const slug = text
     .toLowerCase()
@@ -196,7 +212,9 @@ async function openNote(note, notes) {
     }
 
     const markdown = await response.text();
-    const cleanedMarkdown = stripLeadingTitle(markdown, note.title);
+    const cleanedMarkdown = normalizeMathDelimiters(
+      stripLeadingTitle(markdown, note.title)
+    );
     const rendered = marked.parse(cleanedMarkdown);
 
     if (window.MathJax?.typesetClear) {
