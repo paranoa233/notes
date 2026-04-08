@@ -104,20 +104,48 @@ function stripLeadingTitle(markdown, title) {
   return markdown.slice(match[0].length).replace(/^\s+/, "");
 }
 
-function normalizeMathDelimiters(markdown) {
-  const parts = markdown.split(/(```[\s\S]*?```|`[^`\n]+`)/g);
+function escapeHtml(text) {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
 
-  return parts
+function protectMathSegments(markdown) {
+  const parts = markdown.split(/(```[\s\S]*?```|`[^`\n]+`)/g);
+  const segments = [];
+  let counter = 0;
+
+  function createToken(content) {
+    const token = `CODEXMATH${counter}TOKEN`;
+    counter += 1;
+    segments.push({ token, content });
+    return token;
+  }
+
+  const protectedMarkdown = parts
     .map((part) => {
       if (!part || part.startsWith("```") || part.startsWith("`")) {
         return part;
       }
 
       return part
-        .replace(/\\\[([\s\S]*?)\\\]/g, (_, expr) => `\n$$\n${expr.trim()}\n$$\n`)
-        .replace(/\\\(([\s\S]*?)\\\)/g, (_, expr) => `$${expr.trim()}$`);
+        .replace(/\\\[[\s\S]*?\\\]/g, (match) => createToken(match))
+        .replace(/\\\([\s\S]*?\\\)/g, (match) => createToken(match))
+        .replace(/(?<!\\)\$\$[\s\S]*?(?<!\\)\$\$/g, (match) => createToken(match))
+        .replace(/(?<!\\)\$(?!\$)(?:\\.|[^$\n])+?(?<!\\)\$(?!\$)/g, (match) =>
+          createToken(match)
+        );
     })
     .join("");
+
+  return { protectedMarkdown, segments };
+}
+
+function restoreMathSegments(html, segments) {
+  return segments.reduce((current, segment) => {
+    return current.replaceAll(segment.token, escapeHtml(segment.content));
+  }, html);
 }
 
 function formatLanguageLabel(language) {
@@ -360,10 +388,9 @@ async function openNote(note, notes) {
     }
 
     const markdown = await response.text();
-    const cleanedMarkdown = normalizeMathDelimiters(
-      stripLeadingTitle(markdown, note.title)
-    );
-    const rendered = marked.parse(cleanedMarkdown);
+    const cleanedMarkdown = stripLeadingTitle(markdown, note.title);
+    const { protectedMarkdown, segments } = protectMathSegments(cleanedMarkdown);
+    const rendered = restoreMathSegments(marked.parse(protectedMarkdown), segments);
 
     if (window.MathJax?.typesetClear) {
       window.MathJax.typesetClear([elements.article]);
