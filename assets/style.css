@@ -636,6 +636,445 @@ pre {
   line-height: 1.5;
 }
 
+body.note-page {
+  background:
+    radial-gradient(circle at top, rgba(228, 212, 185, 0.34), transparent 34%),
+    linear-gradient(180deg, #f3ede3 0%, #f6f1e8 44%, #efe8de 100%);
+  color: #28231d;
+  text-rendering: optimizeLegibility;
+}
+
+body.note-page .reader-topbar {
+  background: rgba(243, 237, 227, 0.84);
+  border-bottom-color: rgba(110, 89, 62, 0.12);
+}
+
+body.note-page .reader-topbar-inner,
+body.note-page .reader-main {
+  width: min(100%, 1140px);
+}
+
+body.note-page .reader-paper {
+  background: #fffdfa;
+  border: 1px solid rgba(113, 92, 67, 0.12);
+  border-radius: 26px;
+  box-shadow:
+    0 24px 80px rgba(89, 68, 42, 0.08),
+    0 2px 6px rgba(89, 68, 42, 0.05);
+}
+
+body.note-page .article-header,
+body.note-page .article-body,
+body.note-page .article-toc,
+body.note-page .article-nav {
+  max-width: 760px;
+}
+
+body.note-page .article-header {
+  padding-bottom: 26px;
+  border-bottom: 1px solid rgba(121, 95, 58, 0.14);
+}
+
+body.note-page .article-date {
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  color: #8a755a;
+}
+
+body.note-page .article-title {
+  color: #1f1a15;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Source Han Serif SC", "Noto Serif SC", serif;
+  font-size: clamp(2.2rem, 3.5vw, 3.25rem);
+  line-height: 1.12;
+  letter-spacing: -0.038em;
+}
+
+body.note-page .article-tags {
+  margin-top: 18px;
+}
+
+body.note-page .article-tag {
+  border-color: rgba(130, 108, 82, 0.18);
+  background: rgba(245, 239, 231, 0.78);
+  color: #6a5438;
+}
+
+body.note-page .article-toc {
+  margin-top: 28px;
+  padding: 18px 0 0;
+  border: 0;
+  border-top: 1px solid rgba(121, 95, 58, 0.12);
+  border-radius: 0;
+  background: transparent;
+}
+
+body.note-page .article-toc-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a755a;
+}
+
+body.note-page .article-toc-list {
+  gap: 7px;
+  margin-top: 13px;
+}
+
+body.note-page .article-toc-link {
+  color: #74614a;
+  font-size: 0.97rem;
+}
+
+body.note-page .article-toc-link:hover {
+  color: #2d2419;
+  text-decoration: none;
+}
+
+body.note-page .article-toc-link.level-3 {
+  padding-left: 18px;
+}
+
+body.note-page .article-toc-link.level-4 {
+  padding-left: 36px;
+}
+
+body.note-page .article-body {
+  margin-top: 26px;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Source Han Serif SC", "Noto Serif SC", serif;
+  color: #28231d;
+  font-size: 1.08rem;
+  line-height: 1.92;
+  word-break: break-word;
+}
+
+body.note-page .article-body > :first-child {
+  margin-top: 0;
+}
+
+body.note-page .article-body > :last-child {
+  margin-bottom: 0;
+}
+
+body.note-page .article-body p,
+body.note-page .article-body ul,
+body.note-page .article-body ol,
+body.note-page .article-body blockquote,
+body.note-page .article-body pre,
+body.note-page .article-body table,
+body.note-page .article-body figure,
+body.note-page .article-body hr {
+  margin: 1.2em 0;
+}
+
+body.note-page .article-body .article-lead {
+  margin-top: 0.2rem;
+  color: #4b4032;
+  font-size: 1.18rem;
+  line-height: 1.9;
+}
+
+body.note-page .article-body h1,
+body.note-page .article-body h2,
+body.note-page .article-body h3,
+body.note-page .article-body h4 {
+  position: relative;
+  margin-top: 2.2em;
+  margin-bottom: 0.72em;
+  color: #1f1a15;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Source Han Serif SC", "Noto Serif SC", serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+body.note-page .article-body h1 {
+  font-size: 2.08rem;
+}
+
+body.note-page .article-body h2 {
+  padding-bottom: 0.28em;
+  border-bottom: 1px solid rgba(121, 95, 58, 0.14);
+  font-size: 1.58rem;
+}
+
+body.note-page .article-body h3 {
+  font-size: 1.26rem;
+}
+
+body.note-page .article-body h4 {
+  font-size: 1.08rem;
+  color: #4a3c2d;
+}
+
+body.note-page .heading-anchor {
+  position: absolute;
+  left: -1.1em;
+  top: 0;
+  opacity: 0;
+  color: #b09474;
+  text-decoration: none;
+  transition: opacity 160ms ease, color 160ms ease;
+}
+
+body.note-page .article-body h1:hover .heading-anchor,
+body.note-page .article-body h2:hover .heading-anchor,
+body.note-page .article-body h3:hover .heading-anchor,
+body.note-page .article-body h4:hover .heading-anchor {
+  opacity: 1;
+}
+
+body.note-page .heading-anchor:hover {
+  color: #8a6844;
+}
+
+body.note-page .article-body a {
+  color: #6a3b12;
+  text-decoration-color: rgba(106, 59, 18, 0.35);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.17em;
+}
+
+body.note-page .article-body a:hover {
+  color: #3d1f08;
+}
+
+body.note-page .article-body strong {
+  color: #1c1814;
+}
+
+body.note-page .article-body em {
+  color: #5a4631;
+}
+
+body.note-page .article-body ul,
+body.note-page .article-body ol {
+  padding-left: 1.7rem;
+}
+
+body.note-page .article-body li {
+  padding-left: 0.12rem;
+}
+
+body.note-page .article-body li + li {
+  margin-top: 0.44em;
+}
+
+body.note-page .article-body li::marker {
+  color: #98714d;
+}
+
+body.note-page .article-body input[type="checkbox"] {
+  width: 0.95rem;
+  height: 0.95rem;
+  margin-right: 0.5rem;
+  accent-color: #9d6d3e;
+  vertical-align: -0.08rem;
+}
+
+body.note-page .article-body blockquote {
+  padding: 0.2rem 0 0.2rem 1.15rem;
+  border-left: 3px solid rgba(150, 117, 82, 0.36);
+  border-radius: 0;
+  background: transparent;
+  color: #62513d;
+}
+
+body.note-page .article-body blockquote > :first-child {
+  margin-top: 0;
+}
+
+body.note-page .article-body blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+body.note-page .article-body hr {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid rgba(121, 95, 58, 0.16);
+}
+
+body.note-page .article-body :not(pre) > code {
+  padding: 0.18em 0.46em;
+  border: 1px solid rgba(130, 108, 82, 0.16);
+  border-radius: 8px;
+  background: #f7f1e9;
+  color: #5f3113;
+  font-size: 0.92em;
+}
+
+body.note-page .article-body pre {
+  position: relative;
+  overflow: auto;
+  padding: 2.7rem 1.22rem 1.2rem;
+  border: 1px solid #26282e;
+  border-radius: 18px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 18%),
+    #17181d;
+  color: #edf1f7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+body.note-page .article-body pre::before {
+  content: attr(data-language);
+  position: absolute;
+  top: 0.78rem;
+  left: 1rem;
+  padding: 0.16rem 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #aeb8c9;
+  font-family: "JetBrains Mono", "Cascadia Code", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+}
+
+body.note-page .article-body pre code {
+  display: block;
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  font-size: 0.91rem;
+  line-height: 1.72;
+}
+
+body.note-page .article-body pre code.hljs {
+  background: transparent;
+}
+
+body.note-page .article-body .hljs-comment,
+body.note-page .article-body .hljs-quote {
+  color: #7f8a9b;
+}
+
+body.note-page .article-body .hljs-keyword,
+body.note-page .article-body .hljs-selector-tag,
+body.note-page .article-body .hljs-literal,
+body.note-page .article-body .hljs-section,
+body.note-page .article-body .hljs-link {
+  color: #d48969;
+}
+
+body.note-page .article-body .hljs-string,
+body.note-page .article-body .hljs-title,
+body.note-page .article-body .hljs-name,
+body.note-page .article-body .hljs-type,
+body.note-page .article-body .hljs-attribute,
+body.note-page .article-body .hljs-symbol,
+body.note-page .article-body .hljs-bullet,
+body.note-page .article-body .hljs-addition {
+  color: #9dd3a8;
+}
+
+body.note-page .article-body .hljs-number,
+body.note-page .article-body .hljs-variable,
+body.note-page .article-body .hljs-template-variable,
+body.note-page .article-body .hljs-meta {
+  color: #f0c674;
+}
+
+body.note-page .article-body .hljs-built_in,
+body.note-page .article-body .hljs-function,
+body.note-page .article-body .hljs-title.function_ {
+  color: #7cc7ff;
+}
+
+body.note-page .article-body .hljs-emphasis {
+  font-style: italic;
+}
+
+body.note-page .article-body .hljs-strong {
+  font-weight: 700;
+}
+
+body.note-page .article-body .table-scroll {
+  overflow-x: auto;
+  border: 1px solid rgba(128, 104, 79, 0.14);
+  border-radius: 16px;
+  background: #fffdfa;
+}
+
+body.note-page .article-body table {
+  min-width: 100%;
+  margin: 0;
+  border: 0;
+  border-collapse: collapse;
+  background: transparent;
+}
+
+body.note-page .article-body thead {
+  background: #f7f1e9;
+}
+
+body.note-page .article-body tbody tr:nth-child(even) {
+  background: rgba(245, 239, 231, 0.5);
+}
+
+body.note-page .article-body th,
+body.note-page .article-body td {
+  border: 0;
+  border-top: 1px solid rgba(128, 104, 79, 0.11);
+  padding: 0.82rem 0.95rem;
+}
+
+body.note-page .article-body thead th {
+  border-top: 0;
+  color: #4d3e2d;
+  font-weight: 700;
+}
+
+body.note-page .article-figure {
+  margin: 1.5rem 0;
+}
+
+body.note-page .article-body img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid rgba(128, 104, 79, 0.14);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(74, 54, 30, 0.06);
+}
+
+body.note-page .article-figure figcaption {
+  margin-top: 0.72rem;
+  text-align: center;
+  color: #8a755a;
+  font-size: 0.92rem;
+}
+
+body.note-page .article-body mjx-container {
+  color: #231d17 !important;
+}
+
+body.note-page .article-body mjx-container[display="true"] {
+  padding: 0.22rem 0;
+  margin: 1.6rem 0 !important;
+}
+
+body.note-page .article-nav {
+  margin-top: 38px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(121, 95, 58, 0.14);
+}
+
+body.note-page .nav-link {
+  border-color: rgba(128, 104, 79, 0.14);
+  background: rgba(255, 253, 248, 0.8);
+}
+
+body.note-page .nav-link:hover {
+  background: #fffdfa;
+  box-shadow: 0 14px 32px rgba(80, 60, 35, 0.06);
+}
+
+body.note-page .nav-link span {
+  color: #8a755a;
+}
+
 @media (max-width: 980px) {
   .home-layout {
     grid-template-columns: 1fr;
@@ -673,6 +1112,10 @@ pre {
   .article-body {
     font-size: 1rem;
     line-height: 1.84;
+  }
+
+  body.note-page .heading-anchor {
+    display: none;
   }
 }
 
@@ -717,5 +1160,23 @@ pre {
 
   .article-body mjx-container[jax="CHTML"] {
     font-size: 104% !important;
+  }
+
+  body.note-page .reader-paper {
+    border-radius: 18px;
+  }
+
+  body.note-page .article-title {
+    font-size: 1.92rem;
+  }
+
+  body.note-page .article-body,
+  body.note-page .article-body .article-lead {
+    font-size: 1rem;
+  }
+
+  body.note-page .article-body pre {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }

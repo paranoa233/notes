@@ -13,7 +13,7 @@ const elements = {
 };
 
 marked.setOptions({
-  breaks: true,
+  breaks: false,
   gfm: true
 });
 
@@ -120,6 +120,40 @@ function normalizeMathDelimiters(markdown) {
     .join("");
 }
 
+function formatLanguageLabel(language) {
+  const labelMap = {
+    js: "JavaScript",
+    jsx: "React JSX",
+    ts: "TypeScript",
+    tsx: "React TSX",
+    py: "Python",
+    sh: "Shell",
+    bash: "Bash",
+    ps1: "PowerShell",
+    yml: "YAML",
+    md: "Markdown",
+    html: "HTML",
+    css: "CSS",
+    json: "JSON",
+    cpp: "C++",
+    csharp: "C#",
+    plaintext: "Text",
+    text: "Text"
+  };
+
+  if (!language) {
+    return "Text";
+  }
+
+  const normalized = language.toLowerCase();
+  return labelMap[normalized] || normalized.toUpperCase();
+}
+
+function getCodeLanguage(block) {
+  const match = block.className.match(/language-([a-z0-9#+_-]+)/i);
+  return match?.[1] || "";
+}
+
 function slugifyHeading(text, index) {
   const slug = text
     .toLowerCase()
@@ -187,6 +221,120 @@ function renderTableOfContents(items) {
   elements.articleToc.append(title, list);
 }
 
+function decorateHeadings(items) {
+  items.forEach((item) => {
+    const heading = document.getElementById(item.id);
+    if (!heading || heading.querySelector(".heading-anchor")) {
+      return;
+    }
+
+    const anchor = document.createElement("a");
+    anchor.className = "heading-anchor";
+    anchor.href = `#${item.id}`;
+    anchor.textContent = "#";
+    anchor.setAttribute("aria-label", `链接到 ${item.text}`);
+    heading.appendChild(anchor);
+  });
+}
+
+function markLeadParagraph() {
+  const lead = Array.from(elements.article.children).find((node) => {
+    return node.tagName === "P" && node.textContent.trim();
+  });
+
+  if (lead) {
+    lead.classList.add("article-lead");
+  }
+}
+
+function wrapTables() {
+  elements.article.querySelectorAll("table").forEach((table) => {
+    if (table.parentElement?.classList.contains("table-scroll")) {
+      return;
+    }
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "table-scroll";
+    table.parentNode.insertBefore(wrapper, table);
+    wrapper.appendChild(table);
+  });
+}
+
+function enhanceFigures() {
+  elements.article.querySelectorAll("p > img:only-child").forEach((image) => {
+    const paragraph = image.parentElement;
+    const figure = document.createElement("figure");
+    figure.className = "article-figure";
+
+    paragraph.parentNode.insertBefore(figure, paragraph);
+    figure.appendChild(image);
+
+    const alt = image.getAttribute("alt")?.trim();
+    if (alt) {
+      const caption = document.createElement("figcaption");
+      caption.textContent = alt;
+      figure.appendChild(caption);
+    }
+
+    paragraph.remove();
+  });
+
+  elements.article.querySelectorAll("img").forEach((image) => {
+    image.loading = "lazy";
+    image.decoding = "async";
+  });
+}
+
+function enhanceCodeBlocks() {
+  elements.article.querySelectorAll("pre > code").forEach((block) => {
+    const pre = block.parentElement;
+    let language = getCodeLanguage(block);
+
+    if (window.hljs) {
+      if (language && window.hljs.getLanguage(language)) {
+        window.hljs.highlightElement(block);
+      } else {
+        const result = window.hljs.highlightAuto(block.textContent);
+        block.innerHTML = result.value;
+        block.classList.add("hljs");
+        language = result.language || language;
+      }
+    }
+
+    pre.classList.add("code-block");
+    pre.dataset.language = formatLanguageLabel(language);
+  });
+}
+
+function enhanceLinks() {
+  elements.article.querySelectorAll("a[href]").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (!href || href.startsWith("#")) {
+      return;
+    }
+
+    if (/^https?:\/\//i.test(href)) {
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+    }
+  });
+}
+
+function decorateTaskLists() {
+  elements.article.querySelectorAll('input[type="checkbox"]').forEach((checkbox) => {
+    checkbox.disabled = true;
+  });
+}
+
+function decorateRenderedContent() {
+  wrapTables();
+  enhanceFigures();
+  enhanceCodeBlocks();
+  enhanceLinks();
+  decorateTaskLists();
+  markLeadParagraph();
+}
+
 function showError(title, message) {
   setPageMeta();
   elements.articleTitle.textContent = title;
@@ -224,7 +372,10 @@ async function openNote(note, notes) {
     elements.article.innerHTML = DOMPurify.sanitize(rendered, {
       USE_PROFILES: { html: true }
     });
-    renderTableOfContents(buildTableOfContents());
+    const tocItems = buildTableOfContents();
+    decorateRenderedContent();
+    decorateHeadings(tocItems);
+    renderTableOfContents(tocItems);
 
     if (window.MathJax?.typesetPromise) {
       await window.MathJax.typesetPromise([elements.article]);
