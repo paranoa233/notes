@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "welcome",
+    "title": "欢迎来到我的笔记站",
+    "summary": "这个模板怎么用、怎么发文章、后续怎么扩展。",
+    "date": "2026-04-08",
+    "tags": ["开始", "部署", "说明"],
+    "file": "welcome.md"
+  },
+  {
+    "slug": "paper-reading-workflow",
+    "title": "论文阅读工作流示例",
+    "summary": "用固定模板记录论文结论、方法、疑问和后续实验。",
+    "date": "2026-04-08",
+    "tags": ["科研", "论文", "模板"],
+    "file": "paper-reading-workflow.md"
+  },
+  {
+    "slug": "quaternion-note",
+    "title": "四元数笔记示例",
+    "summary": "演示 Markdown、代码块、表格和数学公式在站点里的展示效果。",
+    "date": "2026-04-08",
+    "tags": ["数学", "四元数", "公式"],
+    "file": "quaternion-note.md"
+  }
+]
