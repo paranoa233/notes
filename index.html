@@ -28,11 +28,7 @@
   <div class="page-shell">
     <aside class="sidebar">
       <div class="brand-card">
-        <p class="eyebrow">Personal Notebook</p>
         <h1>paranoa233's notes</h1>
-        <p class="brand-copy">
-          一个偏向专注阅读的 Markdown 笔记站，主色调是黑白灰，文章和公式尽量靠近 Typora 的阅读感。
-        </p>
       </div>
 
       <label class="search-box" for="search-input">
@@ -58,26 +54,12 @@
     </aside>
 
     <main class="content">
-      <section class="hero">
-        <div>
-          <p class="eyebrow">Focused Reading</p>
-          <h2 id="hero-title">打开一篇笔记，安静地读下去。</h2>
-          <p id="hero-summary" class="hero-summary">
-            点开目录中的文章后，正文会以更接近 Typora 的排版呈现，公式、列表、引用和代码块都会保持清晰。
-          </p>
-        </div>
-        <div class="hero-badge">
-          <span>Mobile Ready</span>
-          <span>Monochrome</span>
-          <span>Math Friendly</span>
-        </div>
-      </section>
-
       <section class="article-shell">
-        <div class="article-meta">
+        <header class="article-header">
+          <p id="article-date" class="article-date"></p>
+          <h1 id="article-title" class="article-title">正在载入笔记...</h1>
           <div id="article-tags" class="article-tags"></div>
-          <a class="source-link" href="./README.md" target="_blank" rel="noreferrer">站点说明</a>
-        </div>
+        </header>
         <article id="article" class="article-body" aria-live="polite"></article>
         <div id="article-nav" class="article-nav"></div>
       </section>

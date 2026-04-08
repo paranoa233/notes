@@ -15,8 +15,8 @@ const elements = {
   noteList: document.getElementById("note-list"),
   noteCount: document.getElementById("note-count"),
   activeNoteDate: document.getElementById("active-note-date"),
-  heroTitle: document.getElementById("hero-title"),
-  heroSummary: document.getElementById("hero-summary"),
+  articleDate: document.getElementById("article-date"),
+  articleTitle: document.getElementById("article-title"),
   article: document.getElementById("article"),
   articleTags: document.getElementById("article-tags"),
   articleNav: document.getElementById("article-nav"),
@@ -186,6 +186,10 @@ async function openNote(slug, options = {}) {
   const note = getNoteBySlug(slug);
   if (!note) {
     setPageMeta();
+    elements.articleTitle.textContent = "未找到笔记";
+    elements.articleDate.textContent = "";
+    elements.articleTags.innerHTML = "";
+    elements.articleNav.innerHTML = "";
     elements.article.innerHTML =
       '<div class="empty-state">没有找到这篇笔记，请检查链接是否正确。</div>';
     return;
@@ -194,8 +198,8 @@ async function openNote(slug, options = {}) {
   state.currentSlug = note.slug;
   renderNoteList();
   renderArticleTags(note);
-  elements.heroTitle.textContent = note.title;
-  elements.heroSummary.textContent = note.summary;
+  elements.articleTitle.textContent = note.title;
+  elements.articleDate.textContent = note.date || "";
   setPageMeta(note);
 
   try {
@@ -275,6 +279,10 @@ async function init() {
     const firstSlug = getHashSlug() || state.notes[0]?.slug;
     if (!firstSlug) {
       setPageMeta();
+      elements.articleTitle.textContent = "还没有笔记";
+      elements.articleDate.textContent = "";
+      elements.articleTags.innerHTML = "";
+      elements.articleNav.innerHTML = "";
       elements.article.innerHTML =
         '<div class="empty-state">还没有笔记。先在 <code>notes/notes.json</code> 里登记一篇吧。</div>';
       return;
@@ -289,6 +297,10 @@ async function init() {
   } catch (error) {
     console.error(error);
     setPageMeta();
+    elements.articleTitle.textContent = "站点初始化失败";
+    elements.articleDate.textContent = "";
+    elements.articleTags.innerHTML = "";
+    elements.articleNav.innerHTML = "";
     elements.article.innerHTML = `
       <div class="empty-state">
         站点初始化失败。请检查 <code>notes/notes.json</code> 是否存在且格式正确。
