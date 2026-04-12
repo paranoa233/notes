@@ -1,6 +1,7 @@
 const SITE_TITLE = "paranoa233's notes";
 const DEFAULT_DESCRIPTION =
   "paranoa233 的独立文章阅读页，采用白纸黑字的阅读模式。";
+const BUILD_ID = "20260413-3";
 
 const elements = {
   articleDate: document.getElementById("article-date"),
@@ -382,7 +383,7 @@ async function openNote(note, notes) {
   renderArticleNav(notes, note);
 
   try {
-    const response = await fetch(`./notes/${note.file}`);
+    const response = await fetch(`./notes/${note.file}?v=${BUILD_ID}`);
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
@@ -418,7 +419,7 @@ async function openNote(note, notes) {
 
 async function init() {
   try {
-    const response = await fetch("./notes/notes.json");
+    const response = await fetch(`./notes/notes.json?v=${BUILD_ID}`);
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }

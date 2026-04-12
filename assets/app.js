@@ -1,3 +1,5 @@
+const BUILD_ID = "20260413-3";
+
 const state = {
   notes: [],
   keyword: "",
@@ -250,7 +252,7 @@ async function init() {
   bindEvents();
 
   try {
-    const response = await fetch("./notes/notes.json");
+    const response = await fetch(`./notes/notes.json?v=${BUILD_ID}`);
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
