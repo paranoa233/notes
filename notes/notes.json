@@ -4,7 +4,13 @@
     "title": "Bott-Tu《Differential Forms in Algebraic Topology》分节阅读",
     "summary": "把 Bott-Tu 这本经典教材按原书 23 个 section 拆开，提供导读页和逐节阅读入口。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "书籍"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "书籍"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/overview.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -16,7 +22,13 @@
     "title": "§1 The de Rham Complex on R^n",
     "summary": "Bott-Tu 第 1 节，介绍 R^n 上的 de Rham complex。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-01.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -29,7 +41,13 @@
     "title": "§2 The Mayer-Vietoris Sequence",
     "summary": "Bott-Tu 第 2 节，围绕 Mayer-Vietoris sequence 展开。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-02.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -42,7 +60,13 @@
     "title": "§3 Orientation and Integration",
     "summary": "Bott-Tu 第 3 节，讨论定向与积分。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-03.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -55,7 +79,13 @@
     "title": "§4 Poincaré Lemmas",
     "summary": "Bott-Tu 第 4 节，讨论 Poincaré lemmas。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-04.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -68,7 +98,13 @@
     "title": "§5 The Mayer-Vietoris Argument",
     "summary": "Bott-Tu 第 5 节，进一步展开 Mayer-Vietoris argument。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-05.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -81,7 +117,13 @@
     "title": "§6 The Thom Isomorphism",
     "summary": "Bott-Tu 第 6 节，讨论 Thom isomorphism。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-06.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -94,7 +136,13 @@
     "title": "§7 The Nonorientable Case",
     "summary": "Bott-Tu 第 7 节，讨论不可定向情形。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-07.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -107,7 +155,13 @@
     "title": "§8 The Generalized Mayer-Vietoris Principle",
     "summary": "Bott-Tu 第 8 节，推广 Mayer-Vietoris principle。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-08.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -120,7 +174,13 @@
     "title": "§9 More Examples and Applications of the Mayer-Vietoris Principle",
     "summary": "Bott-Tu 第 9 节，补充更多例子与应用。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-09.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -133,7 +193,13 @@
     "title": "§10 Presheaves and Čech Cohomology",
     "summary": "Bott-Tu 第 10 节，讨论 presheaves 与 Čech cohomology。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-10.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -146,7 +212,13 @@
     "title": "§11 Sphere Bundles",
     "summary": "Bott-Tu 第 11 节，讨论 sphere bundles。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-11.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -159,7 +231,13 @@
     "title": "§12 Thom Isomorphism and Poincaré Duality Revisited",
     "summary": "Bott-Tu 第 12 节，重访 Thom isomorphism 与 Poincaré duality。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-12.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -172,7 +250,13 @@
     "title": "§13 Monodromy",
     "summary": "Bott-Tu 第 13 节，讨论 monodromy。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-13.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -185,7 +269,13 @@
     "title": "§14 The Spectral Sequence of a Filtered Complex",
     "summary": "Bott-Tu 第 14 节，进入 filtered complex 的 spectral sequence。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-14.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -198,7 +288,13 @@
     "title": "§15 Cohomology with Integer Coefficients",
     "summary": "Bott-Tu 第 15 节，讨论整数系数上同调。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-15.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -211,7 +307,13 @@
     "title": "§16 The Path Fibration",
     "summary": "Bott-Tu 第 16 节，讨论 path fibration。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-16.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -224,7 +326,13 @@
     "title": "§17 Review of Homotopy Theory",
     "summary": "Bott-Tu 第 17 节，回顾 homotopy theory。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-17.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -237,7 +345,13 @@
     "title": "§18 Applications to Homotopy Theory",
     "summary": "Bott-Tu 第 18 节，讨论同伦论应用。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-18.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -250,7 +364,13 @@
     "title": "§19 Rational Homotopy Theory",
     "summary": "Bott-Tu 第 19 节，讨论 rational homotopy theory。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-19.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -263,7 +383,13 @@
     "title": "§20 Chern Classes of a Complex Vector Bundle",
     "summary": "Bott-Tu 第 20 节，讨论复向量丛的 Chern classes。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-20.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -276,7 +402,13 @@
     "title": "§21 The Splitting Principle and Flag Manifolds",
     "summary": "Bott-Tu 第 21 节，讨论 splitting principle 与 flag manifolds。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-21.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -289,7 +421,13 @@
     "title": "§22 Pontrjagin Classes",
     "summary": "Bott-Tu 第 22 节，讨论 Pontrjagin classes。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-22.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -302,7 +440,13 @@
     "title": "§23 The Search for the Universal Bundle",
     "summary": "Bott-Tu 第 23 节，讨论 universal bundle。",
     "date": "2026-04-08",
-    "tags": ["数学", "代数拓扑", "微分形式", "Bott-Tu", "Section"],
+    "tags": [
+      "数学",
+      "代数拓扑",
+      "微分形式",
+      "Bott-Tu",
+      "Section"
+    ],
     "file": "books/differential-forms-in-algebraic-topology/section-23.md",
     "home": false,
     "collectionId": "bott-tu-differential-forms",
@@ -311,11 +455,349 @@
     "navGroup": "bott-tu-differential-forms"
   },
   {
+    "slug": "lee-introduction-to-riemannian-manifolds",
+    "title": "John M. Lee《Introduction to Riemannian Manifolds》分章阅读",
+    "summary": "把 John M. Lee 这本黎曼几何教材按主结构拆成 12 章正文与 3 个附录，提供导读页和逐章阅读入口。",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "黎曼几何",
+      "Riemannian Geometry",
+      "John Lee",
+      "书籍"
+    ],
+    "file": "books/introduction-to-riemannian-manifolds/overview.md",
+    "home": false,
+    "collectionId": "lee-introduction-to-riemannian-manifolds",
+    "collectionRole": "overview",
+    "collectionUnit": "部分",
+    "navGroup": "lee-introduction-to-riemannian-manifolds"
+  },
+  {
+    "slug": "lee-introduction-to-riemannian-manifolds-chapter-01",
+    "title": "Chapter 1 What Is Curvature?",
+    "summary": "John M. Lee 第1章: What Is Curvature?.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "黎曼几何",
+      "Riemannian Geometry",
+      "John Lee",
+      "Chapter"
+    ],
+    "file": "books/introduction-to-riemannian-manifolds/chapter-01.md",
+    "home": false,
+    "collectionId": "lee-introduction-to-riemannian-manifolds",
+    "collectionRole": "section",
+    "collectionOrder": 1,
+    "collectionLabel": "第1章",
+    "collectionTitle": "What Is Curvature?",
+    "navGroup": "lee-introduction-to-riemannian-manifolds"
+  },
+  {
+    "slug": "lee-introduction-to-riemannian-manifolds-chapter-02",
+    "title": "Chapter 2 Riemannian Metrics",
+    "summary": "John M. Lee 第2章: Riemannian Metrics.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "黎曼几何",
+      "Riemannian Geometry",
+      "John Lee",
+      "Chapter"
+    ],
+    "file": "books/introduction-to-riemannian-manifolds/chapter-02.md",
+    "home": false,
+    "collectionId": "lee-introduction-to-riemannian-manifolds",
+    "collectionRole": "section",
+    "collectionOrder": 2,
+    "collectionLabel": "第2章",
+    "collectionTitle": "Riemannian Metrics",
+    "navGroup": "lee-introduction-to-riemannian-manifolds"
+  },
+  {
+    "slug": "lee-introduction-to-riemannian-manifolds-chapter-03",
+    "title": "Chapter 3 Model Riemannian Manifolds",
+    "summary": "John M. Lee 第3章: Model Riemannian Manifolds.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "黎曼几何",
+      "Riemannian Geometry",
+      "John Lee",
+      "Chapter"
+    ],
+    "file": "books/introduction-to-riemannian-manifolds/chapter-03.md",
+    "home": false,
+    "collectionId": "lee-introduction-to-riemannian-manifolds",
+    "collectionRole": "section",
+    "collectionOrder": 3,
+    "collectionLabel": "第3章",
+    "collectionTitle": "Model Riemannian Manifolds",
+    "navGroup": "lee-introduction-to-riemannian-manifolds"
+  },
+  {
+    "slug": "lee-introduction-to-riemannian-manifolds-chapter-04",
+    "title": "Chapter 4 Connections",
+    "summary": "John M. Lee 第4章: Connections.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "黎曼几何",
+      "Riemannian Geometry",
+      "John Lee",
+      "Chapter"
+    ],
+    "file": "books/introduction-to-riemannian-manifolds/chapter-04.md",
+    "home": false,
+    "collectionId": "lee-introduction-to-riemannian-manifolds",
+    "collectionRole": "section",
+    "collectionOrder": 4,
+    "collectionLabel": "第4章",
+    "collectionTitle": "Connections",
+    "navGroup": "lee-introduction-to-riemannian-manifolds"
+  },
+  {
+    "slug": "lee-introduction-to-riemannian-manifolds-chapter-05",
+    "title": "Chapter 5 The Levi-Civita Connection",
+    "summary": "John M. Lee 第5章: The Levi-Civita Connection.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "黎曼几何",
+      "Riemannian Geometry",
+      "John Lee",
+      "Chapter"
+    ],
+    "file": "books/introduction-to-riemannian-manifolds/chapter-05.md",
+    "home": false,
+    "collectionId": "lee-introduction-to-riemannian-manifolds",
+    "collectionRole": "section",
+    "collectionOrder": 5,
+    "collectionLabel": "第5章",
+    "collectionTitle": "The Levi-Civita Connection",
+    "navGroup": "lee-introduction-to-riemannian-manifolds"
+  },
+  {
+    "slug": "lee-introduction-to-riemannian-manifolds-chapter-06",
+    "title": "Chapter 6 Geodesics and Distance",
+    "summary": "John M. Lee 第6章: Geodesics and Distance.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "黎曼几何",
+      "Riemannian Geometry",
+      "John Lee",
+      "Chapter"
+    ],
+    "file": "books/introduction-to-riemannian-manifolds/chapter-06.md",
+    "home": false,
+    "collectionId": "lee-introduction-to-riemannian-manifolds",
+    "collectionRole": "section",
+    "collectionOrder": 6,
+    "collectionLabel": "第6章",
+    "collectionTitle": "Geodesics and Distance",
+    "navGroup": "lee-introduction-to-riemannian-manifolds"
+  },
+  {
+    "slug": "lee-introduction-to-riemannian-manifolds-chapter-07",
+    "title": "Chapter 7 Curvature",
+    "summary": "John M. Lee 第7章: Curvature.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "黎曼几何",
+      "Riemannian Geometry",
+      "John Lee",
+      "Chapter"
+    ],
+    "file": "books/introduction-to-riemannian-manifolds/chapter-07.md",
+    "home": false,
+    "collectionId": "lee-introduction-to-riemannian-manifolds",
+    "collectionRole": "section",
+    "collectionOrder": 7,
+    "collectionLabel": "第7章",
+    "collectionTitle": "Curvature",
+    "navGroup": "lee-introduction-to-riemannian-manifolds"
+  },
+  {
+    "slug": "lee-introduction-to-riemannian-manifolds-chapter-08",
+    "title": "Chapter 8 Riemannian Submanifolds",
+    "summary": "John M. Lee 第8章: Riemannian Submanifolds.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "黎曼几何",
+      "Riemannian Geometry",
+      "John Lee",
+      "Chapter"
+    ],
+    "file": "books/introduction-to-riemannian-manifolds/chapter-08.md",
+    "home": false,
+    "collectionId": "lee-introduction-to-riemannian-manifolds",
+    "collectionRole": "section",
+    "collectionOrder": 8,
+    "collectionLabel": "第8章",
+    "collectionTitle": "Riemannian Submanifolds",
+    "navGroup": "lee-introduction-to-riemannian-manifolds"
+  },
+  {
+    "slug": "lee-introduction-to-riemannian-manifolds-chapter-09",
+    "title": "Chapter 9 The Gauss-Bonnet Theorem",
+    "summary": "John M. Lee 第9章: The Gauss-Bonnet Theorem.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "黎曼几何",
+      "Riemannian Geometry",
+      "John Lee",
+      "Chapter"
+    ],
+    "file": "books/introduction-to-riemannian-manifolds/chapter-09.md",
+    "home": false,
+    "collectionId": "lee-introduction-to-riemannian-manifolds",
+    "collectionRole": "section",
+    "collectionOrder": 9,
+    "collectionLabel": "第9章",
+    "collectionTitle": "The Gauss-Bonnet Theorem",
+    "navGroup": "lee-introduction-to-riemannian-manifolds"
+  },
+  {
+    "slug": "lee-introduction-to-riemannian-manifolds-chapter-10",
+    "title": "Chapter 10 Jacobi Fields",
+    "summary": "John M. Lee 第10章: Jacobi Fields.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "黎曼几何",
+      "Riemannian Geometry",
+      "John Lee",
+      "Chapter"
+    ],
+    "file": "books/introduction-to-riemannian-manifolds/chapter-10.md",
+    "home": false,
+    "collectionId": "lee-introduction-to-riemannian-manifolds",
+    "collectionRole": "section",
+    "collectionOrder": 10,
+    "collectionLabel": "第10章",
+    "collectionTitle": "Jacobi Fields",
+    "navGroup": "lee-introduction-to-riemannian-manifolds"
+  },
+  {
+    "slug": "lee-introduction-to-riemannian-manifolds-chapter-11",
+    "title": "Chapter 11 Comparison Theory",
+    "summary": "John M. Lee 第11章: Comparison Theory.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "黎曼几何",
+      "Riemannian Geometry",
+      "John Lee",
+      "Chapter"
+    ],
+    "file": "books/introduction-to-riemannian-manifolds/chapter-11.md",
+    "home": false,
+    "collectionId": "lee-introduction-to-riemannian-manifolds",
+    "collectionRole": "section",
+    "collectionOrder": 11,
+    "collectionLabel": "第11章",
+    "collectionTitle": "Comparison Theory",
+    "navGroup": "lee-introduction-to-riemannian-manifolds"
+  },
+  {
+    "slug": "lee-introduction-to-riemannian-manifolds-chapter-12",
+    "title": "Chapter 12 Curvature and Topology",
+    "summary": "John M. Lee 第12章: Curvature and Topology.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "黎曼几何",
+      "Riemannian Geometry",
+      "John Lee",
+      "Chapter"
+    ],
+    "file": "books/introduction-to-riemannian-manifolds/chapter-12.md",
+    "home": false,
+    "collectionId": "lee-introduction-to-riemannian-manifolds",
+    "collectionRole": "section",
+    "collectionOrder": 12,
+    "collectionLabel": "第12章",
+    "collectionTitle": "Curvature and Topology",
+    "navGroup": "lee-introduction-to-riemannian-manifolds"
+  },
+  {
+    "slug": "lee-introduction-to-riemannian-manifolds-appendix-a",
+    "title": "Appendix A Review of Smooth Manifolds",
+    "summary": "John M. Lee 附录A: Review of Smooth Manifolds.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "黎曼几何",
+      "Riemannian Geometry",
+      "John Lee",
+      "Appendix"
+    ],
+    "file": "books/introduction-to-riemannian-manifolds/appendix-a.md",
+    "home": false,
+    "collectionId": "lee-introduction-to-riemannian-manifolds",
+    "collectionRole": "section",
+    "collectionOrder": 13,
+    "collectionLabel": "附录A",
+    "collectionTitle": "Review of Smooth Manifolds",
+    "navGroup": "lee-introduction-to-riemannian-manifolds"
+  },
+  {
+    "slug": "lee-introduction-to-riemannian-manifolds-appendix-b",
+    "title": "Appendix B Review of Tensors",
+    "summary": "John M. Lee 附录B: Review of Tensors.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "黎曼几何",
+      "Riemannian Geometry",
+      "John Lee",
+      "Appendix"
+    ],
+    "file": "books/introduction-to-riemannian-manifolds/appendix-b.md",
+    "home": false,
+    "collectionId": "lee-introduction-to-riemannian-manifolds",
+    "collectionRole": "section",
+    "collectionOrder": 14,
+    "collectionLabel": "附录B",
+    "collectionTitle": "Review of Tensors",
+    "navGroup": "lee-introduction-to-riemannian-manifolds"
+  },
+  {
+    "slug": "lee-introduction-to-riemannian-manifolds-appendix-c",
+    "title": "Appendix C Review of Lie Groups",
+    "summary": "John M. Lee 附录C: Review of Lie Groups.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "黎曼几何",
+      "Riemannian Geometry",
+      "John Lee",
+      "Appendix"
+    ],
+    "file": "books/introduction-to-riemannian-manifolds/appendix-c.md",
+    "home": false,
+    "collectionId": "lee-introduction-to-riemannian-manifolds",
+    "collectionRole": "section",
+    "collectionOrder": 15,
+    "collectionLabel": "附录C",
+    "collectionTitle": "Review of Lie Groups",
+    "navGroup": "lee-introduction-to-riemannian-manifolds"
+  },
+  {
     "slug": "welcome",
     "title": "欢迎来到我的笔记站",
     "summary": "这个模板怎么用、怎么发文章、后续怎么扩展。",
     "date": "2026-04-08",
-    "tags": ["开始", "部署", "说明"],
+    "tags": [
+      "开始",
+      "部署",
+      "说明"
+    ],
     "file": "welcome.md"
   },
   {
@@ -323,7 +805,11 @@
     "title": "论文阅读工作流示例",
     "summary": "用固定模板记录论文结论、方法、疑问和后续实验。",
     "date": "2026-04-08",
-    "tags": ["科研", "论文", "模板"],
+    "tags": [
+      "科研",
+      "论文",
+      "模板"
+    ],
     "file": "paper-reading-workflow.md"
   },
   {
@@ -331,7 +817,11 @@
     "title": "四元数笔记示例",
     "summary": "演示 Markdown、代码块、表格和数学公式在站点里的展示效果。",
     "date": "2026-04-08",
-    "tags": ["数学", "四元数", "公式"],
+    "tags": [
+      "数学",
+      "四元数",
+      "公式"
+    ],
     "file": "quaternion-note.md"
   }
 ]

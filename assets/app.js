@@ -96,7 +96,9 @@ function getCollections() {
       const sections = group.notes
         .filter((note) => note.collectionRole === "section")
         .sort((left, right) => {
-          return (left.sectionNumber || 0) - (right.sectionNumber || 0);
+          const leftOrder = left.collectionOrder ?? left.sectionNumber ?? 0;
+          const rightOrder = right.collectionOrder ?? right.sectionNumber ?? 0;
+          return leftOrder - rightOrder;
         });
 
       return { ...group, overview, sections };
@@ -159,7 +161,9 @@ function createCollectionCard(collection, isInitiallyOpen) {
 
   const count = document.createElement("span");
   count.className = "collection-count-badge";
-  count.textContent = `${collection.sections.length} 节`;
+  count.textContent = `${
+    collection.sections.length
+  } ${collection.overview.collectionUnit || "节"}`;
 
   summaryMain.append(title, description);
   summary.append(summaryMain, count);
@@ -184,11 +188,12 @@ function createCollectionCard(collection, isInitiallyOpen) {
 
     const index = document.createElement("span");
     index.className = "collection-section-index";
-    index.textContent = `§${note.sectionNumber}`;
+    index.textContent = note.collectionLabel || `§${note.sectionNumber}`;
 
     const text = document.createElement("span");
     text.className = "collection-section-text";
-    text.textContent = note.title.replace(/^§\d+\s*/, "");
+    text.textContent =
+      note.collectionTitle || note.title.replace(/^§\d+\s*/, "");
 
     link.append(index, text);
     sectionList.appendChild(link);
