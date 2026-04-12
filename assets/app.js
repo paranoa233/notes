@@ -1,4 +1,4 @@
-const BUILD_ID = "20260413-3";
+const BUILD_ID = "20260413-4";
 
 const state = {
   notes: [],
@@ -252,7 +252,9 @@ async function init() {
   bindEvents();
 
   try {
-    const response = await fetch(`./notes/notes.json?v=${BUILD_ID}`);
+    const response = await fetch(`./notes/notes.json?v=${BUILD_ID}`, {
+      cache: "no-store"
+    });
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
