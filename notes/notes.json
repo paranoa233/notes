@@ -1871,5 +1871,276 @@
       "公式"
     ],
     "file": "quaternion-note.md"
+  },
+  {
+    "slug": "milnor-topology-from-the-differentiable-viewpoint",
+    "title": "John Milnor《Topology from the Differentiable Viewpoint》分节阅读",
+    "summary": "把 Milnor 这本经典微分拓扑讲义按原书结构拆成 Preface、§1-§8、Appendix、Bibliography 与 Index。",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "微分拓扑",
+      "Topology",
+      "John Milnor",
+      "书籍"
+    ],
+    "file": "books/topology-from-the-differentiable-viewpoint/overview.md",
+    "home": false,
+    "collectionId": "milnor-topology-from-the-differentiable-viewpoint",
+    "collectionRole": "overview",
+    "collectionUnit": "节",
+    "navGroup": "milnor-topology-from-the-differentiable-viewpoint"
+  },
+  {
+    "slug": "milnor-topology-from-the-differentiable-viewpoint-preface",
+    "title": "Preface",
+    "summary": "Milnor Preface: Preface.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "微分拓扑",
+      "Topology",
+      "John Milnor",
+      "书籍"
+    ],
+    "file": "books/topology-from-the-differentiable-viewpoint/01-preface.md",
+    "home": false,
+    "collectionId": "milnor-topology-from-the-differentiable-viewpoint",
+    "collectionRole": "section",
+    "collectionOrder": 1,
+    "collectionLabel": "Preface",
+    "collectionTitle": "Preface",
+    "navGroup": "milnor-topology-from-the-differentiable-viewpoint"
+  },
+  {
+    "slug": "milnor-topology-from-the-differentiable-viewpoint-section-1-smooth-manifolds-and-smooth-maps",
+    "title": "§1 Smooth Manifolds and Smooth Maps",
+    "summary": "Milnor §1: Smooth Manifolds and Smooth Maps.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "微分拓扑",
+      "Topology",
+      "John Milnor",
+      "书籍"
+    ],
+    "file": "books/topology-from-the-differentiable-viewpoint/02-section-1-smooth-manifolds-and-smooth-maps.md",
+    "home": false,
+    "collectionId": "milnor-topology-from-the-differentiable-viewpoint",
+    "collectionRole": "section",
+    "collectionOrder": 2,
+    "collectionLabel": "§1",
+    "collectionTitle": "Smooth Manifolds and Smooth Maps",
+    "navGroup": "milnor-topology-from-the-differentiable-viewpoint"
+  },
+  {
+    "slug": "milnor-topology-from-the-differentiable-viewpoint-section-2-the-theorem-of-sard-and-brown",
+    "title": "§2 The Theorem of Sard and Brown",
+    "summary": "Milnor §2: The Theorem of Sard and Brown.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "微分拓扑",
+      "Topology",
+      "John Milnor",
+      "书籍"
+    ],
+    "file": "books/topology-from-the-differentiable-viewpoint/03-section-2-the-theorem-of-sard-and-brown.md",
+    "home": false,
+    "collectionId": "milnor-topology-from-the-differentiable-viewpoint",
+    "collectionRole": "section",
+    "collectionOrder": 3,
+    "collectionLabel": "§2",
+    "collectionTitle": "The Theorem of Sard and Brown",
+    "navGroup": "milnor-topology-from-the-differentiable-viewpoint"
+  },
+  {
+    "slug": "milnor-topology-from-the-differentiable-viewpoint-section-3-proof-of-sards-theorem",
+    "title": "§3 Proof of Sard's Theorem",
+    "summary": "Milnor §3: Proof of Sard's Theorem.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "微分拓扑",
+      "Topology",
+      "John Milnor",
+      "书籍"
+    ],
+    "file": "books/topology-from-the-differentiable-viewpoint/04-section-3-proof-of-sards-theorem.md",
+    "home": false,
+    "collectionId": "milnor-topology-from-the-differentiable-viewpoint",
+    "collectionRole": "section",
+    "collectionOrder": 4,
+    "collectionLabel": "§3",
+    "collectionTitle": "Proof of Sard's Theorem",
+    "navGroup": "milnor-topology-from-the-differentiable-viewpoint"
+  },
+  {
+    "slug": "milnor-topology-from-the-differentiable-viewpoint-section-4-the-degree-modulo-2-of-a-mapping",
+    "title": "§4 The Degree Modulo 2 of a Mapping",
+    "summary": "Milnor §4: The Degree Modulo 2 of a Mapping.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "微分拓扑",
+      "Topology",
+      "John Milnor",
+      "书籍"
+    ],
+    "file": "books/topology-from-the-differentiable-viewpoint/05-section-4-the-degree-modulo-2-of-a-mapping.md",
+    "home": false,
+    "collectionId": "milnor-topology-from-the-differentiable-viewpoint",
+    "collectionRole": "section",
+    "collectionOrder": 5,
+    "collectionLabel": "§4",
+    "collectionTitle": "The Degree Modulo 2 of a Mapping",
+    "navGroup": "milnor-topology-from-the-differentiable-viewpoint"
+  },
+  {
+    "slug": "milnor-topology-from-the-differentiable-viewpoint-section-5-oriented-manifolds",
+    "title": "§5 Oriented Manifolds",
+    "summary": "Milnor §5: Oriented Manifolds.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "微分拓扑",
+      "Topology",
+      "John Milnor",
+      "书籍"
+    ],
+    "file": "books/topology-from-the-differentiable-viewpoint/06-section-5-oriented-manifolds.md",
+    "home": false,
+    "collectionId": "milnor-topology-from-the-differentiable-viewpoint",
+    "collectionRole": "section",
+    "collectionOrder": 6,
+    "collectionLabel": "§5",
+    "collectionTitle": "Oriented Manifolds",
+    "navGroup": "milnor-topology-from-the-differentiable-viewpoint"
+  },
+  {
+    "slug": "milnor-topology-from-the-differentiable-viewpoint-section-6-vector-fields-and-the-euler-number",
+    "title": "§6 Vector Fields and the Euler Number",
+    "summary": "Milnor §6: Vector Fields and the Euler Number.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "微分拓扑",
+      "Topology",
+      "John Milnor",
+      "书籍"
+    ],
+    "file": "books/topology-from-the-differentiable-viewpoint/07-section-6-vector-fields-and-the-euler-number.md",
+    "home": false,
+    "collectionId": "milnor-topology-from-the-differentiable-viewpoint",
+    "collectionRole": "section",
+    "collectionOrder": 7,
+    "collectionLabel": "§6",
+    "collectionTitle": "Vector Fields and the Euler Number",
+    "navGroup": "milnor-topology-from-the-differentiable-viewpoint"
+  },
+  {
+    "slug": "milnor-topology-from-the-differentiable-viewpoint-section-7-framed-cobordism-the-pontryagin-construction",
+    "title": "§7 Framed Cobordism; the Pontryagin Construction",
+    "summary": "Milnor §7: Framed Cobordism; the Pontryagin Construction.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "微分拓扑",
+      "Topology",
+      "John Milnor",
+      "书籍"
+    ],
+    "file": "books/topology-from-the-differentiable-viewpoint/08-section-7-framed-cobordism-the-pontryagin-construction.md",
+    "home": false,
+    "collectionId": "milnor-topology-from-the-differentiable-viewpoint",
+    "collectionRole": "section",
+    "collectionOrder": 8,
+    "collectionLabel": "§7",
+    "collectionTitle": "Framed Cobordism; the Pontryagin Construction",
+    "navGroup": "milnor-topology-from-the-differentiable-viewpoint"
+  },
+  {
+    "slug": "milnor-topology-from-the-differentiable-viewpoint-section-8-exercises",
+    "title": "§8 Exercises",
+    "summary": "Milnor §8: Exercises.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "微分拓扑",
+      "Topology",
+      "John Milnor",
+      "书籍"
+    ],
+    "file": "books/topology-from-the-differentiable-viewpoint/09-section-8-exercises.md",
+    "home": false,
+    "collectionId": "milnor-topology-from-the-differentiable-viewpoint",
+    "collectionRole": "section",
+    "collectionOrder": 9,
+    "collectionLabel": "§8",
+    "collectionTitle": "Exercises",
+    "navGroup": "milnor-topology-from-the-differentiable-viewpoint"
+  },
+  {
+    "slug": "milnor-topology-from-the-differentiable-viewpoint-appendix-classifying-1-manifolds",
+    "title": "Appendix: Classifying 1-Manifolds",
+    "summary": "Milnor Appendix: Classifying 1-Manifolds.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "微分拓扑",
+      "Topology",
+      "John Milnor",
+      "书籍"
+    ],
+    "file": "books/topology-from-the-differentiable-viewpoint/10-appendix-classifying-1-manifolds.md",
+    "home": false,
+    "collectionId": "milnor-topology-from-the-differentiable-viewpoint",
+    "collectionRole": "section",
+    "collectionOrder": 10,
+    "collectionLabel": "Appendix",
+    "collectionTitle": "Classifying 1-Manifolds",
+    "navGroup": "milnor-topology-from-the-differentiable-viewpoint"
+  },
+  {
+    "slug": "milnor-topology-from-the-differentiable-viewpoint-bibliography",
+    "title": "Bibliography",
+    "summary": "Milnor Bibliography: Bibliography.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "微分拓扑",
+      "Topology",
+      "John Milnor",
+      "书籍"
+    ],
+    "file": "books/topology-from-the-differentiable-viewpoint/11-bibliography.md",
+    "home": false,
+    "collectionId": "milnor-topology-from-the-differentiable-viewpoint",
+    "collectionRole": "section",
+    "collectionOrder": 11,
+    "collectionLabel": "Bibliography",
+    "collectionTitle": "Bibliography",
+    "navGroup": "milnor-topology-from-the-differentiable-viewpoint"
+  },
+  {
+    "slug": "milnor-topology-from-the-differentiable-viewpoint-index",
+    "title": "Index",
+    "summary": "Milnor Index: Index.",
+    "date": "2026-04-13",
+    "tags": [
+      "数学",
+      "微分拓扑",
+      "Topology",
+      "John Milnor",
+      "书籍"
+    ],
+    "file": "books/topology-from-the-differentiable-viewpoint/12-index.md",
+    "home": false,
+    "collectionId": "milnor-topology-from-the-differentiable-viewpoint",
+    "collectionRole": "section",
+    "collectionOrder": 12,
+    "collectionLabel": "Index",
+    "collectionTitle": "Index",
+    "navGroup": "milnor-topology-from-the-differentiable-viewpoint"
   }
 ]
