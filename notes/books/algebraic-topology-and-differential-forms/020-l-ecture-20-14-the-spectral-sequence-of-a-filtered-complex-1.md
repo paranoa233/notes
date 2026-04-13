@@ -1,4 +1,4 @@
-#### 第20讲 The Spectral Sequence of a Filtered Complex (1)
+#### 20. 谱序列
 
 §14. The Spectral Sequence of a Filtered Complex (1)
 

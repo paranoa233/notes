@@ -1,4 +1,4 @@
-#### 第07讲 The Thom Isomorphism (1)
+#### 7. 向量丛基础
 
 代数拓扑与微分形式 §6 The Thom Isomorphism (1)
 

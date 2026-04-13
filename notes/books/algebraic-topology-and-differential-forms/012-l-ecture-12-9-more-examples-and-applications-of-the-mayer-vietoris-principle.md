@@ -1,4 +1,4 @@
-#### 第12讲 More Examples and Applications of the Mayer-Vietoris Principle
+#### 12. 显式同构
 
 §9 More Examples and Applications of the Mayer-Vietoris Principle
 

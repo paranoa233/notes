@@ -1,4 +1,4 @@
-#### 第05讲 The Mayer-Vietoris Argument (1)
+#### 5. Poincaré 对偶
 
 §5 The Mayer-Vietoris Argument (1)
 

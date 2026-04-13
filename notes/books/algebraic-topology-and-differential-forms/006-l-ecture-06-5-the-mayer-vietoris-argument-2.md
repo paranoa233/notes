@@ -1,4 +1,4 @@
-#### 第06讲 The Mayer-Vietoris Argument (2)
+#### 6. Künneth 公式
 
 §5 The Mayer-Vietoris Argument (2)
 

@@ -1,4 +1,4 @@
-#### 第21讲 The Spectral Sequence of a Filtered Complex (2)
+#### 21. 双复形的谱序列
 
 §14 The Spectral Sequence of a Filtered Complex (2)
 

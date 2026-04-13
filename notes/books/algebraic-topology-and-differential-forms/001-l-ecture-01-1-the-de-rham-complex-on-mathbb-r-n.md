@@ -1,4 +1,4 @@
-#### 第01讲 The de Rham Complex on R^n
+#### 1. R^n 上 de Rham 复形
 
 \( \text{ § }1 \) . The de Rham Complex on \( {\mathbb{R}}^{n} \)
 

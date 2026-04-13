@@ -1,4 +1,4 @@
-#### 第23讲 Cohomology with Integer Coefficients (1)
+#### 23. 整系数奇异同调
 
 代数拓扑与微分形式 §15 Cohomology with Integer Coefficients (1)
 

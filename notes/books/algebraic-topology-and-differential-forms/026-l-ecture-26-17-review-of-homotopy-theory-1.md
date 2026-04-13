@@ -1,4 +1,4 @@
-#### 第26讲 Review of Homotopy Theory (1)
+#### 26. 纤维化的同伦序列
 
 §17 Review of Homotopy Theory (1)
 

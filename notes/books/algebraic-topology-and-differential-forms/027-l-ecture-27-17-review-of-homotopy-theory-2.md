@@ -1,4 +1,4 @@
-#### 第27讲 Review of Homotopy Theory (2)
+#### 27. Hurewicz 同构定理
 
 §17 Review of Homotopy Theory (2)
 

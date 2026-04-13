@@ -1,4 +1,4 @@
-#### 第15讲 Sphere Bundles (2)
+#### 15. Hopf 指标定理
 
 代数拓扑与微分形式 §11 Sphere Bundles (2)
 

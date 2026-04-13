@@ -4533,8 +4533,8 @@
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-01-the-de-rham-complex-on-r-n",
-    "title": "第01讲 The de Rham Complex on R^n",
-    "summary": "Lecture 01: The de Rham Complex on R^n.",
+    "title": "1. R^n 上 de Rham 复形",
+    "summary": "Lecture 1: R^n 上 de Rham 复形.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4548,14 +4548,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 1,
-    "collectionLabel": "第01讲",
-    "collectionTitle": "The de Rham Complex on R^n",
+    "collectionLabel": "1.",
+    "collectionTitle": "R^n 上 de Rham 复形",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-02-orientation-and-integration",
-    "title": "第02讲 Orientation and Integration",
-    "summary": "Lecture 02: Orientation and Integration.",
+    "title": "2. 流形上微积分",
+    "summary": "Lecture 2: 流形上微积分.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4569,14 +4569,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 2,
-    "collectionLabel": "第02讲",
-    "collectionTitle": "Orientation and Integration",
+    "collectionLabel": "2.",
+    "collectionTitle": "流形上微积分",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-03-the-mayer-vietoris-sequence",
-    "title": "第03讲 The Mayer-Vietoris Sequence",
-    "summary": "Lecture 03: The Mayer-Vietoris Sequence.",
+    "title": "3. MV 序列",
+    "summary": "Lecture 3: MV 序列.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4590,14 +4590,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 3,
-    "collectionLabel": "第03讲",
-    "collectionTitle": "The Mayer-Vietoris Sequence",
+    "collectionLabel": "3.",
+    "collectionTitle": "MV 序列",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-04-poincar-lemmas",
-    "title": "第04讲 Poincar? Lemmas",
-    "summary": "Lecture 04: Poincar? Lemmas.",
+    "title": "4. Poincaré 引理",
+    "summary": "Lecture 4: Poincaré 引理.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4611,14 +4611,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 4,
-    "collectionLabel": "第04讲",
-    "collectionTitle": "Poincar? Lemmas",
+    "collectionLabel": "4.",
+    "collectionTitle": "Poincaré 引理",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-05-the-mayer-vietoris-argument-1",
-    "title": "第05讲 The Mayer-Vietoris Argument (1)",
-    "summary": "Lecture 05: The Mayer-Vietoris Argument (1).",
+    "title": "5. Poincaré 对偶",
+    "summary": "Lecture 5: Poincaré 对偶.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4632,14 +4632,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 5,
-    "collectionLabel": "第05讲",
-    "collectionTitle": "The Mayer-Vietoris Argument (1)",
+    "collectionLabel": "5.",
+    "collectionTitle": "Poincaré 对偶",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-06-the-mayer-vietoris-argument-2",
-    "title": "第06讲 The Mayer-Vietoris Argument (2)",
-    "summary": "Lecture 06: The Mayer-Vietoris Argument (2).",
+    "title": "6. Künneth 公式",
+    "summary": "Lecture 6: Künneth 公式.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4653,14 +4653,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 6,
-    "collectionLabel": "第06讲",
-    "collectionTitle": "The Mayer-Vietoris Argument (2)",
+    "collectionLabel": "6.",
+    "collectionTitle": "Künneth 公式",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-07-the-thom-isomorphism-1",
-    "title": "第07讲 The Thom Isomorphism (1)",
-    "summary": "Lecture 07: The Thom Isomorphism (1).",
+    "title": "7. 向量丛基础",
+    "summary": "Lecture 7: 向量丛基础.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4674,14 +4674,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 7,
-    "collectionLabel": "第07讲",
-    "collectionTitle": "The Thom Isomorphism (1)",
+    "collectionLabel": "7.",
+    "collectionTitle": "向量丛基础",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-08-the-thom-isomorphism-2",
-    "title": "第08讲 The Thom Isomorphism (2)",
-    "summary": "Lecture 08: The Thom Isomorphism (2).",
+    "title": "8. Thom 同构",
+    "summary": "Lecture 8: Thom 同构.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4695,14 +4695,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 8,
-    "collectionLabel": "第08讲",
-    "collectionTitle": "The Thom Isomorphism (2)",
+    "collectionLabel": "8.",
+    "collectionTitle": "Thom 同构",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-09-the-thom-isomorphism-3",
-    "title": "第09讲 The Thom Isomorphism (3)",
-    "summary": "Lecture 09: The Thom Isomorphism (3).",
+    "title": "9. Poincaré 对偶与 Thom 类",
+    "summary": "Lecture 9: Poincaré 对偶与 Thom 类.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4716,14 +4716,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 9,
-    "collectionLabel": "第09讲",
-    "collectionTitle": "The Thom Isomorphism (3)",
+    "collectionLabel": "9.",
+    "collectionTitle": "Poincaré 对偶与 Thom 类",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-10-the-thom-isomorphism-4",
-    "title": "第10讲 The Thom Isomorphism (4)",
-    "summary": "Lecture 10: The Thom Isomorphism (4).",
+    "title": "10. 平面丛上 Thom 类的显式表示",
+    "summary": "Lecture 10: 平面丛上 Thom 类的显式表示.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4737,14 +4737,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 10,
-    "collectionLabel": "第10讲",
-    "collectionTitle": "The Thom Isomorphism (4)",
+    "collectionLabel": "10.",
+    "collectionTitle": "平面丛上 Thom 类的显式表示",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-11-the-generalized-mayer-vietoris-principle",
-    "title": "第11讲 The Generalized Mayer-Vietoris Principle",
-    "summary": "Lecture 11: The Generalized Mayer-Vietoris Principle.",
+    "title": "11. 广义 MV 原理",
+    "summary": "Lecture 11: 广义 MV 原理.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4758,14 +4758,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 11,
-    "collectionLabel": "第11讲",
-    "collectionTitle": "The Generalized Mayer-Vietoris Principle",
+    "collectionLabel": "11.",
+    "collectionTitle": "广义 MV 原理",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-12-more-examples-and-applications-of-the-mayer-vietoris-principle",
-    "title": "第12讲 More Examples and Applications of the Mayer-Vietoris Principle",
-    "summary": "Lecture 12: More Examples and Applications of the Mayer-Vietoris Principle.",
+    "title": "12. 显式同构",
+    "summary": "Lecture 12: 显式同构.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4779,14 +4779,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 12,
-    "collectionLabel": "第12讲",
-    "collectionTitle": "More Examples and Applications of the Mayer-Vietoris Principle",
+    "collectionLabel": "12.",
+    "collectionTitle": "显式同构",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-13-presheaves-and-ech-cohomology",
-    "title": "第13讲 Presheaves and ?ech Cohomology",
-    "summary": "Lecture 13: Presheaves and ?ech Cohomology.",
+    "title": "13. Čech 上同调",
+    "summary": "Lecture 13: Čech 上同调.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4800,14 +4800,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 13,
-    "collectionLabel": "第13讲",
-    "collectionTitle": "Presheaves and ?ech Cohomology",
+    "collectionLabel": "13.",
+    "collectionTitle": "Čech 上同调",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-14-sphere-bundles-1",
-    "title": "第14讲 Sphere Bundles (1)",
-    "summary": "Lecture 14: Sphere Bundles (1).",
+    "title": "14. 球面丛",
+    "summary": "Lecture 14: 球面丛.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4821,14 +4821,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 14,
-    "collectionLabel": "第14讲",
-    "collectionTitle": "Sphere Bundles (1)",
+    "collectionLabel": "14.",
+    "collectionTitle": "球面丛",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-15-sphere-bundles-2",
-    "title": "第15讲 Sphere Bundles (2)",
-    "summary": "Lecture 15: Sphere Bundles (2).",
+    "title": "15. Hopf 指标定理",
+    "summary": "Lecture 15: Hopf 指标定理.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4842,14 +4842,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 15,
-    "collectionLabel": "第15讲",
-    "collectionTitle": "Sphere Bundles (2)",
+    "collectionLabel": "15.",
+    "collectionTitle": "Hopf 指标定理",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-16-thom-isomorphism-and-poincar-duality-revisited-1",
-    "title": "第16讲 Thom Isomorphism and Poincar? Duality Revisited (1)",
-    "summary": "Lecture 16: Thom Isomorphism and Poincar? Duality Revisited (1).",
+    "title": "16. 再论 Poincaré 对偶",
+    "summary": "Lecture 16: 再论 Poincaré 对偶.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4863,14 +4863,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 16,
-    "collectionLabel": "第16讲",
-    "collectionTitle": "Thom Isomorphism and Poincar? Duality Revisited (1)",
+    "collectionLabel": "16.",
+    "collectionTitle": "再论 Poincaré 对偶",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-17-thom-isomorphism-and-poincar-duality-revisited-2",
-    "title": "第17讲 Thom Isomorphism and Poincar? Duality Revisited (2)",
-    "summary": "Lecture 17: Thom Isomorphism and Poincar? Duality Revisited (2).",
+    "title": "17. 再论 Thom 同构",
+    "summary": "Lecture 17: 再论 Thom 同构.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4884,14 +4884,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 17,
-    "collectionLabel": "第17讲",
-    "collectionTitle": "Thom Isomorphism and Poincar? Duality Revisited (2)",
+    "collectionLabel": "17.",
+    "collectionTitle": "再论 Thom 同构",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-18-monodromy-1",
-    "title": "第18讲 Monodromy (1)",
-    "summary": "Lecture 18: Monodromy (1).",
+    "title": "18. 单纯复形理论",
+    "summary": "Lecture 18: 单纯复形理论.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4905,14 +4905,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 18,
-    "collectionLabel": "第18讲",
-    "collectionTitle": "Monodromy (1)",
+    "collectionLabel": "18.",
+    "collectionTitle": "单纯复形理论",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-19-monodromy-2",
-    "title": "第19讲 Monodromy (2)",
-    "summary": "Lecture 19: Monodromy (2).",
+    "title": "19. 单值性",
+    "summary": "Lecture 19: 单值性.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4926,14 +4926,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 19,
-    "collectionLabel": "第19讲",
-    "collectionTitle": "Monodromy (2)",
+    "collectionLabel": "19.",
+    "collectionTitle": "单值性",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-20-the-spectral-sequence-of-a-filtered-complex-1",
-    "title": "第20讲 The Spectral Sequence of a Filtered Complex (1)",
-    "summary": "Lecture 20: The Spectral Sequence of a Filtered Complex (1).",
+    "title": "20. 谱序列",
+    "summary": "Lecture 20: 谱序列.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4947,14 +4947,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 20,
-    "collectionLabel": "第20讲",
-    "collectionTitle": "The Spectral Sequence of a Filtered Complex (1)",
+    "collectionLabel": "20.",
+    "collectionTitle": "谱序列",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-21-the-spectral-sequence-of-a-filtered-complex-2",
-    "title": "第21讲 The Spectral Sequence of a Filtered Complex (2)",
-    "summary": "Lecture 21: The Spectral Sequence of a Filtered Complex (2).",
+    "title": "21. 双复形的谱序列",
+    "summary": "Lecture 21: 双复形的谱序列.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4968,14 +4968,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 21,
-    "collectionLabel": "第21讲",
-    "collectionTitle": "The Spectral Sequence of a Filtered Complex (2)",
+    "collectionLabel": "21.",
+    "collectionTitle": "双复形的谱序列",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-22-the-spectral-sequence-of-a-filtered-complex-3",
-    "title": "第22讲 The Spectral Sequence of a Filtered Complex (3)",
-    "summary": "Lecture 22: The Spectral Sequence of a Filtered Complex (3).",
+    "title": "22. 谱序列的应用",
+    "summary": "Lecture 22: 谱序列的应用.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -4989,14 +4989,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 22,
-    "collectionLabel": "第22讲",
-    "collectionTitle": "The Spectral Sequence of a Filtered Complex (3)",
+    "collectionLabel": "22.",
+    "collectionTitle": "谱序列的应用",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-23-cohomology-with-integer-coefficients-1",
-    "title": "第23讲 Cohomology with Integer Coefficients (1)",
-    "summary": "Lecture 23: Cohomology with Integer Coefficients (1).",
+    "title": "23. 整系数奇异同调",
+    "summary": "Lecture 23: 整系数奇异同调.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -5010,14 +5010,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 23,
-    "collectionLabel": "第23讲",
-    "collectionTitle": "Cohomology with Integer Coefficients (1)",
+    "collectionLabel": "23.",
+    "collectionTitle": "整系数奇异同调",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-24-cohomology-with-integer-coefficients-2",
-    "title": "第24讲 Cohomology with Integer Coefficients (2)",
-    "summary": "Lecture 24: Cohomology with Integer Coefficients (2).",
+    "title": "24. 奇异上同调",
+    "summary": "Lecture 24: 奇异上同调.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -5031,14 +5031,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 24,
-    "collectionLabel": "第24讲",
-    "collectionTitle": "Cohomology with Integer Coefficients (2)",
+    "collectionLabel": "24.",
+    "collectionTitle": "奇异上同调",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-25-the-path-fibration",
-    "title": "第25讲 The Path Fibration",
-    "summary": "Lecture 25: The Path Fibration.",
+    "title": "25. 道路纤维化",
+    "summary": "Lecture 25: 道路纤维化.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -5052,14 +5052,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 25,
-    "collectionLabel": "第25讲",
-    "collectionTitle": "The Path Fibration",
+    "collectionLabel": "25.",
+    "collectionTitle": "道路纤维化",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-26-review-of-homotopy-theory-1",
-    "title": "第26讲 Review of Homotopy Theory (1)",
-    "summary": "Lecture 26: Review of Homotopy Theory (1).",
+    "title": "26. 纤维化的同伦序列",
+    "summary": "Lecture 26: 纤维化的同伦序列.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -5073,14 +5073,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 26,
-    "collectionLabel": "第26讲",
-    "collectionTitle": "Review of Homotopy Theory (1)",
+    "collectionLabel": "26.",
+    "collectionTitle": "纤维化的同伦序列",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-27-review-of-homotopy-theory-2",
-    "title": "第27讲 Review of Homotopy Theory (2)",
-    "summary": "Lecture 27: Review of Homotopy Theory (2).",
+    "title": "27. Hurewicz 同构定理",
+    "summary": "Lecture 27: Hurewicz 同构定理.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -5094,14 +5094,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 27,
-    "collectionLabel": "第27讲",
-    "collectionTitle": "Review of Homotopy Theory (2)",
+    "collectionLabel": "27.",
+    "collectionTitle": "Hurewicz 同构定理",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-28-applications-to-homotopy-theory-1",
-    "title": "第28讲 Applications to Homotopy Theory (1)",
-    "summary": "Lecture 28: Applications to Homotopy Theory (1).",
+    "title": "28. EM 空间",
+    "summary": "Lecture 28: EM 空间.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -5115,14 +5115,14 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 28,
-    "collectionLabel": "第28讲",
-    "collectionTitle": "Applications to Homotopy Theory (1)",
+    "collectionLabel": "28.",
+    "collectionTitle": "EM 空间",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   },
   {
     "slug": "fu-algebraic-topology-and-differential-forms-lecture-29-applications-to-homotopy-theory-2",
-    "title": "第29讲 Applications to Homotopy Theory (2)",
-    "summary": "Lecture 29: Applications to Homotopy Theory (2).",
+    "title": "29. π4(S3) 与 π5(S3) 的计算",
+    "summary": "Lecture 29: π4(S3) 与 π5(S3) 的计算.",
     "date": "2026-04-13",
     "tags": [
       "数学",
@@ -5136,8 +5136,8 @@
     "collectionId": "fu-algebraic-topology-and-differential-forms",
     "collectionRole": "section",
     "collectionOrder": 29,
-    "collectionLabel": "第29讲",
-    "collectionTitle": "Applications to Homotopy Theory (2)",
+    "collectionLabel": "29.",
+    "collectionTitle": "π4(S3) 与 π5(S3) 的计算",
     "navGroup": "fu-algebraic-topology-and-differential-forms"
   }
 ]

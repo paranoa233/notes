@@ -1,4 +1,4 @@
-#### 第09讲 The Thom Isomorphism (3)
+#### 9. Poincaré 对偶与 Thom 类
 
 §6 The Thom Isomorphism (3)
 

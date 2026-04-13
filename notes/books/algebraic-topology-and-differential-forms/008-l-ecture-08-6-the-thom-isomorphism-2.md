@@ -1,4 +1,4 @@
-#### 第08讲 The Thom Isomorphism (2)
+#### 8. Thom 同构
 
 §6 The Thom Isomorphism (2)
 

@@ -1,4 +1,4 @@
-#### 第29讲 Applications to Homotopy Theory (2)
+#### 29. π4(S3) 与 π5(S3) 的计算
 
 §18. Applications to Homotopy Theory (2)
 

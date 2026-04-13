@@ -1,4 +1,4 @@
-#### 第02讲 Orientation and Integration
+#### 2. 流形上微积分
 
 \( \text{ § }2 \) . The Mayer-Vietoris 序列 函子 \( {\Omega }^{ * } \) §3. Orientation and Integration
 

@@ -1,4 +1,4 @@
-#### 第10讲 The Thom Isomorphism (4)
+#### 10. 平面丛上 Thom 类的显式表示
 
 §6 The Thom Isomorphism (4)
 

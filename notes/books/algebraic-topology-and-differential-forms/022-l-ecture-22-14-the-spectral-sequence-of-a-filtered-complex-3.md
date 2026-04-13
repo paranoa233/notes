@@ -1,4 +1,4 @@
-#### 第22讲 The Spectral Sequence of a Filtered Complex (3)
+#### 22. 谱序列的应用
 
 \( \text{ § }{14} \) The Spectral Sequence of a Filtered Complex (3)
 

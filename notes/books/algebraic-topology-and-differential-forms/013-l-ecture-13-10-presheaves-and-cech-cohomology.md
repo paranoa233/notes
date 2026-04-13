@@ -1,4 +1,4 @@
-#### 第13讲 Presheaves and ?ech Cohomology
+#### 13. Čech 上同调
 
 §10 Presheaves and Čech Cohomology
 

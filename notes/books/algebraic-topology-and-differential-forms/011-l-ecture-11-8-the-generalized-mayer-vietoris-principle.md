@@ -1,4 +1,4 @@
-#### 第11讲 The Generalized Mayer-Vietoris Principle
+#### 11. 广义 MV 原理
 
 代数拓扑与微分形式 §8 The Generalized Mayer-Vietoris Principle
 

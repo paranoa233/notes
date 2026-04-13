@@ -1,4 +1,4 @@
-#### 第14讲 Sphere Bundles (1)
+#### 14. 球面丛
 
 §11 Sphere Bundles (1)
 

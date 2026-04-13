@@ -1,4 +1,4 @@
-#### 第17讲 Thom Isomorphism and Poincar? Duality Revisited (2)
+#### 17. 再论 Thom 同构
 
 §12 Thom Isomorphism and Poincaré Duality Revisited (2)
 

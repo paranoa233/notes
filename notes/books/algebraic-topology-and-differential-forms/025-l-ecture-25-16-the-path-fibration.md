@@ -1,4 +1,4 @@
-#### 第25讲 The Path Fibration
+#### 25. 道路纤维化
 
 代数拓扑与微分形式 §16 The Path Fibration
 

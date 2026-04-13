@@ -1,4 +1,4 @@
-#### 第28讲 Applications to Homotopy Theory (1)
+#### 28. EM 空间
 
 §18. Applications to Homotopy Theory (1)
 

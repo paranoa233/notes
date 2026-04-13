@@ -1,4 +1,4 @@
-#### 第03讲 The Mayer-Vietoris Sequence
+#### 3. MV 序列
 
 §2. The Mayer-Vietoris Sequence
 
