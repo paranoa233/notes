@@ -1,0 +1,11 @@
+### 2. Computing antiderivatives
+
+*Français : 2. Calcul de primitives*
+
+La formule \( {\int }_{a}^{b}{f}^{\prime }\left( t\right) {dt} = f\left( b\right) - f\left( a\right) \) (pour \( f \) une fonction de classe \( {\mathcal{C}}^{1} \) ) nous amène à calculer les primitives d'une fonction continue pour calculer son intégrale.
+
+> The formula \( {\int }_{a}^{b}{f}^{\prime }\left( t\right) {dt} = f\left( b\right) - f\left( a\right) \) (for \( f \) a function of class \( {\mathcal{C}}^{1} \) ) leads us to compute the antiderivatives of a continuous function to calculate its integral.
+
+Lorsque \( F \) est une primitive de \( f \) , on note \( \int f\left( t\right) {dt} = F\left( t\right) + k \) . Cette notation signifie que l’ensemble des primitives de \( f \) est constitué des fonctions de la forme \( t \mapsto F\left( t\right) + k \) où \( k \) est une constante. Cette écriture peut même être valable sur plusieurs intervalles. Par exemple,écrire \( \int {dt}/t = \log \left| t\right| + k \) signifie que sur \( {\mathbb{R}}^{+ * } \) , les primitives de \( t \mapsto 1/t \) sont les fonctions de la forme \( t \mapsto \log t + k \) , et que sur \( {\mathbb{R}}^{- * } \) elles sont de la forme \( t \mapsto \log \left( {-t}\right) + k \) . Il faut alors se garder d’écrire \( {\int }_{-1}^{1}{dt}/t = {\left\lbrack \log \left| t\right| \right\rbrack }_{-1}^{1} \) , ce qui n’aurait aucun sens.
+
+> When \( F \) is an antiderivative of \( f \), we denote it as \( \int f\left( t\right) {dt} = F\left( t\right) + k \). This notation means that the set of antiderivatives of \( f \) consists of functions of the form \( t \mapsto F\left( t\right) + k \) where \( k \) is a constant. This notation can even be valid over several intervals. For example, writing \( \int {dt}/t = \log \left| t\right| + k \) means that on \( {\mathbb{R}}^{+ * } \), the antiderivatives of \( t \mapsto 1/t \) are functions of the form \( t \mapsto \log t + k \), and that on \( {\mathbb{R}}^{- * } \) they are of the form \( t \mapsto \log \left( {-t}\right) + k \). One must therefore avoid writing \( {\int }_{-1}^{1}{dt}/t = {\left\lbrack \log \left| t\right| \right\rbrack }_{-1}^{1} \), which would have no meaning.

@@ -1,0 +1,15 @@
+#### 1.2. Derivatives of standard functions
+
+*Français : 1.2. Dérivées des fonctions usuelles*
+
+Le tableau qui suit donne la dérivée des fonctions usuelles.
+
+> The following table gives the derivatives of standard functions.
+
+<table><tr><td>\( f\left( x\right) \)</td><td>\( {f}^{\prime }\left( x\right) \)</td></tr><tr><td>\( {x}^{r}\left( {r \in \mathbb{R}}\right) \)</td><td>\( r{x}^{r - 1} \)</td></tr><tr><td>\( {x}^{s}\left( {s \in \mathbb{C}}\right) \)</td><td>\( s{x}^{s - 1} \)</td></tr><tr><td>\( \log x \)</td><td>\( \frac{1}{x} \)</td></tr><tr><td>\( \sin x \)</td><td>\( \cos x \)</td></tr><tr><td>\( \cos x \)</td><td>\( - \sin x \)</td></tr><tr><td>\( \tan x \)</td><td>\( 1 + {\tan }^{2}x = \frac{1}{{\cos }^{2}x} \)</td></tr><tr><td>\( \arcsin x \)</td><td>\( \frac{1}{\sqrt{1 - {x}^{2}}} \)</td></tr><tr><td>\( \arccos x \)</td><td>\( - \frac{1}{\sqrt{1 - {x}^{2}}} \)</td></tr></table>
+
+> <table><tr><td>\( f\left( x\right) \)</td><td>\( {f}^{\prime }\left( x\right) \)</td></tr><tr><td>\( {x}^{r}\left( {r \in \mathbb{R}}\right) \)</td><td>\( r{x}^{r - 1} \)</td></tr><tr><td>\( {x}^{s}\left( {s \in \mathbb{C}}\right) \)</td><td>\( s{x}^{s - 1} \)</td></tr><tr><td>\( \log x \)</td><td>\( \frac{1}{x} \)</td></tr><tr><td>\( \sin x \)</td><td>\( \cos x \)</td></tr><tr><td>\( \cos x \)</td><td>\( - \sin x \)</td></tr><tr><td>\( \tan x \)</td><td>\( 1 + {\tan }^{2}x = \frac{1}{{\cos }^{2}x} \)</td></tr><tr><td>\( \arcsin x \)</td><td>\( \frac{1}{\sqrt{1 - {x}^{2}}} \)</td></tr><tr><td>\( \arccos x \)</td><td>\( - \frac{1}{\sqrt{1 - {x}^{2}}} \)</td></tr></table>
+
+<table><tr><td>\( f\left( x\right) \)</td><td>\( {f}^{\prime }\left( x\right) \)</td></tr><tr><td>\( {e}^{x} \)</td><td>\( {e}^{x} \)</td></tr><tr><td>\( \arctan x \)</td><td>\( \frac{1}{1 + {x}^{2}} \)</td></tr><tr><td>ch \( x \)</td><td>\( \operatorname{sh}x \)</td></tr><tr><td>sh \( x \)</td><td>\( \operatorname{ch}x \)</td></tr><tr><td>th \( x \)</td><td>\( 1 - {\operatorname{th}}^{2}x = \frac{1}{{\operatorname{ch}}^{2}x} \)</td></tr><tr><td>\( \operatorname{argch}x \)</td><td>\( \frac{1}{\sqrt{{x}^{2} - 1}} \)</td></tr><tr><td>\( \operatorname{argsh}x \)</td><td>\( \frac{1}{\sqrt{{x}^{2} + 1}} \)</td></tr><tr><td>argth \( x \)</td><td>\( \frac{1}{1 - {x}^{2}} \)</td></tr></table>
+
+> <table><tbody><tr><td>\( f\left( x\right) \)</td><td>\( {f}^{\prime }\left( x\right) \)</td></tr><tr><td>\( {e}^{x} \)</td><td>\( {e}^{x} \)</td></tr><tr><td>\( \arctan x \)</td><td>\( \frac{1}{1 + {x}^{2}} \)</td></tr><tr><td>cosh \( x \)</td><td>\( \operatorname{sh}x \)</td></tr><tr><td>sinh \( x \)</td><td>\( \operatorname{ch}x \)</td></tr><tr><td>tanh \( x \)</td><td>\( 1 - {\operatorname{th}}^{2}x = \frac{1}{{\operatorname{ch}}^{2}x} \)</td></tr><tr><td>\( \operatorname{argch}x \)</td><td>\( \frac{1}{\sqrt{{x}^{2} - 1}} \)</td></tr><tr><td>\( \operatorname{argsh}x \)</td><td>\( \frac{1}{\sqrt{{x}^{2} + 1}} \)</td></tr><tr><td>artanh \( x \)</td><td>\( \frac{1}{1 - {x}^{2}} \)</td></tr></tbody></table>

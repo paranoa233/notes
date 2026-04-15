@@ -1,0 +1,11 @@
+## Foreword to the second edition
+
+*Français : Avant-propos de la deuxième édition*
+
+Plus de dix ans après la sortie de la première édition, cet ouvrage est encore large-ment utilisé pour la préparation des concours (grandes écoles, agrégation). Les retours de mes lecteurs (grâce à internet notamment) sont nombreux et m'ont encouragé à réaliser cette deuxième édition. Cette dernière contient des corrections de coquilles, quelques retouches et améliorations de preuves et solutions, ainsi que quelques exercices et problèmes supplémentaires dans l'esprit de l'édition précédente. Par ailleurs, le chapitre intégration a été largement revu pour être plus conforme au programme des classes préparatoires scien-tifiques. Enfin, une nouvelle annexe (annexe C) propose une démonstration du théorème des nombres premiers accessible à partir du programme des classes préparatoires.
+
+> More than ten years after the release of the first edition, this work is still widely used for the preparation of competitive examinations (grandes écoles, agrégation). The feedback from my readers (thanks to the internet in particular) is numerous and encouraged me to produce this second edition. The latter contains corrections of typos, some revisions and improvements to proofs and solutions, as well as some additional exercises and problems in the spirit of the previous edition. Furthermore, the integration chapter has been largely revised to be more in line with the curriculum of scientific preparatory classes. Finally, a new appendix (appendix C) offers a proof of the prime number theorem accessible from the preparatory class curriculum.
+
+J'espère que les améliorations de cette deuxième édition seront utiles à mes lecteurs pour la préparation de leur concours. Je tiens à remercier chaleureusement ceux qui m'ont aidé, directement ou indirectement, et en particulier les internautes dont les commentaires ont été nombreux.
+
+> I hope that the improvements in this second edition will be useful to my readers for the preparation of their competitive examinations. I would like to warmly thank those who helped me, directly or indirectly, and in particular the internet users whose comments were numerous.

@@ -1,0 +1,11 @@
+## Foreword to the second edition
+
+*Français : Avant-propos de la deuxième édition*
+
+Plus de dix ans après la sortie de la première édition, cet ouvrage est encore largement utilisé pour la préparation des concours (grandes écoles, agrégation). Les retours de mes lecteurs (grâce à internet notamment) sont nombreux et m'ont encouragé à réaliser cette deuxième édition. Cette dernière contient des corrections de coquilles, quelques retouches et améliorations de preuves et solutions, ainsi que quelques exercices et problèmes supplé- mentaires dans l'esprit de l'édition précédente. Une nouvelle annexe (annexe C) propose une introduction aux fractions continues.
+
+> More than ten years after the release of the first edition, this work is still widely used for preparing for competitive examinations (grandes écoles, agrégation). Feedback from my readers (thanks to the internet in particular) has been numerous and encouraged me to produce this second edition. The latter contains corrections of typos, some touch-ups and improvements to proofs and solutions, as well as some additional exercises and problems in the spirit of the previous edition. A new appendix (Appendix C) offers an introduction to continued fractions.
+
+J'espère que les améliorations de cette deuxième édition seront utiles à mes lecteurs pour la préparation de leur concours. Je remercie chaleureusement les personnes qui m'ont aidé à apporter ces améliorations, en particulier les internautes dont les commentaires ont étés nombreux. Enfin, cette deuxième édition doit beaucoup à la patience de ma femme Laurence et de mes enfants, Gaspard, Anne-Sybille et Léopoldine ; je suis infiniment reconnaissant de leur support pendant les longues journées et soirées passées à cette mise à jour.
+
+> I hope that the improvements in this second edition will be useful to my readers in preparing for their competitive examinations. I warmly thank the people who helped me make these improvements, especially the internet users whose comments were numerous. Finally, this second edition owes much to the patience of my wife Laurence and my children, Gaspard, Anne-Sybille, and Léopoldine; I am infinitely grateful for their support during the long days and evenings spent on this update.
