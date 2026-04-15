@@ -1,4 +1,4 @@
-const BUILD_ID = "20260413-4";
+const BUILD_ID = "20260416-1";
 
 const state = {
   notes: [],
@@ -19,8 +19,12 @@ function normalize(text = "") {
   return text.toLowerCase().trim();
 }
 
+function isHidden(note) {
+  return note.hidden === true;
+}
+
 function isHomeVisible(note) {
-  return note.home !== false;
+  return !isHidden(note) && note.home !== false;
 }
 
 function getVisibleNotes() {
@@ -77,7 +81,7 @@ function getCollections() {
   const lookup = new Map();
 
   state.notes.forEach((note) => {
-    if (!note.collectionId) {
+    if (!note.collectionId || isHidden(note)) {
       return;
     }
 

@@ -1,7 +1,7 @@
 const SITE_TITLE = "paranoa233's notes";
 const DEFAULT_DESCRIPTION =
   "paranoa233 的独立文章阅读页，采用白纸黑字的阅读模式。";
-const BUILD_ID = "20260413-4";
+const BUILD_ID = "20260416-1";
 
 const elements = {
   articleDate: document.getElementById("article-date"),

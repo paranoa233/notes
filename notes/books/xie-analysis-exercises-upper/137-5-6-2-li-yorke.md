@@ -1,0 +1,163 @@
+#### 5.6.2 Li-Yorke 的两个定理
+
+在李天岩和 Yorke 的论文 [34] 中主要有两个定理. 我们先介绍第一个.
+
+命题 5.6.1 (Li-Yorke 第一定理) 设 \( I \) 为区间,函数 \( f \in  C\left( I\right) \) ,且有 \( f\left( I\right)  \subset  I \) . 设有点 \( a, b, c, d \) 属于区间 \( I \) ,满足条件
+
+\[
+f\left( a\right)  = b, f\left( b\right)  = c, f\left( c\right)  = d,\;d \leq  a < b < c\text{ (或 }d \geq  a > b > c\text{ ), }
+\]
+
+则 \( f \) 有最小周期为每个正整数的所有周期轨.
+
+现在我们来证明这个命题. 为此先要做一些准备工作, 证明几个引理. 其中前两个引理恰好是关于连续函数基本性质的练习题.
+
+例题 5.6.1 (引理 1) 设 \( I \) 为有界闭区间, \( f \in  C\left( I\right) \) . 如果有 \( f\left( I\right)  \supset  I \) ,则 \( f \) 在 \( I \) 中有不动点.
+
+证 记 \( I = \left\lbrack  {a, b}\right\rbrack  , f\left( I\right)  = \left\lbrack  {c, d}\right\rbrack \) ,由闭区间上连续函数的值域定理知道 \( f\left( I\right) \) 也是有界闭区间,即有 \( c \leq  a < b \leq  d \) . 由连续函数的介值定理,存在 \( \xi ,\eta  \in  \left\lbrack  {a, b}\right\rbrack \) ,使得 \( f\left( \xi \right)  = a, f\left( \eta \right)  = b \) . 不妨设 \( \xi  < \eta \) . 构造辅助函数
+
+\[
+F\left( x\right)  = f\left( x\right)  - x,
+\]
+
+\( F \) 的零点即 \( f \) 的不动点,则有
+
+\[
+F\left( \xi \right)  = f\left( \xi \right)  - \xi  = a - \xi  \leq  0, F\left( \eta \right)  = f\left( \eta \right)  - \eta  = b - \eta  \geq  0.
+\]
+
+因此知道
+
+\[
+F\left( \xi \right) F\left( \eta \right)  \leq  0.
+\]
+
+若 \( \xi \) 或 \( \eta \) 不是 \( F \) 的零点,则由零点存在定理可知在 \( \left( {\xi ,\eta }\right)  \subset  \left\lbrack  {a, b}\right\rbrack \) 中有 \( F \) 的零点,即 \( f \) 的不动点.
+
+注 与此题类似的是经典性的例题 5.2.4,注意它们的证明相似而不相同.
+
+例题 5.6.2 (引理 2) 设 \( I, J \) 是两个有界闭区间, \( f \in  C\left( I\right) \) . 如果有 \( f\left( I\right)  \supset  J \) , 则在 \( I \) 中存在一个闭子区间 \( {I}^{\prime } \) ,使得 \( f\left( {I}^{\prime }\right)  = J \) .
+
+证 设 \( I = \left\lbrack  {a, b}\right\rbrack  , J = \left\lbrack  {c, d}\right\rbrack \) . 由于 \( f\left( \left\lbrack  {a, b}\right\rbrack  \right)  \supset  \left\lbrack  {c, d}\right\rbrack \) ,由介值定理知道有 \( \xi ,\eta  \in \; \left\lbrack  {a, b}\right\rbrack \) ,使得 \( f\left( \xi \right)  = c, f\left( \eta \right)  = d \) .
+
+先考虑 \( \xi  < \eta \) 的情况. 定义
+
+\[
+u = \sup \{ s \mid  f\left( s\right)  = c,\xi  \leq  s < \eta \}
+\]
+
+\[
+v = \inf \{ t \mid  f\left( t\right)  = d, u < t \leq  \eta \}
+\]
+
+我们断言: \( f\left( u\right)  = c, f\left( v\right)  = d \) . 实际上, \( u \) 是数集 \( A = \{ s \mid  f\left( s\right)  = c,\xi  \leq  s < \eta \} \) 的上确界. 如有 \( u \in  A \) ,则当然 \( f\left( u\right)  = c \) . 否则,至少在集合 \( A \) 中存在数列收敛于 \( u \) (参见例题 3.1.3),由 \( f \) 的连续性可知有 \( f\left( u\right)  = c \) . 同理有 \( f\left( v\right)  = d \) .
+
+由 \( u, v \) 的定义可见 \( u < v \) ,而且在 \( \left( {u, v}\right) \) 中函数值 \( f\left( x\right) \) 不可能取到 \( c \) 和 \( d \) ,从而一定有 \( f\left( \left( {u, v}\right) \right)  \subset  \left( {c, d}\right) \) . 这样就得到
+
+\[
+f\left( \left\lbrack  {u, v}\right\rbrack  \right)  = \left\lbrack  {c, d}\right\rbrack   = J
+\]
+
+因此 \( {I}^{\prime } = \left\lbrack  {u, v}\right\rbrack \) 即为所求. 对于 \( \xi  > \eta \) 的讨论是类似的.
+
+第三个引理是引理 2 的进一步发展, 而且和引理 1 结合起来了. 但是在这里要引进在迭代动力系统研究中使用的一个特定记号, 这个新记号就是将复合函数 \( f\left( {f\left( x\right) }\right) \) 简记为 \( {f}^{2}\left( x\right) \) ,将 \( f\left( {f\left( {f\left( x\right) }\right) }\right) \) 简记为 \( {f}^{3}\left( x\right) ,\cdots \) ,一般地记
+
+\[
+{f}^{n}\left( x\right)  = \underset{n\text{ 重 }}{\underbrace{f\left( {f\left( {\cdots f\left( x\right) \cdots }\right) }\right) }} = \left( \underset{n\text{ 个 }}{\underbrace{f \circ  f \circ  \cdots  \circ  f}}\right) \left( x\right) . \tag{5.6}
+\]
+
+例题 5.6.3 (引理 3) 设 \( f \) 是在有界闭区间 \( {I}_{0},{I}_{1},\cdots ,{I}_{n - 1} \) 上有定义的连续函数, 满足条件
+
+\[
+f\left( {I}_{0}\right)  \supset  {I}_{1}, f\left( {I}_{1}\right)  \supset  {I}_{2},\cdots , f\left( {I}_{n - 2}\right)  \supset  {I}_{n - 1}, f\left( {I}_{n - 1}\right)  \supset  {I}_{0},
+\]
+
+则存在点 \( {x}_{0} \in  {I}_{0} \) ,使得 \( {f}^{n}\left( {x}_{0}\right)  = {x}_{0} \) ,且满足 \( {f}^{i}\left( {x}_{0}\right)  \in  {I}_{i}, i = 1,\cdots , n - 1 \) .
+
+证 应用引理 2 于 \( f\left( {I}_{0}\right)  \supset  {I}_{1} \) ,知道存在闭区间 \( {I}_{0}^{1} \subset  {I}_{0} \) ,使得 \( f\left( {I}_{0}^{1}\right)  = {I}_{1} \) .
+
+从条件 \( f\left( {I}_{1}\right)  \supset  {I}_{2} \) ,又有 \( {f}^{2}\left( {I}_{0}^{1}\right)  \supset  {I}_{2} \) . 再次用引理 2 于区间 \( {I}_{0}^{1} \) 上的函数 \( {f}^{2} \) ,有闭区间 \( {I}_{0}^{2} \subset  {I}_{0}^{1} \subset  {I}_{0} \) ,使得 \( {f}^{2}\left( {I}_{0}^{2}\right)  = {I}_{2} \) . 于是有
+
+\[
+f\left( {I}_{0}^{2}\right)  \subset  {I}_{1},{f}^{2}\left( {I}_{0}^{2}\right)  = {I}_{2}.
+\]
+
+这样进行下去就得到 \( {I}_{0}^{n - 1} \subset  {I}_{0} \) ,使得
+
+\[
+f\left( {I}_{0}^{n - 1}\right)  \subset  {I}_{1},{f}^{2}\left( {I}_{0}^{n - 1}\right)  \subset  {I}_{2},\cdots ,{f}^{n - 2}\left( {I}_{0}^{n - 1}\right)  \subset  {I}_{n - 2},{f}^{n - 1}\left( {I}_{0}^{n - 1}\right)  = {I}_{n - 1}. \tag{5.7}
+\]
+
+用最后一个条件 \( f\left( {I}_{n - 1}\right)  \supset  {I}_{0} \) ,有 \( {f}^{n}\left( {I}_{0}^{n - 1}\right)  \supset  {I}_{0} \supset  {I}_{0}^{n - 1} \) . 对于区间 \( {I}_{0}^{n - 1} \) 上的 \( {f}^{n} \) 应用引理 1,知道存在 \( {f}^{n} \) 的不动点 \( {x}_{0} \in  {I}_{0}^{n - 1} \subset  {I}_{0} \) ,使得 \( {f}^{n}\left( {x}_{0}\right)  = {x}_{0} \) .
+
+同时由 (5.7),可见 \( f\left( {x}_{0}\right)  \in  {I}_{1},{f}^{2}\left( {x}_{0}\right)  \in  {I}_{2},\cdots ,{f}^{n - 1}\left( {x}_{0}\right)  \in  {I}_{n - 1} \) .
+
+命题 5.6.1 (Li-Yorke 第一定理) 的证明 定义区间 \( L = \left\lbrack  {a, b}\right\rbrack  , K = \left\lbrack  {b, c}\right\rbrack \) ,则从定理的主要条件
+
+\[
+f\left( a\right)  = b, f\left( b\right)  = c, f\left( c\right)  = d,\;d \leq  a < b < c\text{ (或 }d \geq  a > b > c\text{ ), }
+\]
+
+可以看出有
+
+\[
+f\left( L\right)  \supset  K, f\left( K\right)  \supset  L, f\left( K\right)  \supset  K\text{ . }
+\]
+
+现在对每个正整数 \( n \) ,寻找最小周期为 \( n \) 的周期点. 分以下几种情况分别讨论.
+
+(i) \( n = 1 \) . 从 \( f\left( K\right)  \supset  K \) 和引理 1 即得.
+
+(ii) \( n = 2 \) . 从 \( f\left( L\right)  \supset  K, f\left( K\right)  \supset  L \) 和引理 3 知,存在点 \( {x}_{0} \in  L \) ,满足 \( f\left( {x}_{0}\right)  \in  K \) 和 \( {f}^{2}\left( {x}_{0}\right)  = {x}_{0} \) . 如果点 \( {x}_{0} \) 的最小周期不是 2,则 \( {x}_{0} \) 就是 \( f \) 的不动点, 即 \( {x}_{0} = f\left( {x}_{0}\right) \) . 由于 \( {x}_{0} \in  L \) 和 \( f\left( {x}_{0}\right)  \in  K \) ,而 \( L \cap  K = \{ b\} \) ,因此只能是 \( {x}_{0} = b \) . 但已知 \( f\left( b\right)  = c > b, b \) 不会是不动点,引出矛盾.
+
+(iii) \( n \geq  3 \) . 令 \( {I}_{0} = L,{I}_{1} = {I}_{2} = \cdots  = {I}_{n - 1} = K \) ,这样就如图 5.3 所示构成了一个圈. 图中所用的记号 \( I \rightarrow  J \) 表示 \( f\left( I\right)  \supset  J \) . 从 \( f\left( L\right)  \supset  K, f\left( K\right)  \supset  K \) 和 \( f\left( K\right)  \supset  L \) 可见这个圈是成立的,也就是说引理 3 的条件满足.
+
+![bo_d7fstb491nqc7381io20_167_347_1569_845_174_0.jpg](images/xie_analysis_exercises_upper_005_bod7fstb491nqc7381io2016734715698451740.jpg)
+
+图 5.3
+
+对于所取的 \( n \) 个区间应用引理 3,知道存在点 \( {x}_{0} \in  L \) ,满足
+
+\[
+{f}^{n}\left( {x}_{0}\right)  = {x}_{0},{f}^{i}\left( {x}_{0}\right)  \in  K, i = 1,\cdots , n - 1. \tag{5.8}
+\]
+
+若 \( n \) 不是点 \( {x}_{0} \) 的最小周期,则有 \( p,1 \leq  p < n \) ,使得 \( {f}^{p}\left( {x}_{0}\right)  = {x}_{0} \) . 由于这时 \( {f}^{p}\left( {x}_{0}\right)  \in  K \) ,而 \( {x}_{0} \in  L \) ,因此与 (ii) 一样,只能有 \( {x}_{0} = b \) . 但从条件 \( n \geq  3 \) 和 \( {f}^{2}\left( {x}_{0}\right)  = {f}^{2}\left( b\right)  = f\left( {f\left( b\right) }\right)  = f\left( c\right)  = d \leq  a \) 可见 \( {f}^{2}\left( {x}_{0}\right)  \notin  K \) ,与 (5.8) 相矛盾.
+
+例题 5.6.4 在区间 \( \left\lbrack  {0,1}\right\rbrack \) 上定义分段线性函数 (其图像在图 5.4 上用粗黑的折线表示):
+
+\[
+f\left( x\right)  = \left\{  \begin{array}{ll} x + \frac{1}{2}, & 0 \leq  x \leq  \frac{1}{2}, \\  2\left( {1 - x}\right) , & \frac{1}{2} < x \leq  1, \end{array}\right.
+\]
+
+则 \( f \) 对一切 \( n \in  {\mathbf{N}}_{ + } \) 存在以 \( n \) 为最小周期的周期轨.
+
+证 取 \( a = 0, b = \frac{1}{2}, c = 1 \) ,则有 \( f\left( 0\right)  = \frac{1}{2}, f\left( \frac{1}{2}\right)  = 1, f\left( 1\right)  = 0 \) . 因此从 Li-Yorke 第一定理知道结论成立.
+
+注 从图 5.4 可以清楚地看出, 其中有周期 3 轨 \( \left\{  {0,\frac{1}{2},1}\right\} \) ,还有不动点 \( \frac{2}{3} \) 和由 \( \left\{  {\frac{1}{3},\frac{5}{6}}\right\} \) 组成的周期 2 轨，其中周期 2 轨还特地用粗黑线的方框标出. 图 5.4 中的箭头是按照第二章 \( \text{ § }{2.6} \) 中介绍的蛛网工作法作出的. 由于命题 5.6.1, 在这样简单地由两段直线组成的图像上还存在无穷多个其周期取到一切正整数的周期轨，这完全超出了几何上的直观想像. 在 [34] 发表之前很少有人能想到如此简单的函数会有如此奇妙的可能性.
+
+![bo_d7fstb491nqc7381io20_168_934_659_534_549_0.jpg](images/xie_analysis_exercises_upper_006_bod7fstb491nqc7381io201689346595345490.jpg)
+
+图 5.4
+
+现在介绍 [34] 中的第二个定理. 虽然我们在这里并不证明, 但了解一下它的内容也是很有意义的. 这里的主要预备知识就是在第三章中的上、下极限.
+
+命题 5.6.2 (Li-Yorke 第二定理) 在与命题 5.6.1 相同的条件下,在区间 \( I \) 中存在一个不可列集 \( S \) ,使得以 \( S \) 中的任何两点 \( x, y\left( {x \neq  y}\right) \) 为初值的迭代生成数列 \( \left\{  {{f}^{n}\left( x\right) }\right\} \) 和 \( \left\{  {{f}^{n}\left( y\right) }\right\} \) 具有以下三个性质:
+
+(1) \( \overline{\mathop{\lim }\limits_{{n \rightarrow  \infty }}}\left| {{f}^{n}\left( x\right)  - {f}^{n}\left( y\right) }\right|  > 0 \) , (2) \( \mathop{\lim }\limits_{{n \rightarrow  \infty }}\left| {{f}^{n}\left( x\right)  - {f}^{n}\left( y\right) }\right|  = 0 \) , (3) \( \overline{\mathop{\lim }\limits_{{n \rightarrow  \infty }}}\left| {{f}^{n}\left( x\right)  - {f}^{n}\left( p\right) }\right|  > 0 \) ,
+
+其中 \( p \) 是 \( f \) 的任何一个周期点.
+
+根据我们对上、下极限的理解,可以看出,由 \( S \) 中任意两点出发的两个轨道 (就是两个迭代生成数列) 既会无限靠近, 但又总会分离开. 这样复杂的性态超出了过去的认识. 因此就产生出 Li-Yorke 混沌 的定义.
+
+定义 设 \( f \) 在区间 \( I \) 上有定义,且有 \( f\left( I\right)  \subset  I \) . 如果满足以下条件:
+
+(1) \( f \) 的周期点的最小周期无上界；
+
+(2)存在 \( I \) 的不可列子集 \( S \) ,对于 \( S \) 中的任意两点 \( x, y, x \neq  y \) ,均有
+
+(i) \( \overline{\mathop{\lim }\limits_{{n \rightarrow  \infty }}}\left| {{f}^{n}\left( x\right)  - {f}^{n}\left( y\right) }\right|  > 0 \) , (ii) \( \mathop{\lim }\limits_{{n \rightarrow  \infty }}\left| {{f}^{n}\left( x\right)  - {f}^{n}\left( y\right) }\right|  = 0 \) ,
+
+则称由 \( f \) 迭代生成的动力系统为混沌.
+
+应当指出, 混沌在数学上目前存在各种不同的定义. 而上述的 Li-Yorke 定义是在数学上第一个可操作的混沌定义. 对混沌有兴趣的读者可以从 \( \left\lbrack  {{21},{34},{38},{39}}\right\rbrack \) 中得到比这里丰富得多的材料.
