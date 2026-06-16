@@ -1,0 +1,245 @@
+{
+  "generatedAt": "2026-06-13",
+  "summary": {
+    "generatedAt": "2026-06-13",
+    "total": 2,
+    "pending": 1,
+    "wrongAgain": 1,
+    "mastered": 0,
+    "due": 2,
+    "overdue": 2,
+    "issueCount": 0,
+    "statusCounts": [
+      {
+        "name": "待复习",
+        "count": 1
+      },
+      {
+        "name": "仍错",
+        "count": 1
+      }
+    ],
+    "priorityCounts": [
+      {
+        "name": "P2",
+        "count": 1
+      },
+      {
+        "name": "P1",
+        "count": 1
+      }
+    ],
+    "modules": [
+      {
+        "name": "数列",
+        "count": 1
+      },
+      {
+        "name": "基本不等式",
+        "count": 1
+      }
+    ],
+    "reasons": [
+      {
+        "name": "关键结论遗忘",
+        "count": 1
+      },
+      {
+        "name": "方法选择",
+        "count": 1
+      },
+      {
+        "name": "等价变形",
+        "count": 1
+      },
+      {
+        "name": "计算失误",
+        "count": 1
+      }
+    ],
+    "methods": [
+      {
+        "name": "特征方程",
+        "count": 1
+      },
+      {
+        "name": "通项验证",
+        "count": 1
+      },
+      {
+        "name": "选项排除",
+        "count": 1
+      },
+      {
+        "name": "换元",
+        "count": 1
+      },
+      {
+        "name": "乘积定值求和最小",
+        "count": 1
+      }
+    ],
+    "knowledge": [
+      {
+        "name": "递推数列",
+        "count": 1
+      },
+      {
+        "name": "特征根",
+        "count": 1
+      },
+      {
+        "name": "极限比值",
+        "count": 1
+      },
+      {
+        "name": "基本不等式",
+        "count": 1
+      },
+      {
+        "name": "代入消元",
+        "count": 1
+      },
+      {
+        "name": "对称结构",
+        "count": 1
+      }
+    ],
+    "priority": [
+      {
+        "title": "1-1-1 基本不等式错题示例",
+        "file": "01_错题/1_基本不等式/1-1_基本不等式/1-1-1_错题示例.md",
+        "priority": "P1",
+        "module": "基本不等式",
+        "status": "仍错",
+        "nextReview": "2026-05-29"
+      },
+      {
+        "title": "10-3-1 数列特征根错题示例",
+        "file": "01_错题/10_数列/10-3_特征根/10-3-1_错题示例.md",
+        "priority": "P2",
+        "module": "数列",
+        "status": "待复习",
+        "nextReview": "2026-05-31"
+      }
+    ],
+    "calendar": [
+      {
+        "date": "2026-06-13",
+        "items": []
+      },
+      {
+        "date": "2026-06-14",
+        "items": []
+      },
+      {
+        "date": "2026-06-15",
+        "items": []
+      },
+      {
+        "date": "2026-06-16",
+        "items": []
+      },
+      {
+        "date": "2026-06-17",
+        "items": []
+      },
+      {
+        "date": "2026-06-18",
+        "items": []
+      },
+      {
+        "date": "2026-06-19",
+        "items": []
+      },
+      {
+        "date": "2026-06-20",
+        "items": []
+      },
+      {
+        "date": "2026-06-21",
+        "items": []
+      },
+      {
+        "date": "2026-06-22",
+        "items": []
+      },
+      {
+        "date": "2026-06-23",
+        "items": []
+      },
+      {
+        "date": "2026-06-24",
+        "items": []
+      },
+      {
+        "date": "2026-06-25",
+        "items": []
+      },
+      {
+        "date": "2026-06-26",
+        "items": []
+      }
+    ]
+  },
+  "issues": [],
+  "notes": [
+    {
+      "title": "1-1-1 基本不等式错题示例",
+      "file": "01_错题/1_基本不等式/1-1_基本不等式/1-1-1_错题示例.md",
+      "wrong_id": "1-1-1-W001",
+      "lesson_id": "1-1",
+      "module_id": "1",
+      "module": "基本不等式",
+      "topic": "基本不等式",
+      "priority": "P1",
+      "status": "仍错",
+      "mastery": 2,
+      "wrong_reason": [
+        "等价变形",
+        "计算失误"
+      ],
+      "knowledge_points": [
+        "基本不等式",
+        "代入消元",
+        "对称结构"
+      ],
+      "methods": [
+        "换元",
+        "乘积定值求和最小"
+      ],
+      "created": "2026-05-28",
+      "last_review": "2026-05-28",
+      "next_review": "2026-05-29"
+    },
+    {
+      "title": "10-3-1 数列特征根错题示例",
+      "file": "01_错题/10_数列/10-3_特征根/10-3-1_错题示例.md",
+      "wrong_id": "10-3-1-W001",
+      "lesson_id": "10-3",
+      "module_id": "10",
+      "module": "数列",
+      "topic": "特征根",
+      "priority": "P2",
+      "status": "待复习",
+      "mastery": 2,
+      "wrong_reason": [
+        "关键结论遗忘",
+        "方法选择"
+      ],
+      "knowledge_points": [
+        "递推数列",
+        "特征根",
+        "极限比值"
+      ],
+      "methods": [
+        "特征方程",
+        "通项验证",
+        "选项排除"
+      ],
+      "created": "2026-05-28",
+      "last_review": "",
+      "next_review": "2026-05-31"
+    }
+  ]
+}

@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>个人错题库看板</title>
+  <style>
+    :root {
+      --bg: #f7f7f4;
+      --panel: #ffffff;
+      --text: #1f2933;
+      --muted: #637083;
+      --line: #dfe3e8;
+      --accent: #2f8f83;
+      --warn: #b65f34;
+      --blue: #536d9e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    main { max-width: 1180px; margin: 0 auto; padding: 28px 18px 42px; }
+    header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: flex-end;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 18px;
+      margin-bottom: 18px;
+    }
+    h1 { margin: 0; font-size: 28px; letter-spacing: 0; }
+    h2 { margin: 0 0 12px; font-size: 18px; letter-spacing: 0; }
+    .muted { color: var(--muted); }
+    .links { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+    .quick {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 12px;
+      background: #fff;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .quick.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .toolbar { margin: 0 0 10px; }
+    input {
+      width: min(340px, 100%);
+      height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0 11px;
+      font: inherit;
+      background: #fff;
+    }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin: 18px 0; }
+    .card, section { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
+    .card b { display: block; color: var(--muted); font-size: 13px; font-weight: 600; }
+    .value { font-size: 30px; font-weight: 750; margin-top: 4px; }
+    .layout { display: grid; grid-template-columns: 1.1fr .9fr; gap: 14px; margin-top: 14px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { text-align: left; border-bottom: 1px solid var(--line); padding: 9px 6px; vertical-align: top; }
+    th { color: var(--muted); font-weight: 650; }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .bar { height: 10px; background: #ecefeb; border-radius: 999px; overflow: hidden; margin-top: 8px; }
+    .fill { height: 100%; width: 0%; background: var(--accent); }
+    .pill { display: inline-block; border: 1px solid var(--line); border-radius: 999px; padding: 2px 8px; font-size: 12px; color: var(--muted); background: #fbfbf9; }
+    .empty { padding: 26px; text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 8px; background: #fbfbf9; }
+    code { background: #eef1f3; border-radius: 4px; padding: 2px 5px; font-family: Consolas, monospace; }
+    @media (max-width: 900px) { header { display: block; } .links { justify-content: flex-start; margin-top: 10px; } .grid, .layout { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <h1>个人错题库看板</h1>
+      <div class="muted">错题、复习、体检和薄弱点一屏看清</div>
+    </div>
+    <nav class="links">
+      <a class="quick primary" href="今日学习路线.md">今日路线</a>
+      <a class="quick" href="错题统计.md">错题统计</a>
+      <a class="quick" href="系统体检.md">系统体检</a>
+      <a class="quick" href="相似题推荐.md">相似题</a>
+      <a class="quick" href="错题关联笔记.md">关联笔记</a>
+    </nav>
+  </header>
+  <div class="muted">更新日期：<span id="generatedAt"></span></div>
+
+  <div class="grid">
+    <div class="card"><b>总错题</b><div class="value" id="total">0</div></div>
+    <div class="card"><b>待复习</b><div class="value" id="pending">0</div></div>
+    <div class="card"><b>今日队列</b><div class="value" id="due">0</div></div>
+    <div class="card"><b>仍错</b><div class="value" id="wrongAgain">0</div></div>
+    <div class="card"><b>已掌握</b><div class="value" id="mastered">0</div></div>
+    <div class="card"><b>逾期</b><div class="value" id="overdue">0</div></div>
+    <div class="card"><b>体检问题</b><div class="value" id="issueCount">0</div></div>
+  </div>
+
+  <div class="layout">
+    <section>
+      <h2>优先复习</h2>
+      <div class="toolbar"><input id="prioritySearch" placeholder="筛选错题、专题或状态"></div>
+      <div id="priorityEmpty" class="empty">优先显示 P1、待复习、仍错或到期的题。</div>
+      <table id="priorityTable" hidden>
+        <thead><tr><th>错题</th><th>优先级</th><th>专题</th><th>状态</th><th>下次复习</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>高频错因</h2>
+      <div id="reasonEmpty" class="empty">导入错题后，这里用于查看重复出现的错误类型。</div>
+      <table id="reasonTable" hidden>
+        <thead><tr><th>错因</th><th>次数</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+
+  <div class="layout">
+    <section>
+      <h2>专题分布</h2>
+      <div id="moduleEmpty" class="empty">暂无错题。</div>
+      <table id="moduleTable" hidden>
+        <thead><tr><th>专题</th><th>数量</th><th>占比</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>接下来 14 天</h2>
+      <div id="calendarEmpty" class="empty">暂无已安排日期的复习。</div>
+      <table id="calendarTable" hidden>
+        <thead><tr><th>日期</th><th>题数</th><th>题目</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+</main>
+
+<script>
+const data = {
+  "generatedAt": "2026-06-13",
+  "total": 2,
+  "pending": 1,
+  "wrongAgain": 1,
+  "mastered": 0,
+  "due": 2,
+  "overdue": 2,
+  "issueCount": 0,
+  "statusCounts": [
+    {
+      "name": "待复习",
+      "count": 1
+    },
+    {
+      "name": "仍错",
+      "count": 1
+    }
+  ],
+  "priorityCounts": [
+    {
+      "name": "P2",
+      "count": 1
+    },
+    {
+      "name": "P1",
+      "count": 1
+    }
+  ],
+  "modules": [
+    {
+      "name": "数列",
+      "count": 1
+    },
+    {
+      "name": "基本不等式",
+      "count": 1
+    }
+  ],
+  "reasons": [
+    {
+      "name": "关键结论遗忘",
+      "count": 1
+    },
+    {
+      "name": "方法选择",
+      "count": 1
+    },
+    {
+      "name": "等价变形",
+      "count": 1
+    },
+    {
+      "name": "计算失误",
+      "count": 1
+    }
+  ],
+  "methods": [
+    {
+      "name": "特征方程",
+      "count": 1
+    },
+    {
+      "name": "通项验证",
+      "count": 1
+    },
+    {
+      "name": "选项排除",
+      "count": 1
+    },
+    {
+      "name": "换元",
+      "count": 1
+    },
+    {
+      "name": "乘积定值求和最小",
+      "count": 1
+    }
+  ],
+  "knowledge": [
+    {
+      "name": "递推数列",
+      "count": 1
+    },
+    {
+      "name": "特征根",
+      "count": 1
+    },
+    {
+      "name": "极限比值",
+      "count": 1
+    },
+    {
+      "name": "基本不等式",
+      "count": 1
+    },
+    {
+      "name": "代入消元",
+      "count": 1
+    },
+    {
+      "name": "对称结构",
+      "count": 1
+    }
+  ],
+  "priority": [
+    {
+      "title": "1-1-1 基本不等式错题示例",
+      "file": "01_错题/1_基本不等式/1-1_基本不等式/1-1-1_错题示例.md",
+      "priority": "P1",
+      "module": "基本不等式",
+      "status": "仍错",
+      "nextReview": "2026-05-29"
+    },
+    {
+      "title": "10-3-1 数列特征根错题示例",
+      "file": "01_错题/10_数列/10-3_特征根/10-3-1_错题示例.md",
+      "priority": "P2",
+      "module": "数列",
+      "status": "待复习",
+      "nextReview": "2026-05-31"
+    }
+  ],
+  "calendar": [
+    {
+      "date": "2026-06-13",
+      "items": []
+    },
+    {
+      "date": "2026-06-14",
+      "items": []
+    },
+    {
+      "date": "2026-06-15",
+      "items": []
+    },
+    {
+      "date": "2026-06-16",
+      "items": []
+    },
+    {
+      "date": "2026-06-17",
+      "items": []
+    },
+    {
+      "date": "2026-06-18",
+      "items": []
+    },
+    {
+      "date": "2026-06-19",
+      "items": []
+    },
+    {
+      "date": "2026-06-20",
+      "items": []
+    },
+    {
+      "date": "2026-06-21",
+      "items": []
+    },
+    {
+      "date": "2026-06-22",
+      "items": []
+    },
+    {
+      "date": "2026-06-23",
+      "items": []
+    },
+    {
+      "date": "2026-06-24",
+      "items": []
+    },
+    {
+      "date": "2026-06-25",
+      "items": []
+    },
+    {
+      "date": "2026-06-26",
+      "items": []
+    }
+  ]
+};
+function text(id, value) { document.getElementById(id).textContent = value; }
+function renderTable(tableId, emptyId, rows, cells) {
+  const table = document.getElementById(tableId);
+  const empty = document.getElementById(emptyId);
+  const body = table.querySelector("tbody");
+  body.innerHTML = "";
+  if (!rows.length) { table.hidden = true; empty.hidden = false; return; }
+  table.hidden = false;
+  empty.hidden = true;
+  for (const row of rows) {
+    const tr = document.createElement("tr");
+    for (const cell of cells(row)) {
+      const td = document.createElement("td");
+      if (cell && cell.html) td.innerHTML = cell.html;
+      else td.textContent = cell ?? "";
+      tr.appendChild(td);
+    }
+    body.appendChild(tr);
+  }
+}
+text("generatedAt", data.generatedAt);
+text("total", data.total);
+text("pending", data.pending);
+text("due", data.due);
+text("wrongAgain", data.wrongAgain);
+text("mastered", data.mastered);
+text("overdue", data.overdue);
+text("issueCount", data.issueCount);
+function renderPriority(keyword = "") {
+  const q = keyword.trim().toLowerCase();
+  const rows = data.priority.filter(row => !q || `${row.title} ${row.module} ${row.status} ${row.priority}`.toLowerCase().includes(q));
+  renderTable("priorityTable", "priorityEmpty", rows, row => [
+    row.file ? {html: `<a href="../${row.file}">${row.title}</a>`} : row.title,
+    {html: `<span class="pill">${row.priority}</span>`},
+    row.module,
+    row.status,
+    row.nextReview
+  ]);
+}
+renderPriority();
+document.getElementById("prioritySearch").addEventListener("input", event => renderPriority(event.target.value));
+renderTable("reasonTable", "reasonEmpty", data.reasons, row => [row.name, row.count]);
+renderTable("moduleTable", "moduleEmpty", data.modules, row => [row.name, row.count, data.total ? Math.round(row.count / data.total * 100) + "%" : "0%"]);
+const calendarRows = data.calendar.filter(day => day.items.length);
+renderTable("calendarTable", "calendarEmpty", calendarRows, row => [
+  row.date,
+  row.items.length,
+  row.items.map(item => item.title).join("；")
+]);
+</script>
+</body>
+</html>
