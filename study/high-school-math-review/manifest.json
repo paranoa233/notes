@@ -2,8 +2,8 @@
   "title": "高中数学复习系统",
   "generatedAt": "2026-06-16T14:08:13.570Z",
   "source": "C:/Users/lucky12345/Documents/高中数学复习",
-  "fileCount": 5229,
-  "totalSize": 45489753,
+  "fileCount": 5227,
+  "totalSize": 39884041,
   "omitted": {
     "mp4": {
       "count": 243,
@@ -12,6 +12,11 @@
     "pdf": {
       "count": 734,
       "size": 4589836997
+    },
+    "zip": {
+      "count": 2,
+      "size": 5605712,
+      "note": "Archived zip bundles are omitted from the GitHub Pages mirror; source contents remain available as browsable files where extracted."
     }
   },
   "files": [
@@ -356,15 +361,6 @@
       "category": "分类版",
       "size": 18947,
       "modified": "2026-05-13T14:31:37.096Z"
-    },
-    {
-      "path": "分类版/学生版讲义合集_含目录-20260527171204.zip",
-      "name": "学生版讲义合集_含目录-20260527171204.zip",
-      "title": "学生版讲义合集_含目录-20260527171204",
-      "ext": "zip",
-      "category": "分类版",
-      "size": 2864317,
-      "modified": "2026-05-27T09:12:05.319Z"
     },
     {
       "path": "高考概率统计/[1.1]--课前的话.html",
@@ -31640,15 +31636,6 @@
       "category": "高考数学五年经典",
       "size": 74,
       "modified": "2026-05-28T20:11:15.326Z"
-    },
-    {
-      "path": "高考数学五年经典/高考数学五年经典_原书顺序合并版-20260529035403.zip",
-      "name": "高考数学五年经典_原书顺序合并版-20260529035403.zip",
-      "title": "高考数学五年经典_原书顺序合并版-20260529035403",
-      "ext": "zip",
-      "category": "高考数学五年经典",
-      "size": 2741395,
-      "modified": "2026-05-28T19:54:04.249Z"
     },
     {
       "path": "高考数学五年经典/extract_problems.py",
