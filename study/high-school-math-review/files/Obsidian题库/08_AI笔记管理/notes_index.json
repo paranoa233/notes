@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2026-06-13",
+  "total": 2,
+  "issueCount": 0,
+  "statusCounts": {
+    "ready": 2
+  },
+  "kindCounts": {
+    "方法卡片": 2
+  },
+  "confidenceCounts": {
+    "high": 2
+  },
+  "moduleCounts": {
+    "数列": 1,
+    "基本不等式": 1
+  },
+  "inbox": {
+    "total": 0,
+    "pending": 0,
+    "processed": 0,
+    "kindCounts": {}
+  },
+  "conversion": {
+    "needsReview": [],
+    "missingProblemLinks": [],
+    "invalidProblemLinks": [],
+    "wrongCandidates": [],
+    "methodCandidates": [],
+    "summary": {
+      "needsReview": 0,
+      "missingProblemLinks": 0,
+      "invalidProblemLinks": 0,
+      "wrongCandidates": 0,
+      "methodCandidates": 0
+    }
+  },
+  "issues": [],
+  "notes": [
+    {
+      "title": "二阶递推特征方程",
+      "file": "08_AI笔记管理/02_标准笔记/10_数列/10-3_特征根/AI-SEED-10-3-001_二阶递推特征方程.md",
+      "note_id": "AI-SEED-10-3-001",
+      "note_kind": "方法卡片",
+      "status": "ready",
+      "module_id": "10",
+      "module": "数列",
+      "lesson_id": "10-3",
+      "topic": "特征根",
+      "classification_confidence": "high"
+    },
+    {
+      "title": "乘积定值求和最小",
+      "file": "08_AI笔记管理/02_标准笔记/1_基本不等式/1-1_基本不等式/AI-SEED-1-1-001_乘积定值求和最小.md",
+      "note_id": "AI-SEED-1-1-001",
+      "note_kind": "方法卡片",
+      "status": "ready",
+      "module_id": "1",
+      "module": "基本不等式",
+      "lesson_id": "1-1",
+      "topic": "基本不等式",
+      "classification_confidence": "high"
+    }
+  ]
+}
