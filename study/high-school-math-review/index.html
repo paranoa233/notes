@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>高中数学复习系统</title>
+  <meta
+    name="description"
+    content="高中数学复习题库、讲义、错题库和 LLM 知识库的在线阅读入口。"
+  >
+  <meta name="theme-color" content="#f8fafc">
+  <link rel="stylesheet" href="./style.css">
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [["$", "$"], ["\\(", "\\)"]],
+        displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      },
+      chtml: {
+        scale: 1,
+        matchFontHeight: false
+      }
+    };
+  </script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="back-link" href="../../index.html">返回 notes</a>
+      <div>
+        <p class="eyebrow">高中数学复习</p>
+        <h1>题库、讲义与笔记</h1>
+      </div>
+      <a class="source-link" href="./files/README.md">源入口</a>
+    </header>
+
+    <main class="workspace">
+      <aside class="sidebar">
+        <label class="search-box">
+          <span>搜索</span>
+          <input id="search" type="search" placeholder="题号、主题、文件名">
+        </label>
+
+        <section class="quick-section">
+          <h2>常用入口</h2>
+          <div id="quick-links" class="quick-links"></div>
+        </section>
+
+        <section class="quick-section">
+          <h2>文件</h2>
+          <p id="result-count" class="result-count">正在载入...</p>
+          <div id="file-list" class="file-list"></div>
+        </section>
+      </aside>
+
+      <section class="reader">
+        <header class="reader-head">
+          <div>
+            <p id="file-meta" class="file-meta"></p>
+            <h2 id="file-title">正在载入...</h2>
+          </div>
+          <div class="reader-actions">
+            <a id="raw-link" class="button" href="#" target="_blank" rel="noopener">打开原文件</a>
+          </div>
+        </header>
+        <nav id="toc" class="toc is-hidden"></nav>
+        <article id="content" class="content"></article>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  <script src="./app.js" defer></script>
+</body>
+</html>
