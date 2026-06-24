@@ -29,7 +29,8 @@ const state = {
   activePath: "",
   query: "",
   group: "all",
-  visibleLimit: LIST_PAGE_SIZE
+  visibleLimit: LIST_PAGE_SIZE,
+  openRequestId: 0
 };
 
 const elements = {
@@ -805,6 +806,7 @@ function renderDownloadCard(file) {
 }
 
 async function openFile(path, anchor = "") {
+  const requestId = ++state.openRequestId;
   const file = state.byPath.get(path);
   if (!file) {
     elements.fileTitle.textContent = "没有找到文件";
@@ -837,6 +839,9 @@ async function openFile(path, anchor = "") {
     }
 
     const { text, tooLarge } = await fetchUtf8Text(path);
+    if (requestId !== state.openRequestId || state.activePath !== path) {
+      return;
+    }
     if (ext === "md") {
       await renderMarkdown(file, text, anchor);
     } else if (ext === "json" && !tooLarge) {
