@@ -567,9 +567,78 @@ function fileMatches(file, query) {
   return normalize([file.title, file.name, file.path, file.category, file.ext].join(" ")).includes(query);
 }
 
+function scoreFile(file, query) {
+  if (!query) {
+    return 0;
+  }
+
+  const title = normalize(file.title);
+  const name = normalize(file.name);
+  const path = normalize(file.path);
+  const category = normalize(file.category);
+  const ext = normalize(file.ext);
+  const terms = query.split(/\s+/).filter(Boolean);
+
+  return terms.reduce((score, term) => {
+    if (title === term) score += 120;
+    else if (title.startsWith(term)) score += 95;
+    else if (title.includes(term)) score += 75;
+
+    if (name === term) score += 100;
+    else if (name.startsWith(term)) score += 80;
+    else if (name.includes(term)) score += 60;
+
+    if (path.includes(term)) score += 42;
+    if (category.includes(term)) score += 24;
+    if (ext === term) score += 10;
+
+    return score;
+  }, 0) - Math.min(file.path.length / 500, 8);
+}
+
+function createFileButton(file, options = {}) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = [
+    "file-item",
+    file.path === state.activePath ? "is-active" : "",
+    options.pinned ? "is-pinned" : ""
+  ].filter(Boolean).join(" ");
+
+  const badge = document.createElement("span");
+  badge.className = "file-badge";
+  badge.textContent = file.ext ? file.ext.toUpperCase() : "FILE";
+
+  const text = document.createElement("span");
+  text.className = "file-text";
+
+  if (options.pinned) {
+    const current = document.createElement("span");
+    current.className = "file-current-label";
+    current.textContent = "当前打开";
+    text.appendChild(current);
+  }
+
+  const title = document.createElement("span");
+  title.className = "file-title";
+  title.textContent = file.title || file.name;
+
+  const path = document.createElement("span");
+  path.className = "file-path";
+  path.textContent = file.path;
+
+  text.append(title, path);
+  button.append(badge, text);
+  button.addEventListener("click", () => setRoute(file.path));
+  return button;
+}
+
 function renderFileList() {
   const query = normalize(state.query);
   const allMatches = state.files.filter((file) => fileMatches(file, query));
+  if (query) {
+    allMatches.sort((a, b) => scoreFile(b, query) - scoreFile(a, query) || a.path.localeCompare(b.path, "zh-Hans-CN"));
+  }
   const matches = allMatches.slice(0, state.visibleLimit);
 
   elements.resultCount.textContent = query
@@ -577,39 +646,24 @@ function renderFileList() {
     : `${allMatches.length} 个文件，显示 ${matches.length} 个`;
 
   elements.fileList.innerHTML = "";
+  const fragment = document.createDocumentFragment();
+  const activeFile = state.activePath ? state.byPath.get(state.activePath) : null;
+  const activeVisible = activeFile && matches.some((file) => file.path === activeFile.path);
+  if (activeFile && !activeVisible) {
+    fragment.appendChild(createFileButton(activeFile, { pinned: true }));
+  }
+
   if (!allMatches.length) {
     const empty = document.createElement("div");
     empty.className = "empty-list";
     empty.textContent = "没有找到匹配文件。";
-    elements.fileList.appendChild(empty);
+    fragment.appendChild(empty);
+    elements.fileList.appendChild(fragment);
     return;
   }
 
-  const fragment = document.createDocumentFragment();
   matches.forEach((file) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = `file-item${file.path === state.activePath ? " is-active" : ""}`;
-
-    const badge = document.createElement("span");
-    badge.className = "file-badge";
-    badge.textContent = file.ext ? file.ext.toUpperCase() : "FILE";
-
-    const text = document.createElement("span");
-    text.className = "file-text";
-
-    const title = document.createElement("span");
-    title.className = "file-title";
-    title.textContent = file.title || file.name;
-
-    const path = document.createElement("span");
-    path.className = "file-path";
-    path.textContent = file.path;
-
-    text.append(title, path);
-    button.append(badge, text);
-    button.addEventListener("click", () => setRoute(file.path));
-    fragment.appendChild(button);
+    fragment.appendChild(createFileButton(file));
   });
 
   if (allMatches.length > matches.length) {
