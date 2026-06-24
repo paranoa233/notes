@@ -9,6 +9,7 @@
     content="高中数学复习题库、讲义、错题库和 LLM 知识库的在线阅读入口。"
   >
   <meta name="theme-color" content="#f8fafc">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f6b6d'/%3E%3Cpath d='M8 11h16M8 16h16M8 21h10' stroke='white' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="./style.css">
   <script>
     window.MathJax = {
@@ -26,12 +27,17 @@
 <body>
   <div class="app-shell">
     <header class="topbar">
-      <a class="back-link" href="../../index.html">返回 notes</a>
-      <div>
+      <div class="nav-actions">
+        <a class="back-link" href="../../index.html">返回 notes</a>
+      </div>
+      <div class="topbar-title">
         <p class="eyebrow">高中数学复习</p>
         <h1>题库、讲义与笔记</h1>
+        <p id="library-stats" class="library-stats">正在载入资料库...</p>
       </div>
-      <a class="source-link" href="./files/README.md">源入口</a>
+      <div class="nav-actions nav-actions--right">
+        <a class="source-link" href="./files/README.md">源入口</a>
+      </div>
     </header>
 
     <main class="workspace">
@@ -48,6 +54,7 @@
 
         <section class="quick-section">
           <h2>文件</h2>
+          <div id="type-filters" class="type-filters" aria-label="文件类型筛选"></div>
           <p id="result-count" class="result-count">正在载入...</p>
           <div id="file-list" class="file-list"></div>
         </section>
@@ -69,8 +76,8 @@
     </main>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
   <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
   <script src="./app.js" defer></script>
 </body>
