@@ -2,10 +2,11 @@
 """Extract problems 401-800 from problems.json and output a summary."""
 import json
 import os
+from pathlib import Path
 
-BASE_DIR = r"C:\Users\lucky12345\Documents\高中数学复习\高考数学五年经典"
+BASE_DIR = Path(__file__).resolve().parent
 
-with open(os.path.join(BASE_DIR, "04_原始资料", "problems.json"), "r", encoding="utf-8") as f:
+with open(BASE_DIR / "04_原始资料" / "problems.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 problems = data["problems"]
@@ -23,7 +24,7 @@ existing_template = 0
 no_solution_yet = 0
 
 for i, p in enumerate(batch):
-    solution_path = os.path.join(BASE_DIR, p["solution_note"])
+    solution_path = BASE_DIR / p["solution_note"]
     if os.path.exists(solution_path):
         with open(solution_path, "r", encoding="utf-8") as f:
             content = f.read()

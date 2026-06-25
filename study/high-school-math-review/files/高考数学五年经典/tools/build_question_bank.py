@@ -391,8 +391,8 @@ def problem_paths(problem: dict) -> tuple[Path, Path, str, str]:
 def render_problem(problem: dict, lesson_link: str, solution_link: str) -> str:
     source_pdf = problem.get("source_pdf_uri", "")
     chapter_pdf = problem.get("chapter_pdf_uri", "")
-    pdf_line = f"> 原书PDF：[打开合并版PDF](<{source_pdf}>)  \n" if source_pdf else ""
-    chapter_line = f"> 章节PDF：[打开章节PDF](<{chapter_pdf}>)  \n" if chapter_pdf else ""
+    pdf_line = ""
+    chapter_line = ""
     fm = [
         "---",
         'type: "problem"',
@@ -488,8 +488,8 @@ def write_lesson_indices(lessons: list[dict], problems: list[dict]) -> None:
         lesson_path = VAULT / "03_讲义索引" / module_dir / f"{lesson['lesson_id']}_{slug(lesson['topic'])}.md"
         source_pdf = lesson.get("source_pdf_uri", "")
         chapter_pdf = lesson.get("chapter_pdf_uri", "")
-        source_line = f"- 原书PDF：[打开合并版PDF](<{source_pdf}>)" if source_pdf else ""
-        chapter_line = f"- 章节PDF：[打开章节PDF](<{chapter_pdf}>)" if chapter_pdf else ""
+        source_line = ""
+        chapter_line = ""
         question_dir = f"01_题目/{lesson['module_id']}_{slug(lesson['module'])}/{lesson['lesson_id']}_{slug(lesson['topic'])}"
         body = f"""---
 type: "lesson"

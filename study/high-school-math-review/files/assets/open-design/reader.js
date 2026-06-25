@@ -11,6 +11,14 @@
     return encodeURI(path).replace(/#/g, "%23");
   }
 
+  function decodePath(path) {
+    try {
+      return decodeURI(path);
+    } catch (_) {
+      return path;
+    }
+  }
+
   function dirname(path) {
     const index = path.lastIndexOf("/");
     return index >= 0 ? path.slice(0, index + 1) : "";
@@ -37,9 +45,13 @@
     return text
       .replace(/^\uFEFF/, "")
       .replace(/^---[\s\S]*?---\s*/, "")
+      .replace(/^\s*>?\s*-?\s*\u539fPDF：\[\u6253\u5f00\u5b66\u751f\u7248PDF\]\(<file:\/\/\/[^>\r\n]+>\)\s*$/gmi, "")
+      .replace(/^\s*>?\s*-?\s*(?:\u539f\u4e66PDF|\u7ae0\u8282PDF)：\[[^\]\r\n]+PDF\]\((?:<file:\/\/\/[^>\r\n]+>|\s*)\)\s*$/gmi, "")
+      .replace(/^\s*(?:source_pdf|source_pdf_uri|source_pdf_path|chapter_pdf_uri|chapter_pdf_path):\s*["']?(?:file:\/\/\/|[A-Za-z]:[\\/]|\\\\)[^\r\n]*$/gmi, "")
       .replace(/!\[\[([^\]]+\.(?:png|jpe?g|gif|webp|svg))\]\]/gi, "![]($1)")
       .replace(/\[\[([^|\]]+)\|([^\]]+)\]\]/g, "[$2]($1)")
-      .replace(/\[\[([^\]]+)\]\]/g, "[$1]($1)");
+      .replace(/\[\[([^\]]+)\]\]/g, "[$1]($1)")
+      .replace(/\n{3,}/g, "\n\n");
   }
 
   function escapeHtml(value) {
@@ -78,18 +90,19 @@
         anchor.setAttribute("rel", "noopener noreferrer");
         return;
       }
-      if (href.endsWith(".md") || href.includes(".md#")) {
-        const target = joinPath(baseDir, href);
+      const decodedHref = decodePath(href);
+      if (decodedHref.endsWith(".md") || decodedHref.includes(".md#")) {
+        const target = joinPath(baseDir, decodedHref);
         anchor.setAttribute("href", readerHref(target));
       } else if (!href.startsWith("#")) {
-        anchor.setAttribute("href", encodePath(joinPath(baseDir, href)));
+        anchor.setAttribute("href", encodePath(joinPath(baseDir, decodedHref)));
       }
     });
 
     content.querySelectorAll("img[src]").forEach((image) => {
       const src = image.getAttribute("src") || "";
       if (!/^(https?:)?\/\//.test(src)) {
-        image.setAttribute("src", encodePath(joinPath(baseDir, src)));
+        image.setAttribute("src", encodePath(joinPath(baseDir, decodePath(src))));
       }
     });
   }

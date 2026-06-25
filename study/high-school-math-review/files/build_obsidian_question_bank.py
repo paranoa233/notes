@@ -434,7 +434,7 @@ def problem_note(problem: dict, lesson_note_rel: Path, solution_rel: Path, exist
     tags = ["题库", "高中数学", f"module/{problem['module_id']}", f"lesson/{problem['lesson_id']}"]
     source_pdf_uri = problem.get("source_pdf_uri", "")
     source_pdf_path = problem.get("source_pdf", "")
-    source_pdf_block = f"> 原PDF：[打开学生版PDF](<{source_pdf_uri}>)  \n" if source_pdf_uri else ""
+    source_pdf_block = ""
     frontmatter = [
         "---",
         'type: "problem"',
@@ -498,7 +498,6 @@ def lesson_note(lesson: dict, count: int) -> str:
             f"source_pdf_path: {yaml_scalar(source_pdf_path)}\n"
             f"source_pdf_name: {yaml_scalar(lesson.get('source_pdf_name', ''))}\n"
         )
-        source_pdf_line = f"- 原PDF：[打开学生版PDF](<{source_pdf_uri}>)\n"
     return f"""---
 type: "lesson"
 lesson_id: {yaml_scalar(lesson["lesson_id"])}

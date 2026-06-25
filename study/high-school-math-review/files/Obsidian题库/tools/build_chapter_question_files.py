@@ -55,10 +55,7 @@ def clean_problem_text(content: str) -> str:
 
 
 def pdf_source_line(problem: dict, lesson: dict) -> str:
-    source_pdf_uri = problem.get("source_pdf_uri") or lesson.get("source_pdf_uri", "")
-    if not source_pdf_uri:
-        return ""
-    return f"> 原PDF：[打开学生版PDF](<{source_pdf_uri}>)"
+    return ""
 
 
 def main() -> int:
