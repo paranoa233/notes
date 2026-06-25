@@ -498,7 +498,7 @@ def render_workbench_html(results: list[dict[str, Any]], data: dict[str, Any]) -
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>高中数学复习工作台</title>
+<title>高中数学复习</title>
 <style>
   :root {{
     --bg:#f5f6f3;
@@ -643,27 +643,48 @@ def render_workbench_html(results: list[dict[str, Any]], data: dict[str, Any]) -
     h1 {{ font-size:25px; }}
   }}
 </style>
+<link rel="stylesheet" href="assets/open-design/workbench.css">
 </head>
 <body>
 <main class="shell">
-  <header>
-    <div>
-      <h1>高中数学复习工作台</h1>
-      <div class="sub">更新：<span id="generatedAt"></span></div>
-    </div>
+  <header class="topbar">
+    <a class="brand" href="学习工作台.html" aria-label="高中数学复习索引">
+      <span class="brand-mark">∑</span>
+      <span>高中数学复习</span>
+    </a>
     <nav class="actions" id="actions"></nav>
   </header>
 
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">复习索引</p>
+      <h1>高中数学复习</h1>
+      <div class="sub">更新：<span id="generatedAt"></span></div>
+      <div class="hero-actions">
+        <a id="heroRouteLink" class="action primary" href="#">今日路线</a>
+        <a id="heroDashboardLink" class="action" href="#">错题看板</a>
+        <a id="heroWikiLink" class="action" href="#">LLM Wiki</a>
+      </div>
+    </div>
+    <aside class="focus-panel" id="focusPanel">
+      <div class="panel-kicker">今日焦点</div>
+      <a class="focus-title" id="focusTitle" href="#">读取中</a>
+      <div class="small" id="focusMeta"></div>
+      <p class="focus-tip" id="focusTip"></p>
+      <a class="action primary" id="focusAction" href="#">打开错题</a>
+    </aside>
+  </section>
+
   <div class="metrics" id="metrics"></div>
 
-  <section>
+  <section class="panel route-panel">
     <div class="section-head">
       <h2>今日学习闭环</h2>
       <a id="routeLink" class="action" href="#">打开路线</a>
     </div>
-    <div class="table-wrap">
+    <div class="table-wrap route-table">
       <table>
-        <thead><tr><th>错题</th><th>优先状态</th><th>建议</th><th>AI 笔记</th><th>二轮题</th><th>五年题</th></tr></thead>
+        <thead><tr><th>错题</th><th>优先状态</th><th>建议</th><th>关联笔记</th><th>二轮题</th><th>五年题</th></tr></thead>
         <tbody id="routeRows"></tbody>
       </table>
     </div>
@@ -671,7 +692,7 @@ def render_workbench_html(results: list[dict[str, Any]], data: dict[str, Any]) -
   </section>
 
   <div class="grid-2">
-    <section>
+    <section class="panel">
       <div class="section-head">
         <h2>题库进度</h2>
         <div class="controls">
@@ -685,7 +706,7 @@ def render_workbench_html(results: list[dict[str, Any]], data: dict[str, Any]) -
       <div class="module-grid" id="moduleGrid"></div>
     </section>
 
-    <section>
+    <section class="panel">
       <div class="section-head">
         <h2>系统健康</h2>
         <a class="action" id="healthLink" href="#">体检</a>
@@ -700,7 +721,7 @@ def render_workbench_html(results: list[dict[str, Any]], data: dict[str, Any]) -
   </div>
 
   <div class="grid-2">
-    <section>
+    <section class="panel">
       <div class="section-head">
         <h2>高频信号</h2>
         <a class="action" id="contentLink" href="#">内容总览</a>
@@ -708,7 +729,7 @@ def render_workbench_html(results: list[dict[str, Any]], data: dict[str, Any]) -
       <div class="chips" id="signalChips"></div>
     </section>
 
-    <section>
+    <section class="panel">
       <div class="section-head">
         <h2>本次维护</h2>
         <a class="action" id="overviewLink" href="#">总控台</a>
@@ -734,7 +755,18 @@ function h(value) {{
     "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"
   }}[ch]));
 }}
-function href(value) {{ return encodeURI(String(value || "")).replace(/#/g, "%23"); }}
+function href(value) {{
+  const raw = String(value || "");
+  if (!raw) return "";
+  if (/^(https?:)?\\/\\//.test(raw) || raw.startsWith("mailto:")) return raw;
+  const hashIndex = raw.indexOf("#");
+  const path = hashIndex >= 0 ? raw.slice(0, hashIndex) : raw;
+  const hash = hashIndex >= 0 ? raw.slice(hashIndex) : "";
+  if (/\\.md(?:$|[?#])/.test(path)) {{
+    return `reader.html?file=${{encodeURIComponent(path)}}${{hash}}`;
+  }}
+  return encodeURI(raw).replace(/#/g, "%23");
+}}
 function link(target, label, className = "") {{
   if (!target || !label) return h(label || "暂无");
   const cls = className ? ` class="${{h(className)}}"` : "";
@@ -753,6 +785,9 @@ function progressBar(value) {{
 
 document.getElementById("generatedAt").textContent = data.generatedAt || "";
 document.getElementById("routeLink").href = href(links.wrongRoute);
+document.getElementById("heroRouteLink").href = href(links.wrongRoute);
+document.getElementById("heroDashboardLink").href = href(links.wrongDashboard);
+document.getElementById("heroWikiLink").href = href(links.llmWiki);
 document.getElementById("healthLink").href = href(links.wrongHealth);
 document.getElementById("contentLink").href = href(links.content);
 document.getElementById("overviewLink").href = href(links.overview);
@@ -762,7 +797,7 @@ document.getElementById("actions").innerHTML = [
   ["错题看板", links.wrongDashboard, ""],
   ["二轮看板", links.questionDashboard, ""],
   ["五年看板", links.classicDashboard, ""],
-  ["AI 转化", links.aiConversion, ""],
+  ["笔记转化", links.aiConversion, ""],
   ["LLM Wiki", links.llmWiki, ""],
   ["Markdown", links.workbenchMd, ""]
 ].map(([label, target, kind]) => link(target, label, `action ${{kind}}`.trim())).join("");
@@ -774,11 +809,35 @@ const classic = data.classic || {{}};
 const content = data.content || {{}};
 const llm = data.llm || {{}};
 const failedTasks = (data.results || []).filter(item => item.status && item.status !== "ok");
+
+function renderFocus() {{
+  const item = (data.learningPath || [])[0];
+  const title = document.getElementById("focusTitle");
+  const meta = document.getElementById("focusMeta");
+  const tip = document.getElementById("focusTip");
+  const action = document.getElementById("focusAction");
+  if (!item) {{
+    title.textContent = "当前没有待执行路线";
+    title.removeAttribute("href");
+    meta.textContent = "错题队列暂时清空";
+    tip.textContent = "可以查看系统健康或继续整理标准笔记。";
+    action.href = href(links.wrongRoute);
+    action.textContent = "查看路线";
+    return;
+  }}
+  title.textContent = item.title || "未命名错题";
+  title.href = href(item.file || links.wrongRoute);
+  meta.textContent = [item.priority, item.status, item.mastery ? `掌握度 ${{item.mastery}}` : ""].filter(Boolean).join(" / ");
+  tip.textContent = item.anti_mistake_tip || item.review_reason || item.timebox || "";
+  action.href = href(item.file || links.wrongRoute);
+  action.textContent = "打开错题";
+}}
+
 document.getElementById("metrics").innerHTML = [
   ["今日队列", wrong.due, `${{num(wrong.wrongAgain)}} 仍错 / ${{num(wrong.overdue)}} 逾期`, "focus"],
   ["二轮已处理", `${{num(question.handled)}} / ${{num(question.total)}}`, `${{num(question.handled_pct)}}%`, ""],
   ["五年待核对", num(classic.review), `正式完成 ${{num(classic.done)}}`, num(classic.review) ? "warn" : ""],
-  ["AI 标准笔记", ai.total, `待整理 ${{num(ai.inbox && ai.inbox.pending)}}`, ""],
+  ["标准笔记", ai.total, `待整理 ${{num(ai.inbox && ai.inbox.pending)}}`, ""],
   ["知识主题", num(llm.topicTotal), `${{num(llm.issueTotal)}} 个 Wiki 检查项`, num(llm.issueTotal) ? "warn" : ""],
   ["系统问题", num(wrong.issueCount) + num(ai.issueCount) + num(llm.issueTotal) + failedTasks.length, failedTasks.length ? "维护异常" : "体检通过", failedTasks.length ? "warn" : ""],
   ["今日路线", (data.learningPath || []).length, "错题 -> 笔记 -> 迁移题", ""]
@@ -793,28 +852,31 @@ function renderRoute() {{
     const twoRound = item.two_round || {{}};
     const classicProblem = item.classic || {{}};
     return `<tr>
-      <td>${{link(item.file, item.title)}}<div class="small">${{h(item.review_reason || "")}}</div></td>
-      <td><span class="pill ${{item.priority === "P1" ? "bad" : "warn"}}">${{h(item.priority || "")}} / ${{h(item.status || "")}}</span><div class="small">掌握度 ${{h(item.mastery || "")}}</div></td>
-      <td>${{h(item.timebox || "")}}<div class="small">${{h(item.anti_mistake_tip || "")}}</div></td>
-      <td>${{link(aiNote.file, aiNote.title || item.ai_note_action || "建议补笔记")}}</td>
-      <td>${{link(twoRound.note_path, twoRound.problem_id || "暂无")}}<div class="small">${{h(twoRound.reason || "")}}</div></td>
-      <td>${{link(classicProblem.note_path, classicProblem.problem_id || "暂无")}}<div class="small">${{h(classicProblem.reason || "")}}</div></td>
+      <td data-label="错题">${{link(item.file, item.title)}}<div class="small">${{h(item.review_reason || "")}}</div></td>
+      <td data-label="优先状态"><span class="pill ${{item.priority === "P1" ? "bad" : "warn"}}">${{h(item.priority || "")}} / ${{h(item.status || "")}}</span><div class="small">掌握度 ${{h(item.mastery || "")}}</div></td>
+      <td data-label="建议">${{h(item.timebox || "")}}<div class="small">${{h(item.anti_mistake_tip || "")}}</div></td>
+      <td data-label="关联笔记">${{link(aiNote.file, aiNote.title || item.ai_note_action || "建议补笔记")}}</td>
+      <td data-label="二轮题">${{link(twoRound.note_path, twoRound.problem_id || "暂无")}}<div class="small">${{h(twoRound.reason || "")}}</div></td>
+      <td data-label="五年题">${{link(classicProblem.note_path, classicProblem.problem_id || "暂无")}}<div class="small">${{h(classicProblem.reason || "")}}</div></td>
     </tr>`;
   }}).join("");
 }}
 
 function renderModules() {{
   const bank = activeBank === "classic" ? classic : question;
+  const basePath = activeBank === "classic" ? "高考数学五年经典/00_控制台/" : "Obsidian题库/00_控制台/";
+  const fallback = activeBank === "classic" ? links.classicDashboard : links.questionDashboard;
   const keyword = document.getElementById("moduleSearch").value.trim().toLowerCase();
   const rows = (bank.modules || []).filter(item => !keyword || String(item.name || "").toLowerCase().includes(keyword));
   document.getElementById("moduleGrid").innerHTML = rows.map(item => {{
     const handledPct = num(item.handled_pct ?? item.pct);
-    return `<div class="module">
+    const target = item.chapter_file ? `${{basePath}}${{item.chapter_file}}` : fallback;
+    return `<a class="module" href="${{h(href(target))}}">
       <div class="module-title" title="${{h(item.name)}}">${{h(item.name)}}</div>
       <div class="small">完成 ${{num(item.done)}}，待核对 ${{num(item.review)}}，已处理 ${{num(item.handled)}} / ${{num(item.total)}}</div>
       ${{progressBar(handledPct)}}
-      <div class="small">${{handledPct}}%</div>
-    </div>`;
+      <div class="module-row"><span class="pill ${{handledPct >= 100 ? "ok" : handledPct >= 60 ? "warn" : ""}}">${{handledPct}}%</span><span class="small">打开章节</span></div>
+    </a>`;
   }}).join("") || `<div class="empty">没有匹配章节。</div>`;
 }}
 
@@ -822,7 +884,7 @@ function renderHealth() {{
   const rows = [
     ["维护任务", failedTasks.length ? "异常" : "正常", failedTasks.map(item => item.name).join("；") || "全部通过"],
     ["错题库体检", num(wrong.issueCount) ? "异常" : "正常", `${{num(wrong.issueCount)}} 个问题`],
-    ["AI 笔记体检", num(ai.issueCount) ? "异常" : "正常", `${{num(ai.issueCount)}} 个问题`],
+    ["笔记体检", num(ai.issueCount) ? "异常" : "正常", `${{num(ai.issueCount)}} 个问题`],
     ["LLM Wiki 体检", num(llm.issueTotal) ? "异常" : "正常", `${{num(llm.issueTotal)}} 个检查项`],
     ["二轮题库缺失笔记", num(question.missing_note_count) ? "异常" : "正常", `${{num(question.missing_note_count)}} 个缺失`],
     ["五年经典缺失笔记", num(classic.missing_note_count) ? "异常" : "正常", `${{num(classic.missing_note_count)}} 个缺失`]
@@ -858,6 +920,7 @@ document.querySelectorAll("[data-bank]").forEach(button => {{
 }});
 document.getElementById("moduleSearch").addEventListener("input", renderModules);
 
+renderFocus();
 renderRoute();
 renderModules();
 renderHealth();

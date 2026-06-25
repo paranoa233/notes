@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>题库阅读器</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+<link rel="stylesheet" href="assets/open-design/reader.css">
+<script defer src="https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/dist/markdown-it.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"></script>
+<script defer src="assets/open-design/reader.js"></script>
+</head>
+<body>
+  <header class="reader-topbar">
+    <a class="reader-brand" href="学习工作台.html">高中数学复习</a>
+    <nav class="reader-nav">
+      <a href="学习工作台.html">工作台</a>
+      <a href="LLM知识库/wiki/00_Index.md" data-reader-link>LLM Wiki</a>
+    </nav>
+  </header>
+  <main class="reader-shell">
+    <aside class="reader-sidebar">
+      <div class="side-label">当前文件</div>
+      <div class="file-path" id="filePath">读取中</div>
+      <a class="raw-link" id="rawLink" href="#">查看原始 Markdown</a>
+    </aside>
+    <article class="reader-article">
+      <div class="reader-status" id="status">正在加载...</div>
+      <div class="markdown-body" id="content"></div>
+    </article>
+    <aside class="reader-toc" id="toc" aria-label="目录"></aside>
+  </main>
+</body>
+</html>

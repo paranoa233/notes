@@ -1,67 +1,6 @@
 {
-  "generatedAt": "2026-06-13T00:36:41",
-  "results": [
-    {
-      "key": "question_bank",
-      "name": "二轮 Obsidian 题库进度",
-      "status": "ok",
-      "returncode": 0,
-      "seconds": 0.76,
-      "message": "进度看板已刷新。",
-      "stdout": "进度看板已刷新。",
-      "stderr": ""
-    },
-    {
-      "key": "ai_notes",
-      "name": "AI 笔记索引",
-      "status": "ok",
-      "returncode": 0,
-      "seconds": 0.33,
-      "message": "AI 笔记索引已刷新。",
-      "stdout": "AI 笔记索引已刷新。",
-      "stderr": ""
-    },
-    {
-      "key": "wrong_bank",
-      "name": "个人错题库",
-      "status": "ok",
-      "returncode": 0,
-      "seconds": 0.17,
-      "message": "refreshed 2 wrong problems; issues: 0",
-      "stdout": "refreshed 2 wrong problems; issues: 0",
-      "stderr": ""
-    },
-    {
-      "key": "classic_bank",
-      "name": "高考数学五年经典题库",
-      "status": "ok",
-      "returncode": 0,
-      "seconds": 0.97,
-      "message": "已刷新进度看板：正式完成 1411/1526，待核对 115，已处理 1526/1526",
-      "stdout": "已刷新进度看板：正式完成 1411/1526，待核对 115，已处理 1526/1526",
-      "stderr": ""
-    },
-    {
-      "key": "content_optimizer",
-      "name": "内容复习建议",
-      "status": "ok",
-      "returncode": 0,
-      "seconds": 0.91,
-      "message": "内容优化已刷新：C:\\Users\\lucky12345\\Documents\\高中数学复习\\内容优化总览.md",
-      "stdout": "内容优化已刷新：C:\\Users\\lucky12345\\Documents\\高中数学复习\\内容优化总览.md",
-      "stderr": ""
-    },
-    {
-      "key": "llm_wiki",
-      "name": "LLM 知识库编译",
-      "status": "ok",
-      "returncode": 0,
-      "seconds": 1.22,
-      "message": "LLM Wiki 已刷新：C:\\Users\\lucky12345\\Documents\\高中数学复习\\LLM知识库\\README.md",
-      "stdout": "LLM Wiki 已刷新：C:\\Users\\lucky12345\\Documents\\高中数学复习\\LLM知识库\\README.md",
-      "stderr": ""
-    }
-  ],
+  "generatedAt": "2026-06-25T14:52:32",
+  "results": [],
   "data": {
     "question_bank": {
       "generated_at": "2026-06-13T00:36:39",

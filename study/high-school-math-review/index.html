@@ -1,84 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>高中数学复习系统</title>
-  <meta
-    name="description"
-    content="高中数学复习题库、讲义、错题库和 LLM 知识库的在线阅读入口。"
-  >
-  <meta name="theme-color" content="#f8fafc">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f6b6d'/%3E%3Cpath d='M8 11h16M8 16h16M8 21h10' stroke='white' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="./style.css">
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [["$", "$"], ["\\(", "\\)"]],
-        displayMath: [["$$", "$$"], ["\\[", "\\]"]]
-      },
-      chtml: {
-        scale: 1,
-        matchFontHeight: false
-      }
-    };
-  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>高中数学复习</title>
+  <meta name="description" content="高中数学复习题库、错题路线、标准笔记与 LLM Wiki 的在线入口。">
+  <meta name="theme-color" content="#fafafa">
+  <meta http-equiv="refresh" content="0; url=files/%E5%AD%A6%E4%B9%A0%E5%B7%A5%E4%BD%9C%E5%8F%B0.html">
+  <link rel="canonical" href="files/%E5%AD%A6%E4%B9%A0%E5%B7%A5%E4%BD%9C%E5%8F%B0.html">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fafafa;
+      --ink: #111827;
+      --muted: #667085;
+      --line: #e5e7eb;
+      --blue: #2563eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+      line-height: 1.7;
+    }
+
+    main {
+      width: min(560px, calc(100vw - 40px));
+      padding: 28px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 5vw, 38px);
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--blue);
+      font-weight: 720;
+      text-underline-offset: 3px;
+    }
+  </style>
 </head>
 <body>
-  <div class="app-shell">
-    <header class="topbar">
-      <div class="nav-actions">
-        <a class="back-link" href="../../index.html">返回 notes</a>
-      </div>
-      <div class="topbar-title">
-        <p class="eyebrow">高中数学复习</p>
-        <h1>题库、讲义与笔记</h1>
-        <p id="library-stats" class="library-stats">正在载入资料库...</p>
-      </div>
-      <div class="nav-actions nav-actions--right">
-        <a class="source-link" href="./files/README.md">源入口</a>
-      </div>
-    </header>
-
-    <main class="workspace">
-      <aside class="sidebar">
-        <label class="search-box">
-          <span>搜索</span>
-          <input id="search" type="search" placeholder="题号、主题、文件名">
-        </label>
-
-        <section class="quick-section">
-          <h2>常用入口</h2>
-          <div id="quick-links" class="quick-links"></div>
-        </section>
-
-        <section class="quick-section">
-          <h2>文件</h2>
-          <div id="type-filters" class="type-filters" aria-label="文件类型筛选"></div>
-          <p id="result-count" class="result-count">正在载入...</p>
-          <div id="file-list" class="file-list"></div>
-        </section>
-      </aside>
-
-      <section class="reader">
-        <header class="reader-head">
-          <div>
-            <p id="file-meta" class="file-meta"></p>
-            <h2 id="file-title">正在载入...</h2>
-          </div>
-          <div class="reader-actions">
-            <a id="raw-link" class="button" href="#" target="_blank" rel="noopener">打开原文件</a>
-          </div>
-        </header>
-        <nav id="toc" class="toc is-hidden"></nav>
-        <article id="content" class="content"></article>
-      </section>
-    </main>
-  </div>
-
-  <script defer src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
-  <script id="MathJax-script" defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-  <script src="./app.js" defer></script>
+  <main>
+    <h1>高中数学复习</h1>
+    <p>正在打开复习索引。若没有自动跳转，请进入 <a href="files/%E5%AD%A6%E4%B9%A0%E5%B7%A5%E4%BD%9C%E5%8F%B0.html">学习工作台</a>。</p>
+  </main>
 </body>
 </html>

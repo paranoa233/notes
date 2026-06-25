@@ -8,6 +8,7 @@
 - [互动工作台](学习工作台.html)
 - [系统总控台](系统总控台.md)
 - [内容优化总览](内容优化总览.md)
+- [Open Design 方案](OPEN_DESIGN.md)
 - [LLM 知识库](LLM知识库/README.md)
 - [LLM Wiki 索引](LLM知识库/wiki/00_Index.md)
 - [AI 学习流水线](Obsidian题库/08_AI笔记管理/AI学习流水线.md)
