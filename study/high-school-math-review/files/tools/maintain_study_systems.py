@@ -643,7 +643,7 @@ def render_workbench_html(results: list[dict[str, Any]], data: dict[str, Any]) -
     h1 {{ font-size:25px; }}
   }}
 </style>
-<link rel="stylesheet" href="assets/open-design/workbench.css">
+<link rel="stylesheet" href="assets/open-design/workbench.css?v=20260625-2">
 </head>
 <body>
 <main class="shell">
@@ -864,7 +864,9 @@ function renderRoute() {{
 
 function renderModules() {{
   const bank = activeBank === "classic" ? classic : question;
-  const basePath = activeBank === "classic" ? "高考数学五年经典/00_控制台/" : "Obsidian题库/00_控制台/";
+  const basePath = activeBank === "classic"
+    ? "高考数学五年经典/07_章节题目合集_Obsidian公式版/"
+    : "Obsidian题库/07_章节题目合集_Obsidian公式版/";
   const fallback = activeBank === "classic" ? links.classicDashboard : links.questionDashboard;
   const keyword = document.getElementById("moduleSearch").value.trim().toLowerCase();
   const rows = (bank.modules || []).filter(item => !keyword || String(item.name || "").toLowerCase().includes(keyword));
