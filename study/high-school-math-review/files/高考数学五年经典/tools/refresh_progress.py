@@ -80,10 +80,9 @@ table{{width:100%;border-collapse:collapse;font-size:13px}}th,td{{border-bottom:
     <div class="muted">刷新时间：{data.get("generated_at", dt.datetime.now().isoformat(timespec="seconds"))}</div>
   </div>
   <nav class="links">
-    <a class="quick primary" href="../06_章节题目合集/README.md">章节合集</a>
-    <a class="quick" href="题目浏览.md">题目浏览</a>
-    <a class="quick" href="上传解答.md">上传解答</a>
-    <a class="quick" href="内容地图.md">内容地图</a>
+    <a class="quick primary" href="../../reader.html?file=高考数学五年经典/07_章节题目合集_Obsidian公式版/README.md">章节合集</a>
+    <a class="quick" href="../../reader.html?file=高考数学五年经典/00_控制台/题目浏览.md">题目浏览</a>
+    <a class="quick" href="../../reader.html?file=高考数学五年经典/00_控制台/内容地图.md">内容地图</a>
   </nav>
 </div>
 <div id="app"></div>
@@ -92,8 +91,8 @@ table{{width:100%;border-collapse:collapse;font-size:13px}}th,td{{border-bottom:
 <script>
 const data = JSON.parse(document.getElementById('data').textContent);
 function bar(pct) {{ return `<div class="bar"><div class="fill" style="width:${{pct}}%"></div></div>`; }}
-function fileHref(path) {{ return '../' + String(path || '').split('/').map(encodeURIComponent).join('/'); }}
-function chapterHref(file) {{ return fileHref('06_章节题目合集/' + (file || 'README.md')); }}
+function readerHref(path) {{ return `../../reader.html?file=${{encodeURIComponent(path)}}`; }}
+function chapterHref(file) {{ return readerHref('高考数学五年经典/07_章节题目合集_Obsidian公式版/' + (file || 'README.md')); }}
 document.getElementById('app').innerHTML = `
 <div class="cards">
   <div class="card"><div class="muted">总题数</div><div class="num">${{data.total}}</div></div>
@@ -160,7 +159,6 @@ def main() -> int:
         "status_counts": dict(Counter(statuses.values())),
         "missing_note_count": len(missing_notes),
         "missing_notes": missing_notes[:100],
-        "vault_root": str(VAULT.resolve()),
         "modules": [],
         "lessons": [],
     }

@@ -69,14 +69,14 @@ a:hover {
 
 .reader-shell {
   display: grid;
-  grid-template-columns: 230px minmax(0, 760px) 210px;
-  gap: 28px;
-  max-width: 1280px;
+  grid-template-columns: minmax(0, 820px) 220px;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 28px 24px 56px;
 }
 
-.reader-sidebar,
 .reader-toc {
   position: sticky;
   top: 84px;
@@ -112,9 +112,12 @@ a:hover {
 }
 
 .reader-status {
-  margin-bottom: 14px;
-  color: var(--muted);
-  font-size: 13px;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
 .markdown-body {
@@ -276,7 +279,6 @@ a:hover {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .reader-sidebar,
   .reader-toc {
     position: static;
   }

@@ -336,9 +336,7 @@ def render_workbench(results: list[dict[str, Any]], data: dict[str, Any]) -> str
     wrong = wrong_bank.get("summary", {})
     ai = data.get("ai_notes", {})
     content = data.get("content", {})
-    llm = data.get("llm_wiki", {}).get("summary", {})
     learning_path = content.get("learningPath", [])
-    failed_tasks = [item for item in results if item.get("status") not in {"ok", None}]
 
     today_rows = [
         [
@@ -362,20 +360,6 @@ def render_workbench(results: list[dict[str, Any]], data: dict[str, Any]) -> str
             rel_link(ROOT / "个人错题库" / "00_控制台" / "错题关联笔记.md", "错题关联笔记"),
             "没有匹配笔记的错题，整理成一张方法卡",
         ],
-        [
-            "4",
-            "查看 LLM 知识库队列",
-            f"{llm.get('topicTotal', 0)} 个主题 / {llm.get('issueTotal', 0)} 个检查项",
-            rel_link(ROOT / "LLM知识库" / "wiki" / "00_Index.md", "LLM Wiki"),
-            "先看待编译队列，再补标准笔记或修复结构问题",
-        ],
-        [
-            "5",
-            "检查系统健康",
-            f"{wrong.get('issueCount', 0)} 个错题体检问题",
-            rel_link(ROOT / "个人错题库" / "00_控制台" / "系统体检.md", "系统体检"),
-            "先修 P1，再看 P2/P3 提醒",
-        ],
     ]
 
     path_rows = []
@@ -396,15 +380,6 @@ def render_workbench(results: list[dict[str, Any]], data: dict[str, Any]) -> str
                 rel_link_value(classic_problem.get("note_path"), classic_problem.get("problem_id")),
             ]
         )
-
-    health_rows = [
-        ["维护任务", "异常" if failed_tasks else "正常", "；".join(item.get("name", "") for item in failed_tasks) or "全部通过"],
-        ["错题库体检", wrong.get("issueCount", 0), rel_link(ROOT / "个人错题库" / "00_控制台" / "系统体检.md", "查看体检")],
-        ["二轮题库缺失笔记", question.get("missing_note_count", 0), rel_link(ROOT / "Obsidian题库" / "00_控制台" / "进度看板.html", "查看看板")],
-        ["五年经典缺失笔记", classic.get("missing_note_count", 0), rel_link(ROOT / "高考数学五年经典" / "00_控制台" / "进度看板.html", "查看看板")],
-        ["AI 笔记检查问题", ai.get("issueCount", 0), rel_link(ROOT / "Obsidian题库" / "08_AI笔记管理" / "系统体检.md", "AI 体检")],
-        ["LLM Wiki 检查项", llm.get("issueTotal", 0), rel_link(ROOT / "LLM知识库" / "wiki" / "04_Health_Check.md", "Wiki 体检")],
-    ]
 
     bank_rows = [
         [
@@ -435,21 +410,14 @@ def render_workbench(results: list[dict[str, Any]], data: dict[str, Any]) -> str
 ## 今日学习闭环
 
 {markdown_table(["顺序", "错题", "优先状态", "为什么今天做", "建议用时", "防错口令", "AI笔记/整理方向", "二轮题", "五年题"], path_rows)}
-## 系统健康
-
-{markdown_table(["项目", "状态/数量", "入口或说明"], health_rows)}
 ## 题库资源
 
 {markdown_table(["题库", "总题数", "已处理", "内容入口"], bank_rows)}
 ## 常用入口
 
 - {rel_link(WORKBENCH_HTML, "互动工作台")}
-- {rel_link(ROOT / "系统总控台.md", "系统总控台")}
-- {rel_link(ROOT / "内容优化总览.md", "内容优化总览")}
 - {rel_link(ROOT / "个人错题库" / "00_控制台" / "学习工作台.md", "个人错题库学习工作台")}
 - {rel_link(ROOT / "个人错题库" / "00_控制台" / "错题看板.html", "个人错题库看板")}
-- {rel_link(ROOT / "Obsidian题库" / "08_AI笔记管理" / "AI学习流水线.md", "AI 学习流水线")}
-- {rel_link(ROOT / "LLM知识库" / "wiki" / "00_Index.md", "LLM Wiki 索引")}
 """
 
 
@@ -460,35 +428,20 @@ def render_workbench_html(results: list[dict[str, Any]], data: dict[str, Any]) -
     wrong = data.get("wrong_bank", {}).get("summary", {})
     ai = data.get("ai_notes", {})
     content = data.get("content", {})
-    llm = data.get("llm_wiki", {}).get("summary", {})
     payload = json.dumps(
         {
             "generatedAt": generated_at,
-            "results": results,
             "question": question,
             "classic": classic,
             "wrong": wrong,
             "ai": ai,
             "content": content,
-            "llm": llm,
             "learningPath": content.get("learningPath", []),
             "links": {
-                "workbenchMd": "学习工作台.md",
-                "overview": "系统总控台.md",
-                "content": "内容优化总览.md",
                 "wrongDashboard": "个人错题库/00_控制台/错题看板.html",
                 "wrongRoute": "个人错题库/00_控制台/今日学习路线.md",
-                "wrongHealth": "个人错题库/00_控制台/系统体检.md",
                 "questionDashboard": "Obsidian题库/00_控制台/进度看板.html",
-                "questionMap": "Obsidian题库/00_控制台/内容地图.md",
                 "classicDashboard": "高考数学五年经典/00_控制台/进度看板.html",
-                "classicMap": "高考数学五年经典/00_控制台/内容地图.md",
-                "aiPipeline": "Obsidian题库/08_AI笔记管理/AI学习流水线.md",
-                "aiConversion": "Obsidian题库/08_AI笔记管理/AI笔记转化看板.md",
-                "aiIndex": "Obsidian题库/08_AI笔记管理/标准笔记索引.md",
-                "llmWiki": "LLM知识库/wiki/00_Index.md",
-                "llmHealth": "LLM知识库/wiki/04_Health_Check.md",
-                "llmQueue": "LLM知识库/wiki/05_Compile_Queue.md",
             },
         },
         ensure_ascii=False,
@@ -663,7 +616,6 @@ def render_workbench_html(results: list[dict[str, Any]], data: dict[str, Any]) -
       <div class="hero-actions">
         <a id="heroRouteLink" class="action primary" href="#">今日路线</a>
         <a id="heroDashboardLink" class="action" href="#">错题看板</a>
-        <a id="heroWikiLink" class="action" href="#">LLM Wiki</a>
       </div>
     </div>
     <aside class="focus-panel" id="focusPanel">
@@ -705,41 +657,14 @@ def render_workbench_html(results: list[dict[str, Any]], data: dict[str, Any]) -
       </div>
       <div class="module-grid" id="moduleGrid"></div>
     </section>
-
-    <section class="panel">
-      <div class="section-head">
-        <h2>系统健康</h2>
-        <a class="action" id="healthLink" href="#">体检</a>
-      </div>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>项目</th><th>状态</th><th>说明</th></tr></thead>
-          <tbody id="healthRows"></tbody>
-        </table>
-      </div>
-    </section>
   </div>
 
   <div class="grid-2">
     <section class="panel">
       <div class="section-head">
         <h2>高频信号</h2>
-        <a class="action" id="contentLink" href="#">内容总览</a>
       </div>
       <div class="chips" id="signalChips"></div>
-    </section>
-
-    <section class="panel">
-      <div class="section-head">
-        <h2>本次维护</h2>
-        <a class="action" id="overviewLink" href="#">总控台</a>
-      </div>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>任务</th><th>状态</th><th>耗时</th></tr></thead>
-          <tbody id="taskRows"></tbody>
-        </table>
-      </div>
     </section>
   </div>
 </main>
@@ -787,19 +712,16 @@ document.getElementById("generatedAt").textContent = data.generatedAt || "";
 document.getElementById("routeLink").href = href(links.wrongRoute);
 document.getElementById("heroRouteLink").href = href(links.wrongRoute);
 document.getElementById("heroDashboardLink").href = href(links.wrongDashboard);
-document.getElementById("heroWikiLink").href = href(links.llmWiki);
-document.getElementById("healthLink").href = href(links.wrongHealth);
-document.getElementById("contentLink").href = href(links.content);
-document.getElementById("overviewLink").href = href(links.overview);
+function assignHref(id, target) {{
+  const element = document.getElementById(id);
+  if (element) element.href = href(target);
+}}
 
 document.getElementById("actions").innerHTML = [
   ["今日路线", links.wrongRoute, "primary"],
   ["错题看板", links.wrongDashboard, ""],
   ["二轮看板", links.questionDashboard, ""],
-  ["五年看板", links.classicDashboard, ""],
-  ["笔记转化", links.aiConversion, ""],
-  ["LLM Wiki", links.llmWiki, ""],
-  ["Markdown", links.workbenchMd, ""]
+  ["五年看板", links.classicDashboard, ""]
 ].map(([label, target, kind]) => link(target, label, `action ${{kind}}`.trim())).join("");
 
 const wrong = data.wrong || {{}};
@@ -807,8 +729,6 @@ const ai = data.ai || {{}};
 const question = data.question || {{}};
 const classic = data.classic || {{}};
 const content = data.content || {{}};
-const llm = data.llm || {{}};
-const failedTasks = (data.results || []).filter(item => item.status && item.status !== "ok");
 
 function renderFocus() {{
   const item = (data.learningPath || [])[0];
@@ -820,7 +740,7 @@ function renderFocus() {{
     title.textContent = "当前没有待执行路线";
     title.removeAttribute("href");
     meta.textContent = "错题队列暂时清空";
-    tip.textContent = "可以查看系统健康或继续整理标准笔记。";
+    tip.textContent = "可以打开题库章节，继续做一组同类题。";
     action.href = href(links.wrongRoute);
     action.textContent = "查看路线";
     return;
@@ -838,8 +758,8 @@ document.getElementById("metrics").innerHTML = [
   ["二轮已处理", `${{num(question.handled)}} / ${{num(question.total)}}`, `${{num(question.handled_pct)}}%`, ""],
   ["五年待核对", num(classic.review), `正式完成 ${{num(classic.done)}}`, num(classic.review) ? "warn" : ""],
   ["标准笔记", ai.total, `待整理 ${{num(ai.inbox && ai.inbox.pending)}}`, ""],
-  ["知识主题", num(llm.topicTotal), `${{num(llm.issueTotal)}} 个 Wiki 检查项`, num(llm.issueTotal) ? "warn" : ""],
-  ["系统问题", num(wrong.issueCount) + num(ai.issueCount) + num(llm.issueTotal) + failedTasks.length, failedTasks.length ? "维护异常" : "体检通过", failedTasks.length ? "warn" : ""],
+  ["二轮题量", num(question.total), `已完成 ${{num(question.done)}}`, ""],
+  ["五年经典", num(classic.total), `已处理 ${{num(classic.handled)}}`, ""],
   ["今日路线", (data.learningPath || []).length, "错题 -> 笔记 -> 迁移题", ""]
 ].map(([label, value, detail, kind]) => `<div class="card ${{h(kind)}}"><b>${{h(label)}}</b><div class="value">${{h(value)}}</div><div class="small">${{h(detail)}}</div></div>`).join("");
 
@@ -882,20 +802,6 @@ function renderModules() {{
   }}).join("") || `<div class="empty">没有匹配章节。</div>`;
 }}
 
-function renderHealth() {{
-  const rows = [
-    ["维护任务", failedTasks.length ? "异常" : "正常", failedTasks.map(item => item.name).join("；") || "全部通过"],
-    ["错题库体检", num(wrong.issueCount) ? "异常" : "正常", `${{num(wrong.issueCount)}} 个问题`],
-    ["笔记体检", num(ai.issueCount) ? "异常" : "正常", `${{num(ai.issueCount)}} 个问题`],
-    ["LLM Wiki 体检", num(llm.issueTotal) ? "异常" : "正常", `${{num(llm.issueTotal)}} 个检查项`],
-    ["二轮题库缺失笔记", num(question.missing_note_count) ? "异常" : "正常", `${{num(question.missing_note_count)}} 个缺失`],
-    ["五年经典缺失笔记", num(classic.missing_note_count) ? "异常" : "正常", `${{num(classic.missing_note_count)}} 个缺失`]
-  ];
-  document.getElementById("healthRows").innerHTML = rows.map(([name, status, detail]) =>
-    `<tr><td>${{h(name)}}</td><td>${{statusPill(status)}}</td><td>${{h(detail)}}</td></tr>`
-  ).join("");
-}}
-
 function renderSignals() {{
   const wrongSignals = Object.entries((content.wrong && content.wrong.reasons) || {{}}).map(([name, count]) => ["错因", name, count]);
   const methodSignals = Object.entries((content.questionBank && content.questionBank.methods) || {{}}).slice(0, 8).map(([name, count]) => ["二轮方法", name, count]);
@@ -904,13 +810,6 @@ function renderSignals() {{
   document.getElementById("signalChips").innerHTML = signals.map(([kind, name, count]) =>
     `<span class="chip"><b>${{h(kind)}}</b> ${{h(name)}} <span class="small">${{h(count)}}</span></span>`
   ).join("") || `<div class="empty">暂无内容信号。</div>`;
-}}
-
-function renderTasks() {{
-  const rows = data.results || [];
-  document.getElementById("taskRows").innerHTML = rows.map(item =>
-    `<tr><td>${{h(item.name)}}</td><td>${{statusPill(item.status)}}</td><td>${{h(item.seconds || 0)}} 秒<div class="small">${{h(item.message || "")}}</div></td></tr>`
-  ).join("") || `<tr><td colspan="3" class="muted">本次只重建了工作台，没有运行维护任务。</td></tr>`;
 }}
 
 document.querySelectorAll("[data-bank]").forEach(button => {{
@@ -925,9 +824,7 @@ document.getElementById("moduleSearch").addEventListener("input", renderModules)
 renderFocus();
 renderRoute();
 renderModules();
-renderHealth();
 renderSignals();
-renderTasks();
 </script>
 </body>
 </html>

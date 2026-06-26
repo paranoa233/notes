@@ -7,6 +7,10 @@
   const rawLink = document.getElementById("rawLink");
   const toc = document.getElementById("toc");
 
+  function setStatus(message) {
+    if (status) status.textContent = message;
+  }
+
   function encodePath(path) {
     return encodeURI(path).replace(/#/g, "%23");
   }
@@ -45,9 +49,12 @@
     return text
       .replace(/^\uFEFF/, "")
       .replace(/^---[\s\S]*?---\s*/, "")
-      .replace(/^\s*>?\s*-?\s*\u539fPDF：\[\u6253\u5f00\u5b66\u751f\u7248PDF\]\(<file:\/\/\/[^>\r\n]+>\)\s*$/gmi, "")
-      .replace(/^\s*>?\s*-?\s*(?:\u539f\u4e66PDF|\u7ae0\u8282PDF)：\[[^\]\r\n]+PDF\]\((?:<file:\/\/\/[^>\r\n]+>|\s*)\)\s*$/gmi, "")
-      .replace(/^\s*(?:source_pdf|source_pdf_uri|source_pdf_path|chapter_pdf_uri|chapter_pdf_path):\s*["']?(?:file:\/\/\/|[A-Za-z]:[\\/]|\\\\)[^\r\n]*$/gmi, "")
+      .replace(/```dataview(?:js)?[\s\S]*?```/gmi, "")
+      .replace(/^\s*>?\s*-?\s*(?:原PDF|原书PDF|章节PDF)：\[[^\]\r\n]+\]\((?:<file:\/\/\/[^>\r\n]+>|file:[^)]+|[^)\r\n]*)\)\s*$/gmi, "")
+      .replace(/^\s*>\s*(?:讲义|题组|来源|原始题号|状态)：[^\r\n]*(?:\r?\n)?/gmi, "")
+      .replace(/^\s*>\s*把文件名以本题编号开头的[^\r\n]*(?:\r?\n)?/gmi, "")
+      .replace(/^\s*(?:source_pdf|source_pdf_uri|source_pdf_path|source_pdf_name|chapter_pdf|chapter_pdf_uri|chapter_pdf_path|chapter_pdf_name|source_line|generated_by):\s*["']?[^"\r\n]*["']?\s*$/gmi, "")
+      .replace(/^\s*(?:\[\[00_控制台\/总览\|返回总览\]\]|题目目录：.*|原合集起始页：.*|原书起始页：.*)\s*$/gmi, "")
       .replace(/!\[\[([^\]]+\.(?:png|jpe?g|gif|webp|svg))\]\]/gi, "![]($1)")
       .replace(/\[\[([^|\]]+)\|([^\]]+)\]\]/g, "[$2]($1)")
       .replace(/\[\[([^\]]+)\]\]/g, "[$1]($1)")
@@ -124,8 +131,8 @@
     if (/^(https?:)?\/\//.test(file)) {
       throw new Error("阅读器只打开当前站点内的 Markdown 文件。");
     }
-    filePath.textContent = file;
-    rawLink.href = encodePath(file);
+    if (filePath) filePath.textContent = file;
+    if (rawLink) rawLink.href = encodePath(file);
     const response = await fetch(encodePath(file), {cache: "no-store"});
     if (!response.ok) throw new Error(`无法读取文件：${response.status} ${response.statusText}`);
     const markdown = protectMath(preprocessMarkdown(await response.text()));
@@ -138,7 +145,7 @@
     content.innerHTML = markdown.restore(md.render(markdown.text));
     decorateRenderedLinks(dirname(file));
     buildToc();
-    status.textContent = "Markdown 已渲染，正在排版公式...";
+    setStatus("Markdown 已渲染，正在排版公式...");
     if (window.renderMathInElement) {
       window.renderMathInElement(content, {
         delimiters: [
@@ -152,9 +159,9 @@
         strict: "ignore",
         trust: false
       });
-      status.textContent = "公式渲染完成";
+      setStatus("");
     } else {
-      status.textContent = "Markdown 已渲染；KaTeX 未加载，公式会保留为 TeX";
+      setStatus("Markdown 已渲染；KaTeX 未加载，公式会保留为 TeX");
     }
     document.title = `${file.split("/").pop()} - 题库阅读器`;
   }
@@ -165,7 +172,7 @@
       if (href.endsWith(".md")) anchor.setAttribute("href", readerHref(href));
     });
     render().catch((error) => {
-      status.textContent = error.message;
+      setStatus(error.message);
       content.innerHTML = `<h1>打开失败</h1><p>${error.message}</p>`;
     });
   });

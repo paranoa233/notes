@@ -143,16 +143,13 @@ def render_dashboard(data: dict) -> str:
     <nav class="quick-links">
       <a class="quick-link primary" id="chapterIndex" href="#">章节题库</a>
       <a class="quick-link" id="detailIndex" href="#">细分题库</a>
-      <a class="quick-link" id="uploadIndex" href="#">上传解答</a>
-      <a class="quick-link" id="formulaIndex" href="#">公式插件</a>
-      <a class="quick-link" id="recentIndex" href="#">最近上传</a>
     </nav>
   </header>
   <div class="cards" id="cards"></div>
   <section>
     <div class="section-head">
       <h2>章节入口</h2>
-      <span class="hint">点击章节进入 Obsidian 公式版题目合集</span>
+      <span class="hint">点击章节进入题目合集</span>
     </div>
     <div class="module-grid" id="modules"></div>
   </section>
@@ -183,10 +180,9 @@ const chapterFiles = {{
 }};
 function bar(pct) {{ return `<div class="bar"><div class="fill" style="width:${{pct}}%"></div></div>`; }}
 function moduleId(name) {{ return String(name).split(" ")[0]; }}
-function joinPath(root, file) {{ const sep = String.fromCharCode(92); return `${{root}}${{sep}}${{file.replace(/\\//g, sep)}}`; }}
-function markdownHref(path) {{ return `mdopen://open?path=${{encodeURIComponent(path)}}`; }}
-function vaultMarkdownHref(relPath) {{ return markdownHref(joinPath(data.vault_root, relPath)); }}
-function chapterMarkdownHref(file) {{ return markdownHref(joinPath(data.chapter_root, file)); }}
+function readerHref(relPath) {{ return `../../reader.html?file=${{encodeURIComponent(relPath)}}`; }}
+function vaultMarkdownHref(relPath) {{ return readerHref(`Obsidian题库/${{relPath}}`); }}
+function chapterMarkdownHref(file) {{ return readerHref(`Obsidian题库/07_章节题目合集_Obsidian公式版/${{file}}`); }}
 function chapterHref(name) {{
   const id = moduleId(name);
   return chapterMarkdownHref(chapterFiles[id] || "README.md");
@@ -198,9 +194,6 @@ function lessonHref(lesson) {{
 }}
 document.getElementById("chapterIndex").href = chapterMarkdownHref("README.md");
 document.getElementById("detailIndex").href = vaultMarkdownHref("00_控制台/题目浏览.md");
-document.getElementById("uploadIndex").href = vaultMarkdownHref("00_控制台/上传解答.md");
-document.getElementById("formulaIndex").href = vaultMarkdownHref("00_控制台/公式插件使用说明.md");
-document.getElementById("recentIndex").href = vaultMarkdownHref("00_控制台/最近上传.md");
 document.getElementById("stamp").textContent = `生成时间：${{data.generated_at}}`;
 document.getElementById("cards").innerHTML = [
   ["总题数", data.total, ""],
@@ -279,8 +272,6 @@ def main() -> int:
         "status_counts": dict(status_counts),
         "missing_note_count": len(missing_notes),
         "missing_notes": missing_notes[:100],
-        "vault_root": str(VAULT.resolve()),
-        "chapter_root": str(CHAPTER_ROOT.resolve()),
         "modules": [],
         "lessons": [],
     }
