@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>题库检索</title>
+<link rel="stylesheet" href="assets/open-design/question-search.css?v=20260626-1">
+<script defer src="assets/open-design/question-search.js?v=20260626-1"></script>
+</head>
+<body>
+  <header class="search-topbar">
+    <a class="brand" href="学习工作台.html">高中数学复习</a>
+    <nav class="top-actions">
+      <a href="学习工作台.html">工作台</a>
+      <a href="reader.html?file=Obsidian题库%2F07_章节题目合集_Obsidian公式版%2FREADME.md">二轮题库</a>
+      <a href="reader.html?file=高考数学五年经典%2F07_章节题目合集_Obsidian公式版%2FREADME.md">五年经典</a>
+    </nav>
+  </header>
+
+  <main class="search-shell">
+    <section class="search-hero">
+      <div>
+        <p class="eyebrow">题库检索</p>
+        <h1>按方法找题</h1>
+      </div>
+      <div class="hero-stats" id="heroStats"></div>
+    </section>
+
+    <section class="search-panel">
+      <div class="filters">
+        <label>
+          <span>关键词</span>
+          <input id="queryInput" type="search" autocomplete="off" placeholder="题号、章节、题干">
+        </label>
+        <label>
+          <span>方法</span>
+          <select id="methodSelect"></select>
+        </label>
+        <label>
+          <span>题库</span>
+          <select id="bankSelect">
+            <option value="">全部</option>
+            <option value="question">二轮题库</option>
+            <option value="classic">五年经典</option>
+          </select>
+        </label>
+        <label>
+          <span>专题</span>
+          <select id="moduleSelect"></select>
+        </label>
+        <label>
+          <span>状态</span>
+          <select id="statusSelect"></select>
+        </label>
+        <label>
+          <span>排序</span>
+          <select id="sortSelect">
+            <option value="method">方法优先</option>
+            <option value="module">专题顺序</option>
+            <option value="bank">题库顺序</option>
+          </select>
+        </label>
+      </div>
+      <div class="method-chips" id="methodChips"></div>
+    </section>
+
+    <section class="result-panel">
+      <div class="result-head">
+        <h2>结果</h2>
+        <div class="result-count" id="resultCount"></div>
+      </div>
+      <div class="result-list" id="resultList"></div>
+    </section>
+  </main>
+</body>
+</html>

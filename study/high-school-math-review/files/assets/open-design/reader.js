@@ -3,9 +3,15 @@
   const file = params.get("file") || "学习工作台.md";
   const content = document.getElementById("content");
   const status = document.getElementById("status");
-  const filePath = document.getElementById("filePath");
-  const rawLink = document.getElementById("rawLink");
   const toc = document.getElementById("toc");
+  const prevButton = document.getElementById("prevProblem");
+  const nextButton = document.getElementById("nextProblem");
+  const focusButton = document.getElementById("focusToggle");
+  const progress = document.getElementById("readerProgress");
+
+  let problems = [];
+  let activeProblemIndex = 0;
+  let focusMode = false;
 
   function setStatus(message) {
     if (status) status.textContent = message;
@@ -43,6 +49,11 @@
 
   function readerHref(path) {
     return `reader.html?file=${encodeURIComponent(path)}`;
+  }
+
+  function slug(value, fallback) {
+    const clean = String(value || "").trim().replace(/[^\w\u4e00-\u9fa5-]+/g, "-").replace(/^-+|-+$/g, "");
+    return clean || fallback;
   }
 
   function preprocessMarkdown(text) {
@@ -114,8 +125,49 @@
     });
   }
 
+  function previousLessonTitle(node) {
+    let cursor = node.previousElementSibling;
+    while (cursor) {
+      if (cursor.tagName === "H2") return cursor.textContent.trim();
+      cursor = cursor.previousElementSibling;
+    }
+    return "";
+  }
+
+  function isProblemHeading(heading) {
+    return /^\d+(?:-\d+){2}\b/.test((heading.textContent || "").trim());
+  }
+
+  function structureProblems() {
+    problems = [];
+    const headings = [...content.querySelectorAll("h3")].filter(isProblemHeading);
+    headings.forEach((heading, index) => {
+      const section = document.createElement("section");
+      const title = heading.textContent.trim();
+      section.className = "reader-problem";
+      section.dataset.problemIndex = String(index);
+      section.dataset.title = title;
+      section.dataset.lesson = previousLessonTitle(heading);
+      heading.id = heading.id || slug(title, `problem-${index + 1}`);
+      heading.classList.add("reader-problem-heading");
+      heading.parentNode.insertBefore(section, heading);
+      let cursor = heading;
+      while (cursor) {
+        const next = cursor.nextSibling;
+        section.appendChild(cursor);
+        if (next && next.nodeType === 1 && /^(H2|H3)$/i.test(next.tagName)) break;
+        cursor = next;
+      }
+      problems.push({section, heading, title, lesson: section.dataset.lesson});
+    });
+
+    const hash = decodeURIComponent(location.hash.slice(1));
+    const hashIndex = problems.findIndex((item) => item.heading.id === hash || item.title === hash);
+    activeProblemIndex = hashIndex >= 0 ? hashIndex : 0;
+  }
+
   function buildToc() {
-    const headings = [...content.querySelectorAll("h2, h3")].slice(0, 24);
+    const headings = [...content.querySelectorAll("h2, h3")].slice(0, 28);
     if (!headings.length) {
       toc.innerHTML = "";
       return;
@@ -127,12 +179,69 @@
     }).join("");
   }
 
+  function updateProblemView(shouldScroll) {
+    const hasProblems = problems.length > 0;
+    if (prevButton) prevButton.disabled = !hasProblems || activeProblemIndex <= 0;
+    if (nextButton) nextButton.disabled = !hasProblems || activeProblemIndex >= problems.length - 1;
+    if (focusButton) {
+      focusButton.disabled = !hasProblems;
+      focusButton.setAttribute("aria-pressed", focusMode ? "true" : "false");
+    }
+    document.body.classList.toggle("reader-focus", focusMode && hasProblems);
+
+    problems.forEach((item, index) => {
+      item.section.classList.toggle("is-active", index === activeProblemIndex);
+    });
+
+    if (progress) {
+      if (!hasProblems) {
+        progress.textContent = "";
+      } else {
+        const item = problems[activeProblemIndex];
+        const lesson = item.lesson ? `${item.lesson} · ` : "";
+        progress.textContent = `${activeProblemIndex + 1}/${problems.length} · ${lesson}${item.title}`;
+      }
+    }
+
+    if (shouldScroll && hasProblems) {
+      problems[activeProblemIndex].section.scrollIntoView({behavior: "smooth", block: "start"});
+      history.replaceState(null, "", `#${problems[activeProblemIndex].heading.id}`);
+    }
+  }
+
+  function setActiveProblem(index, shouldScroll = true) {
+    if (!problems.length) return;
+    activeProblemIndex = Math.max(0, Math.min(problems.length - 1, index));
+    updateProblemView(shouldScroll);
+  }
+
+  function bindReaderControls() {
+    if (prevButton) prevButton.addEventListener("click", () => setActiveProblem(activeProblemIndex - 1));
+    if (nextButton) nextButton.addEventListener("click", () => setActiveProblem(activeProblemIndex + 1));
+    if (focusButton) {
+      focusButton.addEventListener("click", () => {
+        focusMode = !focusMode;
+        updateProblemView(true);
+      });
+    }
+    window.addEventListener("keydown", (event) => {
+      const tag = document.activeElement && document.activeElement.tagName;
+      if (!focusMode || /^(INPUT|TEXTAREA|SELECT)$/i.test(tag || "")) return;
+      if (event.key === "ArrowRight") {
+        event.preventDefault();
+        setActiveProblem(activeProblemIndex + 1);
+      }
+      if (event.key === "ArrowLeft") {
+        event.preventDefault();
+        setActiveProblem(activeProblemIndex - 1);
+      }
+    });
+  }
+
   async function render() {
     if (/^(https?:)?\/\//.test(file)) {
       throw new Error("阅读器只打开当前站点内的 Markdown 文件。");
     }
-    if (filePath) filePath.textContent = file;
-    if (rawLink) rawLink.href = encodePath(file);
     const response = await fetch(encodePath(file), {cache: "no-store"});
     if (!response.ok) throw new Error(`无法读取文件：${response.status} ${response.statusText}`);
     const markdown = protectMath(preprocessMarkdown(await response.text()));
@@ -144,6 +253,7 @@
     });
     content.innerHTML = markdown.restore(md.render(markdown.text));
     decorateRenderedLinks(dirname(file));
+    structureProblems();
     buildToc();
     setStatus("Markdown 已渲染，正在排版公式...");
     if (window.renderMathInElement) {
@@ -163,17 +273,16 @@
     } else {
       setStatus("Markdown 已渲染；KaTeX 未加载，公式会保留为 TeX");
     }
+    updateProblemView(false);
     document.title = `${file.split("/").pop()} - 题库阅读器`;
   }
 
   window.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("[data-reader-link]").forEach((anchor) => {
-      const href = anchor.getAttribute("href") || "";
-      if (href.endsWith(".md")) anchor.setAttribute("href", readerHref(href));
-    });
+    bindReaderControls();
     render().catch((error) => {
       setStatus(error.message);
       content.innerHTML = `<h1>打开失败</h1><p>${error.message}</p>`;
+      updateProblemView(false);
     });
   });
 })();
