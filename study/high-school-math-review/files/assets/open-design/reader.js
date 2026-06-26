@@ -64,6 +64,8 @@
       .replace(/^\s*>?\s*-?\s*(?:原PDF|原书PDF|章节PDF)：\[[^\]\r\n]+\]\((?:<file:\/\/\/[^>\r\n]+>|file:[^)]+|[^)\r\n]*)\)\s*$/gmi, "")
       .replace(/^\s*>\s*(?:讲义|题组|来源|原始题号|状态)：[^\r\n]*(?:\r?\n)?/gmi, "")
       .replace(/^\s*>\s*把文件名以本题编号开头的[^\r\n]*(?:\r?\n)?/gmi, "")
+      .replace(/^##\s*我的解答[\s\S]*?(?=^##\s|\s*$)/gmi, "")
+      .replace(/^\s*(?:\[\[[^\]\r\n]*我的解答[^\]\r\n]*\]\]|\[我的解答\]\([^)]+\))\s*$/gmi, "")
       .replace(/^\s*(?:source_pdf|source_pdf_uri|source_pdf_path|source_pdf_name|chapter_pdf|chapter_pdf_uri|chapter_pdf_path|chapter_pdf_name|source_line|generated_by):\s*["']?[^"\r\n]*["']?\s*$/gmi, "")
       .replace(/^\s*(?:\[\[00_控制台\/总览\|返回总览\]\]|题目目录：.*|原合集起始页：.*|原书起始页：.*)\s*$/gmi, "")
       .replace(/!\[\[([^\]]+\.(?:png|jpe?g|gif|webp|svg))\]\]/gi, "![]($1)")

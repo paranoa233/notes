@@ -5,7 +5,7 @@
     method: "",
     bank: "",
     module: "",
-    status: "",
+    kind: "",
     sort: "method"
   };
 
@@ -15,7 +15,7 @@
     method: document.getElementById("methodSelect"),
     bank: document.getElementById("bankSelect"),
     module: document.getElementById("moduleSelect"),
-    status: document.getElementById("statusSelect"),
+    kind: document.getElementById("kindSelect"),
     sort: document.getElementById("sortSelect"),
     chips: document.getElementById("methodChips"),
     count: document.getElementById("resultCount"),
@@ -54,13 +54,13 @@
     state.method = params.get("method") || "";
     state.bank = params.get("bank") || "";
     state.module = params.get("module") || "";
-    state.status = params.get("status") || "";
+    state.kind = params.get("kind") || "";
     state.sort = params.get("sort") || "method";
   }
 
   function writeUrl() {
     const params = new URLSearchParams();
-    for (const key of ["query", "method", "bank", "module", "status", "sort"]) {
+    for (const key of ["query", "method", "bank", "module", "kind", "sort"]) {
       const paramKey = key === "query" ? "q" : key;
       if (state[key]) params.set(paramKey, state[key]);
     }
@@ -74,15 +74,18 @@
     const methods = Object.entries(index.methods || {})
       .filter(([name]) => name !== "未标注")
       .sort((a, b) => Number(b[1]) - Number(a[1]));
+    const kinds = Object.entries(index.kinds || {})
+      .filter(([name]) => name !== "未标注")
+      .sort((a, b) => Number(b[1]) - Number(a[1]));
     els.method.innerHTML = option("", "全部") + methods.map(([name, count]) => option(name, `${name} · ${count}`)).join("");
     els.module.innerHTML = option("", "全部") + uniqueSorted(problems.map((item) => item.module)).map((name) => option(name, name)).join("");
-    els.status.innerHTML = option("", "全部") + uniqueSorted(problems.map((item) => item.status)).map((name) => option(name, name || "未标注")).join("");
+    els.kind.innerHTML = option("", "全部") + kinds.map(([name, count]) => option(name, `${name} · ${count}`)).join("");
 
     els.query.value = state.query;
     els.method.value = state.method;
     els.bank.value = state.bank;
     els.module.value = state.module;
-    els.status.value = state.status;
+    els.kind.value = state.kind;
     els.sort.value = state.sort;
 
     els.heroStats.innerHTML = [
@@ -91,7 +94,7 @@
       ["专题", Object.keys(index.modules || {}).length]
     ].map(([label, value]) => `<div class="stat"><b>${h(value)}</b><span>${h(label)}</span></div>`).join("");
 
-    els.chips.innerHTML = methods.slice(0, 14).map(([name, count]) =>
+    els.chips.innerHTML = methods.map(([name, count]) =>
       `<button class="chip${name === state.method ? " active" : ""}" type="button" data-method="${h(name)}">${h(name)}<small>${h(count)}</small></button>`
     ).join("");
   }
@@ -100,7 +103,7 @@
     if (state.bank && item.bankId !== state.bank) return false;
     if (state.method && !(item.methods || []).includes(state.method)) return false;
     if (state.module && item.module !== state.module) return false;
-    if (state.status && item.status !== state.status) return false;
+    if (state.kind && item.kind !== state.kind) return false;
     const query = normalize(state.query);
     if (!query) return true;
     const text = normalize([
@@ -169,7 +172,7 @@
       renderResults();
       writeUrl();
     });
-    for (const [key, element] of [["method", els.method], ["bank", els.bank], ["module", els.module], ["status", els.status], ["sort", els.sort]]) {
+    for (const [key, element] of [["method", els.method], ["bank", els.bank], ["module", els.module], ["kind", els.kind], ["sort", els.sort]]) {
       element.addEventListener("change", () => {
         state[key] = element.value;
         render();
@@ -186,7 +189,7 @@
   async function boot() {
     initFromUrl();
     bindControls();
-    const response = await fetch("assets/open-design/question-search-index.json?v=20260626-1", {cache: "no-store"});
+    const response = await fetch("assets/open-design/question-search-index.json?v=20260626-2", {cache: "no-store"});
     if (!response.ok) throw new Error(`索引加载失败：${response.status}`);
     state.index = await response.json();
     render();

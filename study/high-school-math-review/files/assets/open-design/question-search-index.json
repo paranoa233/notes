@@ -1,18 +1,19 @@
 {
-  "generatedAt": "2026-06-26T14:34:52",
+  "generatedAt": "2026-06-26T18:32:13",
   "total": 2603,
   "banks": {
     "二轮题库": 1077,
     "五年经典": 1526
   },
   "methods": {
-    "基本不等式": 484,
+    "基本不等式": 88,
     "整体结构识别": 3,
     "代入消元": 32,
+    "乘积定值求和最小": 6,
     "换元": 44,
     "导数单调性": 567,
     "选项排除": 445,
-    "未标注": 715,
+    "未标注": 840,
     "数形结合": 271,
     "构造函数": 132,
     "递推验证": 207,
@@ -20,7 +21,8 @@
     "概率递推": 222,
     "圆锥曲线定义": 222,
     "空间向量": 148,
-    "特征方程": 5
+    "特征方程": 5,
+    "通项验证": 2
   },
   "modules": {
     "基本不等式": 64,
@@ -50,6 +52,18 @@
     "概率与统计": 164,
     "新高考创新题型": 48
   },
+  "kinds": {
+    "讲义": 55,
+    "作业": 293,
+    "挑战自我": 43,
+    "经典例题": 479,
+    "知识清单": 111,
+    "练习": 54,
+    "题目": 42,
+    "模拟集训": 1082,
+    "新高考真题": 157,
+    "全国卷真题": 287
+  },
   "problems": [
     {
       "bank": "二轮题库",
@@ -65,7 +79,8 @@
       "methods": [
         "基本不等式",
         "整体结构识别",
-        "代入消元"
+        "代入消元",
+        "乘积定值求和最小"
       ],
       "file": "Obsidian题库/01_题目/1_基本不等式/1-1_基本不等式/1-1-1.md",
       "excerpt": "1. (2010 重庆高考)已知 x > 0, y > 0, x + {2y} + {2xy} = 8 ，则 x + {2y} 的最小值是 ( ) A. 3 B. 4 C. \\frac{9}{2} D. \\frac{11}{2}"
@@ -83,7 +98,8 @@
       "status": "todo",
       "methods": [
         "基本不等式",
-        "换元"
+        "换元",
+        "乘积定值求和最小"
       ],
       "file": "Obsidian题库/01_题目/1_基本不等式/1-1_基本不等式/1-1-2.md",
       "excerpt": "2. (2005 福建高考) 设 a, b \\in \\mathbb{R} ,且 {a}^{2} + 2{b}^{2} = 6 ,则 a + b 的最小值是 ( ) A. - 2\\sqrt{2} B. - \\frac{5\\sqrt{3}}{3} C. -3 D. - \\frac{7}{2}"
@@ -1256,7 +1272,6 @@
       "kind": "讲义",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "构造函数",
         "导数单调性"
       ],
@@ -1355,9 +1370,7 @@
       "section": "(二)函数性质的组合技",
       "kind": "作业",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/2_函数/2-1_基本方法/2-1-12.md",
       "excerpt": "2. (2012 新课标) 已知函数 f\\left( x\\right) = \\frac{{\\left( x + 1\\right) }^{2} + \\sin x}{{x}^{2} + 1} ,则 f\\left( x\\right) 的最大值与最小值之和为 ___."
     },
@@ -1597,9 +1610,7 @@
       "section": "三、挑战自我",
       "kind": "挑战自我",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/2_函数/2-1_基本方法/2-1-27.md",
       "excerpt": "17.(2024 山东济南二模)已知函数 f\\left( x\\right) = {x}^{3} - 3{x}^{2} + {3x} + {2}^{x - 1} - {2}^{-x + 1} ，若实数 x, y 满足 f\\left( {3{x}^{2}}\\right) + f\\left( {2{y}^{2} - 4}\\right) = 2 ，则 x + y 的最大值为___."
     },
@@ -1799,7 +1810,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/2_函数/2-2_对称性进阶/2-2-9.md",
@@ -1831,9 +1841,7 @@
       "section": "(二)具体函数",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/2_函数/2-2_对称性进阶/2-2-11.md",
       "excerpt": "5. 函数 f\\left( x\\right) = \\left( {\\frac{1}{x} + 3}\\right) \\left( {1 - \\frac{2}{x}}\\right) \\left( {2{x}^{2} + {ax} + b}\\right) ,对任意的 x \\neq 0 时,都有 f\\left( x\\right) - \\; f\\left( \\frac{1}{x}\\right) = 0 ，则 a + {2b} = ___，函数 f"
     },
@@ -1946,7 +1954,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "Obsidian题库/01_题目/2_函数/2-2_对称性进阶/2-2-18.md",
@@ -3162,7 +3169,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "构造函数",
         "数形结合",
         "选项排除"
@@ -3217,7 +3223,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合",
         "选项排除"
       ],
@@ -3844,7 +3849,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/2_函数/2-5_抽象函数/2-5-36.md",
@@ -3862,7 +3866,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "选项排除"
       ],
@@ -3896,7 +3899,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "分类讨论"
       ],
       "file": "Obsidian题库/01_题目/2_函数/2-6_分段函数/2-6-2.md",
@@ -3914,7 +3916,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "构造函数"
       ],
       "file": "Obsidian题库/01_题目/2_函数/2-6_分段函数/2-6-3.md",
@@ -4157,7 +4158,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "构造函数"
       ],
       "file": "Obsidian题库/01_题目/2_函数/2-6_分段函数/2-6-18.md",
@@ -4220,7 +4220,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "构造函数"
       ],
       "file": "Obsidian题库/01_题目/2_函数/2-6_分段函数/2-6-22.md",
@@ -4238,7 +4237,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "构造函数"
       ],
       "file": "Obsidian题库/01_题目/2_函数/2-6_分段函数/2-6-23.md",
@@ -4255,9 +4253,7 @@
       "section": "(一)零点、交点",
       "kind": "作业",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/2_函数/2-6_分段函数/2-6-24.md",
       "excerpt": "15.(2024 湖南岳阳三模)已知函数 f\\left( x\\right) = \\left\\{ \\begin{matrix} {\\mathrm{e}}^{x} + a, x < a, \\\\ {x}^{2} + {2ax}, x \\geq a. \\end{matrix}\\right. f\\left( x\\right) 不存在最小值， 则实数 a 的取值范围是( ) A. \\left( {-1,0}\\right) B. \\left( {\\f"
     },
@@ -4471,7 +4467,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "分类讨论"
       ],
       "file": "Obsidian题库/01_题目/2_函数/2-7_绝对值的处理/2-7-1.md",
@@ -4506,7 +4501,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "分类讨论",
         "数形结合",
         "选项排除"
@@ -4526,7 +4520,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "分类讨论"
       ],
       "file": "Obsidian题库/01_题目/2_函数/2-7_绝对值的处理/2-7-4.md",
@@ -4544,7 +4537,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "分类讨论",
         "数形结合"
       ],
@@ -4715,7 +4707,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "Obsidian题库/01_题目/2_函数/2-7_绝对值的处理/2-7-15.md",
@@ -4752,7 +4743,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "Obsidian题库/01_题目/2_函数/2-7_绝对值的处理/2-7-17.md",
@@ -4769,9 +4759,7 @@
       "section": "(三) 代数方法: 绝对值的性质",
       "kind": "作业",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/2_函数/2-7_绝对值的处理/2-7-18.md",
       "excerpt": "8. (2015 重庆高考)若函数 f\\left( x\\right) = \\left| {x + 1}\\right| + 2\\left| {x - a}\\right| 的最小值为 5，则实数 a = ___. (四)综合题"
     },
@@ -4787,7 +4775,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "选项排除"
       ],
@@ -4825,7 +4812,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合",
         "选项排除"
       ],
@@ -4844,7 +4830,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/2_函数/2-7_绝对值的处理/2-7-22.md",
@@ -4962,9 +4947,7 @@
       "section": "三、挑战自我",
       "kind": "挑战自我",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/2_函数/2-7_绝对值的处理/2-7-29.md",
       "excerpt": "19.(2023 浙江温州三模)已知函数 f\\left( x\\right) = \\left| {\\frac{{\\mathrm{e}}^{x} - {\\mathrm{e}}^{-x}}{{\\mathrm{e}}^{x} + {\\mathrm{e}}^{-x}} - a}\\right| ,存在实数 {x}_{1},{x}_{2},\\cdots ,{x}_{n} 使得 f\\left( {x}_{1}\\right) + f\\left( {x}_"
     },
@@ -5014,7 +4997,6 @@
       "kind": "知识清单",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "Obsidian题库/01_题目/2_函数/2-8_新函数的处理/2-8-2.md",
@@ -5032,7 +5014,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "数形结合",
         "选项排除"
@@ -5070,7 +5051,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "选项排除"
       ],
@@ -5159,9 +5139,7 @@
       "section": "(三)三角函数",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/2_函数/2-8_新函数的处理/2-8-10.md",
       "excerpt": "8. (2013 辽宁高考)已知函数 f\\left( x\\right) = {x}^{2} - 2\\left( {a + 2}\\right) x + {a}^{2}, g\\left( x\\right) = - {x}^{2} + 2(a - 2) x - {a}^{2} + 8 . 设 {H}_{1}\\left( x\\right) = \\max \\{ f\\left( x\\right) , g\\left( x\\right) \\} ,{H}"
     },
@@ -5176,9 +5154,7 @@
       "section": "(三)三角函数",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/2_函数/2-8_新函数的处理/2-8-11.md",
       "excerpt": "9. 以 \\max M 表示数集 M 中最大的数,设 0 < a < b < c < 1 ,已知 b \\geq {2a} 或 a + \\; b \\leq 1 ，则 \\max \\{ b - a, c - b,1 - c\\} 的最小值为___."
     },
@@ -5209,7 +5185,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "数形结合",
         "选项排除"
@@ -5229,7 +5204,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "选项排除"
       ],
@@ -5301,7 +5275,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "构造函数",
         "导数单调性",
         "选项排除"
@@ -5339,7 +5312,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "数形结合",
         "选项排除"
@@ -5359,7 +5331,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "选项排除"
       ],
@@ -5378,7 +5349,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/2_函数/2-8_新函数的处理/2-8-22.md",
@@ -5396,7 +5366,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合",
         "选项排除"
       ],
@@ -5415,7 +5384,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/2_函数/2-8_新函数的处理/2-8-24.md",
@@ -5464,9 +5432,7 @@
       "section": "(二)幂、指、对",
       "kind": "作业",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/2_函数/2-8_新函数的处理/2-8-27.md",
       "excerpt": "15. (2025 安徽一模) 以 \\min M 表示数集 M 中最小的数. 函数 f\\left( x\\right) = \\cos x . \\sin x + \\min \\{ \\cos x,2\\sin x\\} \\left( {x \\in \\mathbf{R}}\\right) 的最大值是___."
     },
@@ -5500,7 +5466,6 @@
       "kind": "挑战自我",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "数形结合",
         "选项排除"
@@ -5520,7 +5485,6 @@
       "kind": "挑战自我",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合",
         "选项排除"
       ],
@@ -5573,9 +5537,7 @@
       "section": "四、挑战自我",
       "kind": "挑战自我",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/2_函数/2-8_新函数的处理/2-8-33.md",
       "excerpt": "21. (2024 湖北模拟)记 \\mathop{\\max }\\limits_{{x \\in \\left\\lbrack {a, b}\\right\\rbrack }}\\{ f\\left( x\\right) \\} ,\\mathop{\\min }\\limits_{{x \\in \\left\\lbrack {a, b}\\right\\rbrack }}\\{ f\\left( x\\right) \\} 分别表示函数 f\\left( x\\right) 在 "
     },
@@ -5872,7 +5834,6 @@
       "kind": "练习",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-1.md",
@@ -5921,9 +5882,7 @@
       "section": "*(I)尝试对10以内的整数做出“正整数分拆”，观察其中对(II)是否有帮助；",
       "kind": "练习",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-4.md",
       "excerpt": "4.(2020 北京大兴一模)已知数列 {a}_{1},{a}_{2},\\cdots ,{a}_{10} 满足:对任意的 i, j \\in \\; \\{ 1,2,3,4,5,6,7,8,9,{10}\\} ,若 i \\neq j ,则 {a}_{i} \\neq {a}_{j} ,且 {a}_{i} \\in \\{ 1,2,3,4,5,6,7,8,9,{10}\\} ,设集合 A = \\; \\left\\{ {{a}_{i} + {a}_{i + "
     },
@@ -5953,9 +5912,7 @@
       "section": "专项练习",
       "kind": "练习",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-6.md",
       "excerpt": "2.(1)平面上有 100 条直线，这些曲线可以把平面分成若干个连通区域，则连通区域数量最大值为___. (2)若平面上有 100 条二次曲线，这些曲线可以把平面分成若干个连通区域， 则连通区域数量最大值为___."
     },
@@ -6021,7 +5978,6 @@
       "kind": "练习",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-10.md",
@@ -6068,9 +6024,7 @@
       "section": "实战演练",
       "kind": "练习",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-13.md",
       "excerpt": "1.(2024 北京西城二模)已知数列 A : {a}_{1},{a}_{2},\\cdots ,{a}_{n} ，从 A 中选取第 {i}_{1} 项、第 {i}_{2} 项、 \\ldots 、 第 {i}_{k} 项 \\left( {{i}_{1} < {i}_{2} < \\cdots < {i}_{k}}\\right) 构成数列 B : {a}_{{i}_{1}},{a}_{{i}_{2}},\\cdots ,{a}_{{i}_{k}"
     },
@@ -6163,9 +6117,7 @@
       "section": "实战演练",
       "kind": "练习",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-19.md",
       "excerpt": "1. (2023 北京门头沟一模) 已知集合 M = \\{ \\pm 1, \\pm 2, \\pm 3,\\cdots , \\pm n\\} \\left( {n \\geq 3}\\right) . 若对于集合 M 的任意 k 元子集 A ， A 中必有 4 个元素的和为 -1，则称这样的正整数 k 为 “好数”,所有 “好数” 的最小值记作 g\\left( M\\right) . (1)当 n = 3 ，即集合 M = \\{ - 3, - 2, -"
     },
@@ -6260,7 +6212,6 @@
       "kind": "练习",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-25.md",
@@ -6277,9 +6228,7 @@
       "section": "专项练习",
       "kind": "练习",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-26.md",
       "excerpt": "1. 已知 {x}_{1},{x}_{2},\\cdots ,{x}_{n} 为正实数,且 {x}_{1} + {x}_{2} + \\cdots + {x}_{n} = 1 ,求 {x}_{1}{x}_{2}\\cdots {x}_{n} 的最大值."
     },
@@ -6343,7 +6292,6 @@
       "kind": "练习",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-30.md",
@@ -6360,9 +6308,7 @@
       "section": "实战演练",
       "kind": "练习",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-31.md",
       "excerpt": "3. (2019 北京朝阳期中)已知无穷数列 \\left\\{ {a}_{n}\\right\\} ， \\left\\{ {b}_{n}\\right\\} ， \\left\\{ {c}_{n}\\right\\} 满足: \\forall n \\in {\\mathbf{N}}^{ * } ， {a}_{n + 1} = \\left| {b}_{n}\\right| - \\; \\left| {c}_{n}\\right| ,{b}_{n + 1} = \\lef"
     },
@@ -6409,9 +6355,7 @@
       "section": "数列相关的不等式估计与放缩",
       "kind": "练习",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-34.md",
       "excerpt": "3. (2024 北京海淀一模)已知: Q : {a}_{1},{a}_{2},\\cdots ,{a}_{{m}^{2}}\\left( {m \\geq 2, m \\in {\\mathbf{N}}^{ * }}\\right) 为有穷正整数数列,其最大项的值为 m ,且当 k = 0,1,\\cdots , m - 1 时,均有 {a}_{{km} + i} \\neq {a}_{{km} + j}(1 \\leq i < j \\leq \\; m"
     },
@@ -6427,7 +6371,6 @@
       "kind": "练习",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-35.md",
@@ -6445,7 +6388,6 @@
       "kind": "练习",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-36.md",
@@ -6462,9 +6404,7 @@
       "section": "偏组合问题的估计",
       "kind": "练习",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-37.md",
       "excerpt": "2. (2017 北京石景山一模) 已知集合 {R}_{n} = \\left\\{ {X \\mid X = \\left( {{x}_{1},{x}_{2},\\cdots ,{x}_{n}}\\right) ,{x}_{i} \\in \\{ 0,1\\} , i = }\\right. \\; 1,2,\\cdots , n\\} \\left( {n \\geq 2}\\right) . 对于 A = \\left( {{a}_{1},{a}_{2},\\cdo"
     },
@@ -6479,9 +6419,7 @@
       "section": "偏组合问题的估计",
       "kind": "练习",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-38.md",
       "excerpt": "3. (2019 北京海淀二模) 对于给定的奇数 m,\\left( {m \\geq 3}\\right) ，设 A 是由 m \\times m 个数组成的 m 行 m 列的数表,数表中第 i 行,第 j 列的数 {a}_{ij} \\in \\{ 0,1\\} ,记 c\\left( i\\right) 为 A 的第 i 行所有数之和, r\\left( j\\right) 为 A 的第 j 列所有数之和,其中 i, j \\in \\{ 1,2,\\ldo"
     },
@@ -6620,9 +6558,7 @@
       "section": "同余分析",
       "kind": "练习",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-47.md",
       "excerpt": "3. (2020 北京朝阳二模)设集合 A = \\left\\{ {{a}_{1},{a}_{2},{a}_{3},{a}_{4}}\\right\\} ，其中 {a}_{1},{a}_{2},{a}_{3},{a}_{4} 是正整数， 记 {S}_{A} = {a}_{1} + {a}_{2} + {a}_{3} + {a}_{4} . 对于 {a}_{i},{a}_{j} \\in A\\left( {1 \\leq i < j \\leq 4}"
     },
@@ -6879,7 +6815,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-63.md",
@@ -6896,9 +6831,7 @@
       "section": "作业",
       "kind": "作业",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-64.md",
       "excerpt": "5. (2018 北京高考)设 n 为正整数，集合 A = \\left\\{ {\\alpha \\mid \\alpha = \\left( {{t}_{1},{t}_{2},\\cdots ,{t}_{n}}\\right) ,{t}_{k} \\in \\{ 0,1\\} , k = }\\right. \\; 1,2,\\cdots , n\\} . 对于集合 A 中的任意元素 \\alpha = \\left( {{x}_{1},{x}_{2},\\cdots"
     },
@@ -6945,9 +6878,7 @@
       "section": "作业",
       "kind": "作业",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-67.md",
       "excerpt": "8. (2015 北京高考)已知数列 \\left\\{ {a}_{n}\\right\\} 满足: {a}_{1} \\in {\\mathbf{N}}^{ * } ， {a}_{1} \\leq {36} ，且 {a}_{n + 1} = \\; \\left\\{ {\\begin{matrix} 2{a}_{n},\\;{a}_{n} \\leq {18}, \\\\ 2{a}_{n} - {36},\\;{a}_{n} > {18} \\end{matrix}"
     },
@@ -6978,7 +6909,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-69.md",
@@ -6995,9 +6925,7 @@
       "section": "作业",
       "kind": "作业",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/3_新定义/3-1_新定义/3-1-70.md",
       "excerpt": "11. (2012 北京高考) 设 A 是由 m \\times n 个实数组成的 m 行 n 列的数表,满足: 每个数的绝对值不大于 1,且所有数的和为零,记 S\\left( {m, n}\\right) 为所有这样的数表构成的集合. 对于 A \\in S\\left( {m, n}\\right) ,记 {r}_{i}\\left( A\\right) 为 A 的第 i 行各数之和 \\left( {1 \\leq i \\leq m}\\right)"
     },
@@ -7137,7 +7065,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "代入消元",
         "导数单调性"
       ],
@@ -7269,7 +7196,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "代入消元",
         "导数单调性"
       ],
@@ -7356,7 +7282,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/4_导数选填/4-1_基本方法1/4-1-14.md",
@@ -7374,7 +7299,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "选项排除"
       ],
@@ -7501,7 +7425,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "数形结合"
       ],
@@ -7520,7 +7443,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/4_导数选填/4-2_基本方法2/4-2-8.md",
@@ -7606,7 +7528,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/4_导数选填/4-2_基本方法2/4-2-13.md",
@@ -7763,7 +7684,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "数形结合"
       ],
@@ -7834,7 +7754,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/4_导数选填/4-3_切线/4-3-12.md",
@@ -7852,7 +7771,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/4_导数选填/4-3_切线/4-3-13.md",
@@ -7870,7 +7788,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/4_导数选填/4-3_切线/4-3-14.md",
@@ -8191,7 +8108,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "换元",
         "导数单调性"
       ],
@@ -8210,7 +8126,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "换元",
         "导数单调性"
       ],
@@ -8229,7 +8144,6 @@
       "kind": "挑战自我",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "换元",
         "导数单调性"
       ],
@@ -8773,7 +8687,6 @@
       "kind": "挑战自我",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "构造函数",
         "导数单调性",
         "递推验证",
@@ -8972,7 +8885,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/4_导数选填/4-7_三次函数/4-7-11.md",
@@ -9078,7 +8990,6 @@
       "kind": "挑战自我",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/4_导数选填/4-7_三次函数/4-7-17.md",
@@ -9114,7 +9025,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "数形结合"
       ],
@@ -9133,7 +9043,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/4_导数选填/4-8_凹凸性/4-8-3.md",
@@ -9274,7 +9183,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "数形结合",
         "选项排除"
@@ -9439,7 +9347,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/4_导数选填/4-9_新定义/4-9-12.md",
@@ -9475,7 +9382,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "选项排除"
       ],
@@ -9531,7 +9437,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/4_导数选填/4-10_综合应用/4-10-2.md",
@@ -9776,7 +9681,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "换元",
         "导数单调性",
         "递推验证"
@@ -9853,7 +9757,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "分类讨论",
         "导数单调性"
       ],
@@ -10032,7 +9935,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/5_导数大题/5-2_基本方法2/5-2-4.md",
@@ -10050,7 +9952,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/5_导数大题/5-2_基本方法2/5-2-5.md",
@@ -10102,7 +10003,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/5_导数大题/5-3_端点效应&内点效应/5-3-3.md",
@@ -10139,7 +10039,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/5_导数大题/5-3_端点效应&内点效应/5-3-5.md",
@@ -10263,7 +10162,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/5_导数大题/5-3_端点效应&内点效应/5-3-12.md",
@@ -10574,7 +10472,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/5_导数大题/5-4_多变量多参数/5-4-16.md",
@@ -10681,7 +10578,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "数形结合"
       ],
@@ -10700,7 +10596,6 @@
       "kind": "挑战自我",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "代入消元",
         "导数单调性",
         "数形结合"
@@ -10826,7 +10721,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "构造函数",
         "导数单调性"
       ],
@@ -10934,7 +10828,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/5_导数大题/5-5_凹凸性/5-5-12.md",
@@ -11224,7 +11117,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/5_导数大题/5-7_导数与数列/5-7-8.md",
@@ -11560,7 +11452,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/5_导数大题/5-9_极值点偏移/5-9-7.md",
@@ -11716,7 +11607,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "数形结合",
         "选项排除"
@@ -11823,7 +11713,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "圆锥曲线定义"
       ],
@@ -11913,7 +11802,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "分类讨论",
         "导数单调性"
       ],
@@ -11984,7 +11872,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "构造函数",
         "导数单调性"
       ],
@@ -12038,7 +11925,6 @@
       "kind": "作业",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "换元",
         "导数单调性",
         "数形结合"
@@ -12076,7 +11962,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "Obsidian题库/01_题目/6_三角函数/6-1_图像/6-1-1.md",
@@ -12457,7 +12342,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/6_三角函数/6-2_w的取值范围/6-2-7.md",
@@ -12529,7 +12413,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "Obsidian题库/01_题目/6_三角函数/6-3_三角恒等变换/6-3-4.md",
@@ -12770,7 +12653,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "Obsidian题库/01_题目/6_三角函数/6-4_综合应用/6-4-9.md",
@@ -12852,7 +12734,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "代入消元"
       ],
       "file": "Obsidian题库/01_题目/7_解三角形/7-1_基本方法(边角互化)/7-1-4.md",
@@ -12869,9 +12750,7 @@
       "section": "(一)基本方法:代数角度",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/7_解三角形/7-1_基本方法(边角互化)/7-1-5.md",
       "excerpt": "5. (2024 湖北武汉五调)在 \\bigtriangleup {ABC} 中，角 A, B, C 的对边分别为 a, b, c 且满足 {c}^{2} - {a}^{2} = {ab}, c = 2 ，则 \\bigtriangleup {ABC} 面积取最大值时， \\cos C = ( ) A. \\frac{\\sqrt{3} - 1}{2} B. \\frac{\\sqrt{3} + 1}{4} C. \\frac{2 - \\sqrt{2"
     },
@@ -12887,7 +12766,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "代入消元"
       ],
       "file": "Obsidian题库/01_题目/7_解三角形/7-1_基本方法(边角互化)/7-1-6.md",
@@ -12904,9 +12782,7 @@
       "section": "(一)基本方法:代数角度",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/7_解三角形/7-1_基本方法(边角互化)/7-1-7.md",
       "excerpt": "7. 在 \\bigtriangleup {ABC} 中,角 A, B, C 所对应的边分别为 a, b, c ,若 {ac} = 8,\\sin B + \\; 2\\sin C\\cos A = 0 ,则: ① \\tan B 的最大值为___； ② {S}_{\\bigtriangleup {ABC}} 的最大值为___."
     },
@@ -12939,7 +12815,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "Obsidian题库/01_题目/7_解三角形/7-1_基本方法(边角互化)/7-1-9.md",
@@ -12987,7 +12862,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/7_解三角形/7-2_几何性质、四心相关/7-2-2.md",
@@ -13049,9 +12923,7 @@
       "section": "(二)角平分线",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/7_解三角形/7-2_几何性质、四心相关/7-2-6.md",
       "excerpt": "5.(2018江苏高考)在 \\bigtriangleup {ABC} 中，角 A, B, C 所对的边分别为 a, b, c,\\angle {ABC} = {120}^{ \\circ } ， \\angle {ABC} 的平分线交 {AC} 于点 D ，且 {BD} = 1 ，则 {4a} + c 的最小值为___."
     },
@@ -13067,7 +12939,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/7_解三角形/7-2_几何性质、四心相关/7-2-7.md",
@@ -13084,9 +12955,7 @@
       "section": "(三) 综合应用",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/7_解三角形/7-2_几何性质、四心相关/7-2-8.md",
       "excerpt": "7. (2023 河南信阳三模)在 \\bigtriangleup {ABC} 中，内角 A, B, C 的对边分别为 a, b, c ，若 a = \\; 6\\sqrt{2}\\sin \\left( {B + \\frac{\\pi }{4}}\\right) , c = 6 且 O 为 \\bigtriangleup {ABC} 的外心, G 为 \\bigtriangleup {ABC} 的重心,则 \\left| {OG}\\right| 的最小值"
     },
@@ -13101,9 +12970,7 @@
       "section": "(三) 综合应用",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/7_解三角形/7-3_四边形或多三角形/7-3-1.md",
       "excerpt": "1. (2024 四川南充一模)已知平面四边形 {ABCD} 中， {AB} = 1 ， {BC} = 2 ， {CD} = 3 ， {DA} = 4 ，则该平面四边形 {ABCD} 面积的最大值为___."
     },
@@ -13149,7 +13016,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "Obsidian题库/01_题目/7_解三角形/7-3_四边形或多三角形/7-3-4.md",
@@ -13166,9 +13032,7 @@
       "section": "(三)综合应用",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/7_解三角形/7-3_四边形或多三角形/7-3-5.md",
       "excerpt": "5. (2024 四川成都二诊)平面四边形 {ABCD} 中， {BC} = {CD} = 2 ， \\frac{AB}{BD} = \\frac{3}{4} ， \\angle {ABD} = {90}^{ \\circ } ， 则 {AC} 的最大值为___."
     },
@@ -13198,9 +13062,7 @@
       "section": "二、经典例题",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/7_解三角形/7-4_三角形中的恒等式/7-4-1.md",
       "excerpt": "1. (2016 江苏高考) 在锐角三角形 {ABC} 中,若 \\sin A = 2\\sin B\\sin C ,则 \\tan A\\tan B\\tan C 的最小值是___."
     },
@@ -13230,9 +13092,7 @@
       "section": "二、经典例题",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/7_解三角形/7-4_三角形中的恒等式/7-4-3.md",
       "excerpt": "3. 若非负实数 x, y, z 满足 x + y + z = \\pi ,求 2\\cos x + 2\\cos y + 3\\cos z 的最小值."
     },
@@ -13247,9 +13107,7 @@
       "section": "(一)综合应用:建系、向量",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/7_解三角形/7-5_综合应用/7-5-1.md",
       "excerpt": "1. (2024 江西新余模拟)在等腰直角三角形 {ABC} 中， A 为直角顶点， M 为线段BC 上一点, N 为射线 {CA} 上一点, {BC} = 2 . (1)若 2\\overrightarrow{AN} = \\overrightarrow{CA},{MP} \\bot {BN} ， {\\bigtriangleup {MBN}} 的面积为 \\frac{3}{4} ，求 \\lambda 使 \\lambda \\overrighta"
     },
@@ -13264,9 +13122,7 @@
       "section": "(一)综合应用:建系、向量",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/7_解三角形/7-5_综合应用/7-5-2.md",
       "excerpt": "2.(2022 江苏盐城模拟)在 \\bigtriangleup {ABC} 中，内角 A, B, C 的对边分别是 a, b, c,(a + \\; c)\\left( {\\sin A - \\sin C}\\right) + b\\sin B = a\\sin B, b + {2a} = 4,\\overrightarrow{CA} = 3\\overrightarrow{CD} - 2\\overrightarrow{CB} ,则线段 {CD} 长度"
     },
@@ -13311,9 +13167,7 @@
       "section": "(一)综合应用:建系、向量",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/7_解三角形/7-5_综合应用/7-5-5.md",
       "excerpt": "5. (2024 黑龙江大庆三模) 法国数学家费马在给意大利数学家托里拆利的一封信中提到 “费马点”, 即平面内到三角形三个顶点距离之和最小的点, 托里拆利确定费马点的方法如下: ①当 \\bigtriangleup {ABC} 的三个内角均小于120°时，满足 \\angle {AOB} = \\angle {BOC} = \\angle {COA} = {120}^{ \\circ } 的点 0为费马点; ②当 \\bigtriangleup "
     },
@@ -13493,9 +13347,7 @@
       "section": "三、经典例题",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/8_向量/8-1_向量/8-1-11.md",
       "excerpt": "3.(2023四川乐山一模)已知正六边形 {ABCDEF} 边长为 2， {MN} 是正六边形 {ABCDEF} 的外接圆的一条动弦， {MN} = 2, P 为正六边形 {ABCDEF} 边上的动点，则 \\overrightarrow{PM} \\cdot \\overrightarrow{PN} 的最小值为___."
     },
@@ -13542,9 +13394,7 @@
       "section": "(三)等值线",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/8_向量/8-1_向量/8-1-14.md",
       "excerpt": "6.(1)(2013 江苏高考)设 D ， E 分别是 \\bigtriangleup {ABC} 的边 {AB} ， {BC} 上的点， {AD} = \\frac{1}{2}{AB} ， {BE} = \\frac{2}{3}{BC} . 若 \\overrightarrow{DE} = {\\lambda }_{1}\\overrightarrow{AB} + {\\lambda }_{2}\\overrightarrow{AC}\\left( {"
     },
@@ -13560,7 +13410,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "Obsidian题库/01_题目/8_向量/8-1_向量/8-1-15.md",
@@ -13578,7 +13427,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "Obsidian题库/01_题目/8_向量/8-1_向量/8-1-16.md",
@@ -13613,7 +13461,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "Obsidian题库/01_题目/8_向量/8-1_向量/8-1-18.md",
@@ -13630,9 +13477,7 @@
       "section": "(三)等值线",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/8_向量/8-1_向量/8-1-19.md",
       "excerpt": "11. (2024 上海徐汇二模)如图所示，已知 \\bigtriangleup {ABC} 满足 {BC} = 8,{AC} = {3AB}, P 为 \\bigtriangleup {ABC} 所在平面内一点. 定义点集 D = \\left\\{ {P\\left| {\\;\\overrightarrow{AP} = {3\\lambda }\\overrightarrow{AB} + \\frac{1 - \\lambda }{3}\\overrig"
     },
@@ -13648,7 +13493,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "Obsidian题库/01_题目/8_向量/8-1_向量/8-1-20.md",
@@ -13666,7 +13510,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "Obsidian题库/01_题目/8_向量/8-1_向量/8-1-21.md",
@@ -13789,7 +13632,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/9_立体几何/9-1_轨迹与最值/9-1-8.md",
@@ -13824,7 +13666,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/9_立体几何/9-1_轨迹与最值/9-1-10.md",
@@ -13842,7 +13683,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义",
         "选项排除"
       ],
@@ -13905,9 +13745,7 @@
       "section": "(一)轨迹",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/9_立体几何/9-1_轨迹与最值/9-1-15.md",
       "excerpt": "8. (2018 新课标 III 文)设 A, B, C, D 是同一个半径为 4 的球的球面上四点， \\bigtriangleup {ABC} 为等边三角形且其面积为 9\\sqrt{3} ，则三棱锥 D - {ABC} 体积的最大值为( ) A. {12}\\sqrt{3} B. {18}\\sqrt{3} C. {24}\\sqrt{3} D. {54}\\sqrt{3}"
     },
@@ -13923,7 +13761,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/9_立体几何/9-1_轨迹与最值/9-1-16.md",
@@ -13941,7 +13778,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "空间向量",
         "圆锥曲线定义"
       ],
@@ -13960,7 +13796,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/9_立体几何/9-1_轨迹与最值/9-1-18.md",
@@ -14044,7 +13879,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/9_立体几何/9-2_翻折/9-2-5.md",
@@ -14232,7 +14066,6 @@
       "kind": "讲义",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "Obsidian题库/01_题目/9_立体几何/9-3_外接球/9-3-11.md",
@@ -14281,9 +14114,7 @@
       "section": "(二)综合应用:结合轨迹思考",
       "kind": "讲义",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/9_立体几何/9-3_外接球/9-3-14.md",
       "excerpt": "12. 已知四棱锥 P - {ABCD} ，底面 {ABCD} 是正方形， {PA} \\bot 平面 {ABCD} ， {AD} = 1 ， {PC} 与底面 {ABCD} 所成角的正切值为 \\frac{\\sqrt{2}}{2} ，点 M 为平面 {ABCD} 内一点，且 {AM} = {\\lambda AD}(0 < \\; \\lambda < 1) ,点 N 为平面 {PAB} 内一点, {NC} = \\sqrt{5} ,则三棱锥 N"
     },
@@ -14360,9 +14191,7 @@
       "section": "(一) 通法",
       "kind": "讲义",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/9_立体几何/9-4_内切球/9-4-4.md",
       "excerpt": "2. 表面积为 {4\\pi } 的球内切于圆锥,则该圆锥的表面积的最小值为( ) A. {4\\pi } B. {8\\pi } C. {12\\pi } D. {16\\pi }"
     },
@@ -14407,9 +14236,7 @@
       "section": "(一) 通法",
       "kind": "讲义",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/9_立体几何/9-4_内切球/9-4-7.md",
       "excerpt": "5. 以半径为 1 的球的球心0 为原点建立空间直角坐标系,与球 O 相切的平面 \\alpha 分别与 x, y, z 轴交于 A, B, C 三点， \\left| {OC}\\right| = \\sqrt{2} ，则 {\\left| OA\\right| }^{2} + 4{\\left| OB\\right| }^{2} 的最小值为( ) A. {16}\\sqrt{2} B. {12}\\sqrt{3} C. 18 D. 8\\sqrt{6}"
     },
@@ -14439,9 +14266,7 @@
       "section": "(二)多个球相切",
       "kind": "讲义",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/9_立体几何/9-4_内切球/9-4-9.md",
       "excerpt": "7. 水平桌面上放置了 4 个半径为 2 的小球, 4 个小球的球心构成正方形, 且相邻的两个小球相切. 若用一个半球形的容器罩住四个小球, 则半球形容器内壁的半径的最小值为( ) A. 4 B. 2\\sqrt{2} + 2 C. 2\\sqrt{3} + 2 D. 6"
     },
@@ -14456,9 +14281,7 @@
       "section": "(二)多个球相切",
       "kind": "讲义",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/9_立体几何/9-4_内切球/9-4-10.md",
       "excerpt": "8. 如图所示，有一个棱长为4的正四面体 P - {ABC} 容器， D 是 {PB} 的中点， E 是 {CD} 上的动点，回答下列问题: ![[05_附件/images/635_1047_280_345_299_0.jpg]] (1)如果在这个容器中放入 1 个小球(全部进入)，则小球半径的最大值为___； (2)如果在这个容器中放入 4 个完全相同的小球(全部进入)，则小球半径的最大值为___."
     },
@@ -14520,9 +14343,7 @@
       "section": "(一)截面通法",
       "kind": "讲义",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/9_立体几何/9-5_截面问题/9-5-3.md",
       "excerpt": "2.(2018 新课标I)已知正方体的棱长为 1，每条棱所在直线与平面 \\alpha 所成的角都相等，则 \\alpha 截此正方体所得截面面积的最大值为( ) A. \\frac{3\\sqrt{3}}{4} B. \\frac{2\\sqrt{3}}{3} C. \\frac{3\\sqrt{2}}{4} D. \\frac{\\sqrt{3}}{2}"
     },
@@ -14616,9 +14437,7 @@
       "section": "(三)综合应用",
       "kind": "讲义",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/9_立体几何/9-5_截面问题/9-5-9.md",
       "excerpt": "8. 已知正三棱柱 {ABC} - {A}_{1}{B}_{1}{C}_{1} 的体积为 6\\sqrt{3},{AB} = {2\\sqrt{3}}, D 是 {B}_{1}{C}_{1} 的中点， 点 P 是线段 {A}_{1}D 上的动点,过 {BC} 且与 {AP} 垂直的截面 \\alpha 与 {AP} 交于点 E ,则三棱锥 P - {BCE} 的体积的最小值为( ) A. \\frac{\\sqrt{3}}{2} B. \\frac"
     },
@@ -14634,6 +14453,7 @@
       "kind": "讲义",
       "status": "todo",
       "methods": [
+        "乘积定值求和最小",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/9_立体几何/9-5_截面问题/9-5-10.md",
@@ -14684,7 +14504,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/9_立体几何/9-6_综合应用/9-6-3.md",
@@ -15072,7 +14891,8 @@
       "methods": [
         "特征方程",
         "递推验证",
-        "选项排除"
+        "选项排除",
+        "通项验证"
       ],
       "file": "Obsidian题库/01_题目/10_数列/10-3_特征根/10-3-1.md",
       "excerpt": "1. (多选)(2023 江苏模拟)佩尔数列是一个呈指数增长的整数数列. 随着项数越来越大, 其后一项与前一项的比值越来越接近于一个常数, 该常数称为白银比. 白银比和三角平方数,佩尔数及正八边形都有关系. 记佩尔数列为 \\left\\{ {a}_{n}\\right\\} ,且 {a}_{1} = 0,{a}_{2} = 1,{a}_{n + 2} = 2{a}_{n + 1} + {a}_{n} . 则 ( ) A. {a}_{10} ="
@@ -15091,7 +14911,8 @@
       "methods": [
         "特征方程",
         "递推验证",
-        "选项排除"
+        "选项排除",
+        "通项验证"
       ],
       "file": "Obsidian题库/01_题目/10_数列/10-3_特征根/10-3-2.md",
       "excerpt": "2. (多选) (2024 四川成都模拟改编) 斐波那契数列 \\left\\{ {f}_{n}\\right\\} 满足 {f}_{1} = {f}_{2} = 1,{f}_{n + 2} = \\; {f}_{n + 1} + {f}_{n}\\left( {n \\in {\\mathbf{N}}^{ * }}\\right) . 下列命题正确的有( ) A. {f}_{8}{}^{2} = {f}_{7}{f}_{9} + 1 B. 存在实数 \\"
@@ -15641,9 +15462,7 @@
       "section": "(二)几何意义",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/11_复数/11-1_复数/11-1-17.md",
       "excerpt": "12.(2002 北京高考)已知 {z}_{1},{z}_{2} \\in \\mathbf{C} ，且 \\left| {z}_{1}\\right| = 1 . 若 {z}_{1} + {z}_{2} = 2 ，则 \\left| {{z}_{1} - {z}_{2}}\\right| 的最大值是( ) A. 6 B. 5 C. 4 D. 3"
     },
@@ -15673,9 +15492,7 @@
       "section": "(二)几何意义",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/11_复数/11-1_复数/11-1-19.md",
       "excerpt": "14.(2003 北京高考)若 z \\in \\mathbf{C} ，且 \\left| {z + 2 - {2\\mathrm{i}}}\\right| = 1 ，则 \\left| {z - 2 - {2\\mathrm{i}}}\\right| 的最小值是( ) A. 2 B. 3 C. 4 D. 5"
     },
@@ -15691,7 +15508,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "Obsidian题库/01_题目/11_复数/11-1_复数/11-1-20.md",
@@ -15741,7 +15557,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/11_复数/11-1_复数/11-1-23.md",
@@ -15848,9 +15663,7 @@
       "section": "二、经典例题",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/12_直线和圆/12-1_特殊的圆/12-1-6.md",
       "excerpt": "1.(2024 福建莆田三模)古希腊著名数学家阿波罗尼斯发现:若动点 M 与两个定点 A, B 的距离之比为常数 \\lambda \\left( {\\lambda > 0,\\lambda \\neq 1}\\right) ,则点 M 的轨迹是圆. 后来,人们将这个圆以他的名字命名,称为阿波罗尼斯圆,简称阿氏圆. 已知 A\\left( {-1,0}\\right) , B\\left( {0,1}\\right) , M 是平面内一动点,且 \\fra"
     },
@@ -15866,7 +15679,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "Obsidian题库/01_题目/12_直线和圆/12-1_特殊的圆/12-1-7.md",
@@ -15883,9 +15695,7 @@
       "section": "二、经典例题",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/12_直线和圆/12-1_特殊的圆/12-1-8.md",
       "excerpt": "3. (2022 江西南昌一模)已知 A\\left( {-1,0}\\right) , B\\left( {3,0}\\right) , P 是圆 O : {x}^{2} + {y}^{2} = {45} 上的一个动点,则 \\sin \\angle {APB} 的最大值为 ( ) A. \\frac{\\sqrt{3}}{3} B. \\frac{\\sqrt{5}}{3} C. \\frac{\\sqrt{3}}{4} D. \\frac{\\sqrt{5}"
     },
@@ -15918,7 +15728,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "Obsidian题库/01_题目/12_直线和圆/12-2_数形结合/12-2-1.md",
@@ -15936,7 +15745,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "Obsidian题库/01_题目/12_直线和圆/12-2_数形结合/12-2-2.md",
@@ -15954,7 +15762,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合",
         "圆锥曲线定义"
       ],
@@ -15973,7 +15780,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "Obsidian题库/01_题目/12_直线和圆/12-2_数形结合/12-2-4.md",
@@ -15991,7 +15797,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "Obsidian题库/01_题目/12_直线和圆/12-2_数形结合/12-2-5.md",
@@ -16149,9 +15954,7 @@
       "section": "经典例题",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/12_直线和圆/12-4_综合应用/12-4-3.md",
       "excerpt": "3. (2024 广东模拟预测) 已知圆 M : {x}^{2} + {y}^{2} - {6y} = 0 与圆 N : {\\left( x - \\cos \\theta \\right) }^{2} + (y - \\; \\sin \\theta {)}^{2} = 1\\left( {0 \\leq \\theta \\leq {2\\pi }}\\right) 交于 A, B 两点,则 \\bigtriangleup {ABM} ( M 为圆 M 的圆"
     },
@@ -16235,7 +16038,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "Obsidian题库/01_题目/13_圆锥曲线(难点)/13-2_最值问题/13-2-1.md",
@@ -16253,7 +16055,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "Obsidian题库/01_题目/13_圆锥曲线(难点)/13-2_最值问题/13-2-2.md",
@@ -16271,7 +16072,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "Obsidian题库/01_题目/13_圆锥曲线(难点)/13-2_最值问题/13-2-3.md",
@@ -16289,7 +16089,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "Obsidian题库/01_题目/13_圆锥曲线(难点)/13-2_最值问题/13-2-4.md",
@@ -16307,7 +16106,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "Obsidian题库/01_题目/13_圆锥曲线(难点)/13-2_最值问题/13-2-5.md",
@@ -16376,7 +16174,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义",
         "选项排除"
       ],
@@ -16513,7 +16310,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "Obsidian题库/01_题目/13_圆锥曲线(难点)/13-6_综合应用/13-6-2.md",
@@ -16531,7 +16327,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "Obsidian题库/01_题目/13_圆锥曲线(难点)/13-6_综合应用/13-6-3.md",
@@ -16581,9 +16376,7 @@
       "section": "经典例题",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/13_圆锥曲线(难点)/13-6_综合应用/13-6-6.md",
       "excerpt": "6. (2024 山东青岛一模)已知 O 为坐标原点，点 W 为 \\odot O : {x}^{2} + {y}^{2} = 4 和 \\odot M 的公共点, \\overrightarrow{OM} \\cdot \\overrightarrow{OW} = 0, \\odot M 与直线 x + 2 = 0 相切,记动点 M 的轨迹为 C . (1)求 C 的方程； (2)若 n > m > 0 ，直线 {l}_{1} : x - y -"
     },
@@ -16702,9 +16495,7 @@
       "section": "一、知识清单",
       "kind": "知识清单",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/14_圆锥曲线(小题)/14-1_第一定义&几何性质/14-1-3.md",
       "excerpt": "4. 求解下列求范围问题. (1)已知 a > b > 0 ， {a}^{2} - {b}^{2} = {c}^{2} ， \\sqrt{{a}^{2} + {b}^{2}} \\leq {2c} ，求 e 的范围. (2)已知 {a}_{1} > c > 0, c > {a}_{2} > 0,4{c}^{2} = {a}_{1}^{2} + 3{a}_{2}^{2},{e}_{1} = \\frac{c}{{a}_{1}},{e}_{2} "
     },
@@ -16771,7 +16562,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "Obsidian题库/01_题目/14_圆锥曲线(小题)/14-1_第一定义&几何性质/14-1-7.md",
@@ -17203,7 +16993,7 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
+        "乘积定值求和最小",
         "圆锥曲线定义"
       ],
       "file": "Obsidian题库/01_题目/14_圆锥曲线(小题)/14-3_焦点弦/14-3-9.md",
@@ -17221,7 +17011,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "Obsidian题库/01_题目/14_圆锥曲线(小题)/14-3_焦点弦/14-3-10.md",
@@ -17257,7 +17046,7 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
+        "乘积定值求和最小",
         "圆锥曲线定义",
         "选项排除"
       ],
@@ -17294,7 +17083,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "Obsidian题库/01_题目/14_圆锥曲线(小题)/14-4_新曲线&求轨迹/14-4-1.md",
@@ -17346,9 +17134,7 @@
       "section": "经典例题",
       "kind": "经典例题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "Obsidian题库/01_题目/14_圆锥曲线(小题)/14-5_参数方程/14-5-2.md",
       "excerpt": "2. (2023 全国高考)已知实数 x, y 满足 {x}^{2} + {y}^{2} - {4x} - {2y} - 4 = 0 ，则 x - y 的最大值是 ( ) A. 1 + \\frac{3\\sqrt{2}}{2} B. 4 C. 1 + 3\\sqrt{2} D. 7"
     },
@@ -17431,7 +17217,7 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
+        "乘积定值求和最小",
         "圆锥曲线定义",
         "概率递推",
         "选项排除"
@@ -17762,7 +17548,6 @@
       "kind": "经典例题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证",
         "概率递推",
         "选项排除"
@@ -17939,7 +17724,6 @@
       "kind": "题目",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "概率递推"
       ],
       "file": "Obsidian题库/01_题目/15_概率统计/15-4_综合应用/15-4-2.md",
@@ -19122,9 +18906,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/1_集合与常用逻辑用语/1-3_集合中的参数问题/1-3-8.md",
       "excerpt": "8.(2024九省联考)已知集合 A = \\{ - 2,0,2,4\\} ， B = \\{ x\\left| \\right| x - 3 \\mid \\leq m\\} ,若 A \\cap B = A ,则 m 的最小值为___."
     },
@@ -19818,9 +19600,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/2_不等式/2-1_不等式的性质及其应用/2-1-9.md",
       "excerpt": "9.(2020 北京清华附中三统)李明自主创业，在网上经营一家水果店，销售的水果中有草莓、京白梨、西瓜、桃，价格依次为 60 元/盒、65 元/盒、 80 元/盒、90 元/盒. 为增加销量, 李明对这四种水果进行促销:一次购买水果的总价达到 120 元，顾客就少付 x 元. 每笔订单顾客网上支付成功后，李明会得到支付款的 80%. ①当 x = {10} 时，顾客一次购买草莓和西瓜各 1 盒，需要支付___元； ②在促销活动中，为保证"
     },
@@ -20536,9 +20316,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/3_函数/3-1_指数式与对数式的运算及互化/3-1-3.md",
       "excerpt": "3.(2023 浙江杭州二模)已知 a > 1, b > 1 ，且 {\\log }_{2}\\sqrt{a} = {\\log }_{b}4 ,则 {ab} 的最小值为 ( ) A. 4 B. 8 C. 16 D. 32"
     },
@@ -20904,9 +20682,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/3_函数/3-3_函数的奇偶性/3-3-6.md",
       "excerpt": "6.(2023 江苏南通等八市二调)已知函数 f\\left( x\\right) 的定义域为 \\mathbf{R}, y = f\\left( x\\right) + {\\mathrm{e}}^{x} 是偶函数, y = \\; f\\left( x\\right) - 3{\\mathrm{e}}^{x} 是奇函数,则 f\\left( x\\right) 的最小值为 ( ) A. e B. 2\\sqrt{2} C. 2\\sqrt{3} D. 2e"
     },
@@ -21203,7 +20979,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "选项排除"
       ],
@@ -21741,7 +21516,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "数形结合"
       ],
@@ -21760,7 +21534,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合",
         "选项排除"
       ],
@@ -21779,7 +21552,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "数形结合",
         "选项排除"
@@ -21853,7 +21625,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "数形结合"
       ],
@@ -21905,9 +21676,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/3_函数/3-8_二次函数在给定区间上的最值问题/3-8-2.md",
       "excerpt": "2.(2022 安徽合肥调研)已知函数 f\\left( x\\right) = \\frac{1}{3}{x}^{3} \\; + b{x}^{2} + \\left( {b - 4}\\right) x . 若存在 x \\in \\left\\lbrack {-3, - 1}\\right\\rbrack ,使得 {f}^{\\prime }\\left( x\\right) \\geq 0 成立，则实数 b 的最值情况是( ) A. 有最大值 1 B. 有最"
     },
@@ -21957,7 +21726,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合",
         "选项排除"
       ],
@@ -21976,7 +21744,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "高考数学五年经典/01_题目/3_函数/3-8_二次函数在给定区间上的最值问题/3-8-6.md",
@@ -21993,9 +21760,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/3_函数/3-8_二次函数在给定区间上的最值问题/3-8-7.md",
       "excerpt": "7.(2024 重庆渝北阶段练习)已知三个实数 a, b ， c ,其中 c > 0, b \\leq {2a} + {3c} 且 {bc} = {a}^{2} ,则 \\frac{a - {2c}}{b} 的最大值为___."
     },
@@ -22010,9 +21775,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/3_函数/3-8_二次函数在给定区间上的最值问题/3-8-8.md",
       "excerpt": "8.(2024 湖北武汉二模)已知动点 P\\left( {x, y}\\right) 的轨迹方程为 {x}^{2} - 4{y}^{2} - \\sqrt{{x}^{2} - 4{y}^{2}} + m = 0 ，其中 m \\in \\left( {-\\infty ,\\frac{1}{4}}\\right\\rbrack ,则 \\sqrt{\\frac{5}{4}{x}^{2} - {8y} + {16}} 的最小值为___."
     },
@@ -22881,9 +22644,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/3_函数/3-13_分段函数问题/3-13-7.md",
       "excerpt": "7.(2023 湖北八市联考)已知函数 f\\left( x\\right) = \\; \\left\\{ \\begin{array}{l} - {x}^{2} - {2x}, x \\leq 0, \\\\ \\left| {1 - \\ln x}\\right| , x > 0. \\end{array}\\right. 若 f\\left( x\\right) = m 存在四个不相等的实根 {x}_{1},{x}_{2},{x}_{3},{x}_{4} ,且"
     },
@@ -23062,9 +22823,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/3_函数/3-14_“勾函数”问题/3-14-9.md",
       "excerpt": "9.(2023 辽宁本溪期中)若 a\\left( {\\sin x + \\cos x}\\right) \\leq 2 \\; + \\sin x\\cos x 对任意 x \\in \\left( {0,\\frac{\\pi }{2}}\\right) 恒成立，则 a 的最大值为___."
     },
@@ -23334,7 +23093,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/3_函数/3-16_函数模型的实际应用/3-16-7.md",
@@ -23415,9 +23173,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/3_函数/3-17_函数的综合应用/3-17-1.md",
       "excerpt": "1. (2024 湖北宜荆荆三模)设 D = \\; \\sqrt{{\\left( x - a\\right) }^{2} + {\\left( {\\mathrm{e}}^{x} - 2\\sqrt{a}\\right) }^{2}} + a + 1 ,其中 \\mathrm{e} \\approx 2.71828,则 D 的最小值为 ( ) A. \\sqrt{2} B. \\sqrt{2} + 1 C. \\sqrt{3} D. \\sqrt{3} + 1"
     },
@@ -23545,9 +23301,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/3_函数/3-17_函数的综合应用/3-17-9.md",
       "excerpt": "9.(2024 九省联考)以 max M 表示数集 M 中最大的数. 设 0 < a < b < c < 1 ,已知 b \\geq {2a} 或 a + \\; b \\leq 1 ,则 \\max \\{ b - a, c - b,1 - c\\} 的最小值为___。"
     },
@@ -23802,7 +23556,6 @@
       "kind": "全国卷真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "高考数学五年经典/01_题目/4_导数/4-1_导数的运算与几何意义/4-1-14.md",
@@ -24171,7 +23924,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "高考数学五年经典/01_题目/4_导数/4-3_利用导数求函数的极值与最值/4-3-3.md",
@@ -24189,7 +23941,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "选项排除"
       ],
@@ -24243,7 +23994,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "高考数学五年经典/01_题目/4_导数/4-3_利用导数求函数的极值与最值/4-3-7.md",
@@ -24261,7 +24011,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "高考数学五年经典/01_题目/4_导数/4-3_利用导数求函数的极值与最值/4-3-8.md",
@@ -24279,7 +24028,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "高考数学五年经典/01_题目/4_导数/4-3_利用导数求函数的极值与最值/4-3-9.md",
@@ -24297,7 +24045,6 @@
       "kind": "新高考真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "高考数学五年经典/01_题目/4_导数/4-3_利用导数求函数的极值与最值/4-3-10.md",
@@ -24402,7 +24149,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "高考数学五年经典/01_题目/4_导数/4-4_导数中的参数问题/4-4-2.md",
@@ -24472,7 +24218,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "高考数学五年经典/01_题目/4_导数/4-4_导数中的参数问题/4-4-6.md",
@@ -24490,7 +24235,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "高考数学五年经典/01_题目/4_导数/4-4_导数中的参数问题/4-4-7.md",
@@ -24611,7 +24355,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "高考数学五年经典/01_题目/4_导数/4-5_利用导数研究公切线问题/4-5-6.md",
@@ -24889,7 +24632,6 @@
       "kind": "全国卷真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "高考数学五年经典/01_题目/4_导数/4-6_利用导数研究函数中的零点问题/4-6-11.md",
@@ -24943,7 +24685,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "高考数学五年经典/01_题目/4_导数/4-7_利用导数研究函数中的任意与存在问题/4-7-1.md",
@@ -25472,7 +25213,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "构造函数",
         "导数单调性"
       ],
@@ -25546,7 +25286,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "构造函数",
         "导数单调性"
       ],
@@ -25650,7 +25389,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "高考数学五年经典/01_题目/4_导数/4-10_导数中的指对同构问题/4-10-7.md",
@@ -25900,7 +25638,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "数形结合"
       ],
@@ -25919,7 +25656,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "选项排除"
       ],
@@ -26027,7 +25763,6 @@
       "kind": "新高考真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "递推验证"
       ],
@@ -26869,7 +26604,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "选项排除"
       ],
@@ -26937,7 +26671,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-4_三角函数的性质及应用/5-4-5.md",
@@ -26988,7 +26721,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "构造函数"
       ],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-4_三角函数的性质及应用/5-4-8.md",
@@ -27055,7 +26787,6 @@
       "kind": "全国卷真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-4_三角函数的性质及应用/5-4-12.md",
@@ -27072,9 +26803,7 @@
       "section": "全国卷真题",
       "kind": "全国卷真题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-4_三角函数的性质及应用/5-4-13.md",
       "excerpt": "2.(2021 全国乙卷文, 4)函数 f\\left( x\\right) = \\sin \\frac{x}{3} + \\; \\cos \\frac{x}{3} 的最小正周期和最大值分别是 ( ) A. {3\\pi } 和 \\sqrt{2} B. {3\\pi } 和 2 C. {6\\pi } 和 \\sqrt{2} D. {6\\pi } 和 2"
     },
@@ -27200,7 +26929,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "构造函数",
         "导数单调性",
         "数形结合",
@@ -27310,7 +27038,6 @@
       "kind": "新高考真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合",
         "选项排除"
       ],
@@ -27366,7 +27093,6 @@
       "kind": "全国卷真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-5_三角函数图象与性质的综合/5-5-15.md",
@@ -27384,7 +27110,6 @@
       "kind": "全国卷真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-5_三角函数图象与性质的综合/5-5-16.md",
@@ -27498,7 +27223,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-6_三角函数的值域和最值/5-6-7.md",
@@ -27550,9 +27274,7 @@
       "section": "全国卷真题",
       "kind": "全国卷真题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-6_三角函数的值域和最值/5-6-10.md",
       "excerpt": "1.(2022全国乙卷文，11)函数 f\\left( x\\right) = \\cos x + \\; \\left( {x + 1}\\right) \\sin x + 1 在区间 \\left\\lbrack {0,{2\\pi }}\\right\\rbrack 上的最小值、最大值分别为 ( ) A. - \\frac{\\pi }{2},\\frac{\\pi }{2} B. - \\frac{3\\pi }{2},\\frac{\\pi }{2} C. - \\f"
     },
@@ -27567,9 +27289,7 @@
       "section": "全国卷真题",
       "kind": "全国卷真题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-6_三角函数的值域和最值/5-6-11.md",
       "excerpt": "2.(2024全国甲卷文，13)函数 f\\left( x\\right) = \\sin x - \\; \\sqrt{3}\\cos x 在 \\left\\lbrack {0,\\pi }\\right\\rbrack 上的最大值是___。"
     },
@@ -27660,7 +27380,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-7_运用正、余弦定理解三角形/5-7-6.md",
@@ -27979,9 +27698,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-8_三角形的周长和面积/5-8-6.md",
       "excerpt": "6.(2024 江苏南通如皋、连云港调研)在 \\bigtriangleup {ABC} 中,角 A, B, C 所对的边分别为 a, b, c ,若 a = 2, c \\; = 3,\\cos B = b\\cos C ,点 P, Q 分别在边 {AB} 和 {CB} 上,且 {PQ} 把 \\bigtriangleup {ABC} 的面积分成相等的两部分, 则 {PQ} 长的最小值为___."
     },
@@ -28191,9 +27908,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-9_三角形中的爪型图问题/5-9-2.md",
       "excerpt": "2.(2022 山东泰安期中)已知 \\bigtriangleup {ABC} 的内角 A ， B ， C 的对边分别为 a ， b ， c ，且 a = \\sqrt{3} ，边 {BC} 上的中线 {AD} 长为 1,则 {bc} 的最大值为 ( ) A. \\frac{7}{4} B. \\frac{7}{2} C. \\sqrt{3} D. 2\\sqrt{3}"
     },
@@ -28208,9 +27923,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-9_三角形中的爪型图问题/5-9-3.md",
       "excerpt": "3.(2023 浙江绍兴期中)在 \\bigtriangleup {ABC} 中，角 A ， B ， C 所对的边分别为 a, b, c,\\angle {ABC} = \\frac{\\pi }{3},\\angle {ABC} 的平分线交 {AC} 于点 D ，且 {BD} = \\sqrt{3} ，则 {4a} + c 的最小值为___."
     },
@@ -28330,9 +28043,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-10_三角形中的最值和范围问题/5-10-1.md",
       "excerpt": "1.(2022 江苏南京、盐城一模)在 \\bigtriangleup {ABC} 中，角 A, B, C 的对边分别为 a, b, c . 若 a = {3b} ，则 \\cos B 的最小值是___."
     },
@@ -28347,9 +28058,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-10_三角形中的最值和范围问题/5-10-2.md",
       "excerpt": "2.(2024 江苏南京二模)在斜三角形 {ABC} 中，若 \\sin A = \\cos B ,则 3\\tan B + \\tan C 的最小值为 ( ) A. \\sqrt{2} B. \\sqrt{5} C. \\sqrt{6} D. 4\\sqrt{3}"
     },
@@ -28364,9 +28073,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-10_三角形中的最值和范围问题/5-10-3.md",
       "excerpt": "3.(2021 重庆南开中学第三次质量检测)已知 \\bigtriangleup {ABC} 三个内角 A, B, C 的对边分别为 a, b, c . 若 a + b + {2c} = {4c} \\cdot {\\cos }^{2}\\frac{B}{2} ,则 \\frac{b}{a} + {\\left( \\frac{c}{b}\\right) }^{2} 的最小值为___."
     },
@@ -28396,9 +28103,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-10_三角形中的最值和范围问题/5-10-5.md",
       "excerpt": "5.(2024 安徽合肥二模)记 \\bigtriangleup {ABC} 的内角 A ， B ， C 的对边分别为 a, b, c ，已知 c = 2,\\frac{1}{\\tan A} + \\frac{1}{\\tan B} \\; + \\frac{1}{\\tan A\\tan B} = 1 ,则 \\bigtriangleup {ABC} 面积的最大值为 ( ) A. 1 + \\sqrt{2} B. 1 + \\sqrt{3} C. 2\\sq"
     },
@@ -28428,9 +28133,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-10_三角形中的最值和范围问题/5-10-7.md",
       "excerpt": "7.(2023 重庆质检(七))在 \\bigtriangleup {ABC} 中， a ， b ， c 分别是 \\bigtriangleup {ABC} 的内角 A, B, C 所对的边,且 \\frac{b}{\\sin A + \\sin C} = \\frac{a - c}{\\sin B - \\sin C}. (1)求角 A 的大小； (2)记 \\bigtriangleup {ABC} 的面积为 S ，若 \\overrightarrow{"
     },
@@ -28475,9 +28178,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-11_三角函数的综合运用/5-11-1.md",
       "excerpt": "1.(2023 河北石家庄质检(一)已知函数 f\\left( x\\right) = \\frac{\\sin x}{1 + \\cos x} + \\frac{8}{1 - \\cos x}\\left( {0 < x < \\pi }\\right) ,则函数 f\\left( x\\right) 的最小值是___。"
     },
@@ -28493,7 +28194,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "构造函数"
       ],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-11_三角函数的综合运用/5-11-2.md",
@@ -28543,7 +28243,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合",
         "选项排除"
       ],
@@ -28596,7 +28295,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性"
       ],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-11_三角函数的综合运用/5-11-8.md",
@@ -28613,9 +28311,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-11_三角函数的综合运用/5-11-9.md",
       "excerpt": "9.(2024 福建厦门二模)定义:如果三角形的一个内角恰好是另一个内角的两倍, 那么这个三角形叫作倍角三角形. 如图， \\bigtriangleup {ABC} 的面积为 S ,三个内角 A, B, C 所对的边分别为 a, b, c ，且 \\sin C \\; = \\frac{2S}{{c}^{2} - {b}^{2}} . (1)求证: \\bigtriangleup {ABC} 是倍角三角形； (2)若 c = 9 ，当 S 取最大"
     },
@@ -28728,7 +28424,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-12_三角函数在实际问题中的应用/5-12-4.md",
@@ -28792,9 +28487,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-12_三角函数在实际问题中的应用/5-12-8.md",
       "excerpt": "8.(2021 湖南长沙长郡中学月考)如图, 某湖有一半径为 {100}\\mathrm{\\;m} 的半圆形岸边,现决定在圆心 O 处设立一个水文监测中心(大小忽略不计), 在其正东方向相距 {200}\\mathrm{\\;m} 的点 A 处安装一套监测设备. 为了监测数据更加准确，在半圆弧上的点 B 以及湖中的点 C 处,再分别安装一套监测设备,且满足 {AB} = {AC},\\angle {BAC} = {90}^{ \\circ } ."
     },
@@ -28809,9 +28502,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/5_三角函数与解三角形/5-12_三角函数在实际问题中的应用/5-12-9.md",
       "excerpt": "9.(2023 重庆一诊)从秦朝统一全国币制到清朝末年，圆形方孔铜钱(简称“孔方兄”)是我国使用时长超两千年的货币. 如图 1 ，这是一枚清朝同治年间的铜钱，其边框是由大小不等的两同心圆围成的, 内嵌正方形孔的中心与同心圆的圆心重合,正方形外部,圆框内部刻有四个字“同治通宝”. 某模具厂计划仿制这样的铜钱作为纪念品, 其小圆内部图纸设计如图 2 所示,小圆直径为 1, 内嵌一个大正方形孔，四周是四个全等的小正方形(边长比孔的边长小)，每"
     },
@@ -28978,9 +28669,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-1_平面向量的概念与线性运算/6-1-9.md",
       "excerpt": "9.(2024 湖南永州二模)在 \\bigtriangleup {ABC} 中，若 \\mid \\overrightarrow{AB} + \\; \\overrightarrow{AC}\\left| { = 1,}\\right| \\overrightarrow{CA} + \\overrightarrow{CB} \\mid = 2 ，则 \\bigtriangleup {ABC} 的面积的最大值为 ( ) A. \\frac{1}{6} B. \\"
     },
@@ -29130,9 +28819,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-2_向量共线定理及其应用/6-2-8.md",
       "excerpt": "8.(2024内蒙古呼和浩特第一次质量监测)在 \\bigtriangleup {ABC} 中， D 为线段 {AC} 上的一个三等分点， \\left| {AD}\\right| = 2\\left| {DC}\\right| ,连接 {BD} ,在线段 {BD} 上任取一点 E ,连接 {AE} . 若 \\overrightarrow{AE} = a\\overrightarrow{AC} + b\\overrightarrow{AB} ,则 {"
     },
@@ -29148,7 +28835,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-2_向量共线定理及其应用/6-2-9.md",
@@ -29256,7 +28942,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-3_平面向量基本定理及其应用/6-3-7.md",
@@ -29365,9 +29050,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-4_平面向量的坐标表示及运算/6-4-4.md",
       "excerpt": "4.(2021 江苏扬州高邮一中测试)已知在直角梯形 {ABCD} 中, {AD}//{BC},\\angle {ADC} = {90}^{ \\circ },{AD} = 2 , {BC} = 1, P 是腰 {DC} 上的动点,则 \\left| {\\overrightarrow{PA} + 3\\overrightarrow{PB}}\\right| 的最小值为 ( ) A. -4 B. 5 C. -5 D. 4"
     },
@@ -29397,9 +29080,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-4_平面向量的坐标表示及运算/6-4-6.md",
       "excerpt": "6.(2022 重庆模拟)已知平面内一正三角形 {ABC} 的外接圆半径为 4,以三角形 {ABC} 的中心为圆心、 r\\left( {0 < r \\leq 1}\\right) 为半径的圆上有一个动点 M ,则 \\left| {\\overrightarrow{MA} + \\overrightarrow{MB} + 3\\overrightarrow{MC}}\\right| 最大值为 ( ) A. 13 B. \\sqrt{89} C. 5\\"
     },
@@ -29414,9 +29095,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-4_平面向量的坐标表示及运算/6-4-7.md",
       "excerpt": "7.(2021 重庆巴蜀中学月考)已知单位向量 \\mathbf{a},\\mathbf{b} ， 且 \\mathbf{a} \\cdot \\mathbf{b} = 0 ,则 \\left| {t\\left( {\\mathbf{a} + \\mathbf{b}}\\right) + 4\\mathbf{b}}\\right| + \\mid t\\left( {\\mathbf{a} + \\mathbf{b}}\\right) + (\\mathbf{a} \\;"
     },
@@ -29461,9 +29140,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-4_平面向量的坐标表示及运算/6-4-10.md",
       "excerpt": "10.(2024 上海师大附中一模)在 \\bigtriangleup {ABC} 中， {AC} \\; = 3,{BC} = 4,\\angle C = {90}^{ \\circ }.P 为 \\bigtriangleup {ABC} 所在平面内的动点，且 {PC} = 2 . 若 \\overrightarrow{CP} = \\lambda \\overrightarrow{CA} + \\mu \\overrightarrow{CB} ，则给出"
     },
@@ -29538,9 +29215,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-5_平面向量数量积的运算/6-5-5.md",
       "excerpt": "4.(2022 辽宁沈阳质检)如图，在直角梯形 {ABCD} 中， {AD}//{BC} ， {AB}\\bot {BC},{AD} = 1,{BC} = 2, P 是线段 {AB} 上的动点,则 \\left| {\\overrightarrow{PC} + 4\\overrightarrow{PD}}\\right| 的最小值为 ( ) ![[05_附件/images/88_619_298_199_253_0.jpg]] A. 3\\sqrt{"
     },
@@ -29600,9 +29275,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-5_平面向量数量积的运算/6-5-9.md",
       "excerpt": "8.(2024 福建泉州质检(三))已知在平行四边形 {ABCD} 中, {AB} = 2,{BC} = 4, B = \\frac{2\\pi }{3} . 若以 C 为圆心的圆与对角线 {BD} 相切, P 是圆 C 上的一点, 则 \\overrightarrow{BD} \\cdot \\left( {\\overrightarrow{CP} - \\overrightarrow{CB}}\\right) 的最小值是 ( ) A. 8 - 2\\"
     },
@@ -29617,9 +29290,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-5_平面向量数量积的运算/6-5-10.md",
       "excerpt": "9.(2022 福建福州质检)已知平面向量 \\mathbf{a},\\mathbf{b},\\mathbf{c} 均为单位向量，且 \\left| {\\mathbf{a} - \\mathbf{b}}\\right| = 1 ，则 \\left( {\\mathbf{a} - \\mathbf{b}}\\right) \\cdot \\left( {\\mathbf{b} - \\mathbf{c}}\\right) 的最大值为 ( ) A. \\frac{1}{4"
     },
@@ -29979,9 +29650,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-6_奔驰定理与三角形的“四心”问题/6-6-6.md",
       "excerpt": "7.(2024 湖北武汉华中师大一附中 5 月适应性考试) 已知 \\bigtriangleup {ABC} 是边长为 4\\sqrt{3} 的正三角形， P 是 \\bigtriangleup {ABC} 所在平面内的一点,且满足 \\left| {\\overrightarrow{AP} + \\overrightarrow{BP}}\\right| \\; + \\overrightarrow{CP} \\mid = 3 ，则 \\left| \\ove"
     },
@@ -30028,9 +29697,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-6_奔驰定理与三角形的“四心”问题/6-6-9.md",
       "excerpt": "10. (2024 吉林地区一模)在 \\mathrm{{Rt}} \\bigtriangleup {ABC} 中， A = \\; {90}^{ \\circ } ， \\bigtriangleup {ABC} 的重心、外心、垂心、内心分别为 {G}_{1} ， {G}_{2},{G}_{3},{G}_{4} . 若 \\overrightarrow{A{G}_{i}} = {\\lambda }_{i}\\overrightarrow{AB} + "
     },
@@ -30075,9 +29742,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-7_极化恒等式和等和线定理的应用/6-7-3.md",
       "excerpt": "3. (2024 湖北武汉 4 月调研)已知 P 是边长为 1 的正六边形 {ABCDEF} 边上的动点,则 \\overrightarrow{PA} \\cdot \\overrightarrow{PB} 的最大值为 ( ) A. 2 B. \\frac{11}{4} C. 3 D. \\frac{13}{4}"
     },
@@ -30122,9 +29787,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-7_极化恒等式和等和线定理的应用/6-7-6.md",
       "excerpt": "6.(2024 安徽六校教育研究会二测)已知正方形 {ABCD} 的边长为 2,中心为 O ,四个半圆的圆心为正方形 {ABCD} 各边的中点 (如图). 若点 P 在 \\overset{\\text{ ⏜ }}{BC} 上，且 \\overrightarrow{AP} = \\lambda \\overrightarrow{AB} + \\mu \\overrightarrow{AD} ，则 \\lambda + \\mu 的最大值为 ___. !["
     },
@@ -30154,9 +29817,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-7_极化恒等式和等和线定理的应用/6-7-8.md",
       "excerpt": "8.(2024 广东深圳第一次调研)设点 A\\left( {-2,0}\\right) ， B\\left( {-\\frac{1}{2},0}\\right) , C\\left( {0,1}\\right) ,若动点 P 满足 \\left| {PA}\\right| = \\; 2\\left| {PB}\\right| ，且 \\overrightarrow{AP} = \\lambda \\overrightarrow{AB} + \\mu \\overri"
     },
@@ -30172,7 +29833,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "构造函数"
       ],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-7_极化恒等式和等和线定理的应用/6-7-9.md",
@@ -30206,9 +29866,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-8_平面向量的综合运用/6-8-1.md",
       "excerpt": "1.(2020 山东章丘四中模拟)在 \\bigtriangleup {ABC} 中， \\angle {ACB} 为钝角， {AC} = {BC} = 1 . 若 \\overrightarrow{OC} = x\\overrightarrow{CA} + y\\overrightarrow{CB} ，且 x + \\; y = 1 ,函数 f\\left( m\\right) = \\left| {\\overrightarrow{CA} - m\\ov"
     },
@@ -30240,9 +29898,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-8_平面向量的综合运用/6-8-3.md",
       "excerpt": "3.(2024 江苏南京航空航天大学苏州附中二模)设 A, B, C, D 为平面内四点，已知 \\left| \\overrightarrow{AB}\\right| = 2,\\left| \\overrightarrow{AC}\\right| = 1 ， \\overrightarrow{AB} 与 \\overrightarrow{AC} 的夹角为 {60}^{ \\circ } ， M 为 {AB} 的中点， \\left| \\overrigh"
     },
@@ -30257,9 +29913,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-8_平面向量的综合运用/6-8-4.md",
       "excerpt": "4.(2020 天津适应测试)如图，在 \\bigtriangleup {ABC} 中， {AB} = 3 ， {AC} = 2,\\angle {BAC} = {60}^{ \\circ }, D, E 分别是边 {AB},{AC} 上的点， {AE} = 1 ，且 \\overrightarrow{AD} \\cdot \\overrightarrow{AE} = \\frac{1}{2} ，则 \\left| \\overrightarrow{AD"
     },
@@ -30305,7 +29959,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-8_平面向量的综合运用/6-8-7.md",
@@ -30353,7 +30006,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-8_平面向量的综合运用/6-8-10.md",
@@ -30837,9 +30489,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-10_复数的几何意义/6-10-5.md",
       "excerpt": "5.(2023 广东模拟测试(一))在复平面内, 已知复数 z 满足 \\left| {z - 1}\\right| = \\left| {z + \\mathrm{i}}\\right| ( \\mathrm{i} 为虚数单位),记 {z}_{0} = 2 + \\mathrm{i} 对应的点为点 {Z}_{0}, z 对应的点为点 Z , 则点 {Z}_{0} 与点 Z 之间距离的最小值为 ( ) A. \\frac{\\sqrt{2}}{2} B."
     },
@@ -30901,9 +30551,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/6_平面向量与复数/6-10_复数的几何意义/6-10-9.md",
       "excerpt": "9.(2024 贵州贵阳适应性考试)如果复数 z = \\; x + y\\mathrm{i}\\left( {x, y \\in \\mathbf{R}}\\right) ,{z}_{1} = - 2,{z}_{2} = - \\frac{1}{2},{z}_{3} = \\mathrm{i} 在复平面内对应的点分别为 Z,{Z}_{1},{Z}_{2},{Z}_{3} ,复数 z 满足 \\left| {z - {z}_{1}}\\right| = 2"
     },
@@ -31094,7 +30742,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/7_数列/7-1_等差数列基本量的计算/7-1-6.md",
@@ -31457,7 +31104,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/7_数列/7-3_等差数列前-(n-)项和的最值/7-3-1.md",
@@ -31475,7 +31121,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/7_数列/7-3_等差数列前-(n-)项和的最值/7-3-2.md",
@@ -31493,7 +31138,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/7_数列/7-3_等差数列前-(n-)项和的最值/7-3-3.md",
@@ -31529,7 +31173,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证",
         "选项排除"
       ],
@@ -31548,7 +31191,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/7_数列/7-3_等差数列前-(n-)项和的最值/7-3-6.md",
@@ -31566,7 +31208,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证",
         "选项排除"
       ],
@@ -31585,7 +31226,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/7_数列/7-3_等差数列前-(n-)项和的最值/7-3-8.md",
@@ -31603,7 +31243,6 @@
       "kind": "新高考真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/7_数列/7-3_等差数列前-(n-)项和的最值/7-3-9.md",
@@ -31707,7 +31346,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/7_数列/7-4_等比数列基本量的计算/7-4-5.md",
@@ -31725,7 +31363,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/7_数列/7-4_等比数列基本量的计算/7-4-6.md",
@@ -31966,7 +31603,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/7_数列/7-5_等比数列的性质/7-5-7.md",
@@ -32071,7 +31707,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/7_数列/7-6_等比数列的前-(n-)项和/7-6-4.md",
@@ -32277,7 +31912,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/7_数列/7-7_等差数列与等比数列的综合应用/7-7-2.md",
@@ -32470,7 +32104,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证",
         "概率递推"
       ],
@@ -32710,7 +32343,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/7_数列/7-9_数列求和的方法/7-9-9.md",
@@ -32877,7 +32509,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证",
         "选项排除"
       ],
@@ -33068,7 +32699,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/7_数列/7-11_数列中的子数列与增减项问题/7-11-4.md",
@@ -33138,7 +32768,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/7_数列/7-11_数列中的子数列与增减项问题/7-11-8.md",
@@ -33203,7 +32832,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证",
         "选项排除"
       ],
@@ -33222,7 +32850,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/7_数列/7-12_数列中的最值、范围/7-12-4.md",
@@ -33273,7 +32900,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "换元",
         "递推验证"
       ],
@@ -33292,7 +32918,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/7_数列/7-12_数列中的最值、范围/7-12-8.md",
@@ -33358,7 +32983,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/7_数列/7-13_数列中的奇偶项问题/7-13-4.md",
@@ -33393,7 +33017,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/7_数列/7-13_数列中的奇偶项问题/7-13-6.md",
@@ -33664,7 +33287,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "递推验证",
         "选项排除"
@@ -33767,9 +33389,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/7_数列/7-15_数列中的创新问题/7-15-9.md",
       "excerpt": "9.(2024 河南郑州二模)已知数列 \\left\\{ {a}_{n}\\right\\} 为有穷数列,且 {a}_{n} \\in {\\mathbf{N}}^{ * } ,若数列 \\left\\{ {a}_{n}\\right\\} 满足如下两个性质, 则称数列 \\left\\{ {a}_{n}\\right\\} 为 m 的 k 增数列: ① {a}_{1} + {a}_{2} + {a}_{3} + \\; \\cdots + {a}_{n} = m "
     },
@@ -34145,7 +33765,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "空间向量",
         "选项排除"
       ],
@@ -34164,7 +33783,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "空间向量"
       ],
       "file": "高考数学五年经典/01_题目/8_立体几何与空间向量/8-2_平面图形的翻折与空间图形的展开问题/8-2-3.md",
@@ -34253,7 +33871,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "空间向量",
         "选项排除"
       ],
@@ -34633,7 +34250,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "空间向量"
       ],
       "file": "高考数学五年经典/01_题目/8_立体几何与空间向量/8-4_简单几何体的体积问题/8-4-8.md",
@@ -35250,7 +34866,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "空间向量"
       ],
       "file": "高考数学五年经典/01_题目/8_立体几何与空间向量/8-6_简单几何体的内切球问题/8-6-1.md",
@@ -35336,7 +34951,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "空间向量",
         "选项排除"
       ],
@@ -35372,7 +34986,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "空间向量"
       ],
       "file": "高考数学五年经典/01_题目/8_立体几何与空间向量/8-6_简单几何体的内切球问题/8-6-8.md",
@@ -35390,7 +35003,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "空间向量"
       ],
       "file": "高考数学五年经典/01_题目/8_立体几何与空间向量/8-6_简单几何体的内切球问题/8-6-9.md",
@@ -35477,7 +35089,6 @@
       "kind": "新高考真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "空间向量"
       ],
       "file": "高考数学五年经典/01_题目/8_立体几何与空间向量/8-7_空间角的求解/8-7-5.md",
@@ -35733,7 +35344,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "空间向量"
       ],
       "file": "高考数学五年经典/01_题目/8_立体几何与空间向量/8-8_空间距离的求解/8-8-2.md",
@@ -35974,7 +35584,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "空间向量",
         "选项排除"
       ],
@@ -35993,7 +35602,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "空间向量"
       ],
       "file": "高考数学五年经典/01_题目/8_立体几何与空间向量/8-9_空间几何体的截面问题/8-9-4.md",
@@ -36080,7 +35688,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "空间向量"
       ],
       "file": "高考数学五年经典/01_题目/8_立体几何与空间向量/8-9_空间几何体的截面问题/8-9-9.md",
@@ -36204,7 +35811,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "空间向量",
         "选项排除"
       ],
@@ -36241,7 +35847,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "空间向量",
         "选项排除"
       ],
@@ -36353,9 +35958,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-1_直线的方程/9-1-5.md",
       "excerpt": "5.(2023 安徽蚌埠统考二模)若直线 \\frac{x}{a} + \\frac{y}{b} = 1 (a > 0, b > 0) 过点 \\left( {2,3}\\right) ,则 {2a} + b 的最小值为___"
     },
@@ -36541,9 +36144,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-2_两条直线的位置关系与距离公式/9-2-7.md",
       "excerpt": "7.(2021 湖南娄底双峰一中月考)若动点 A ， B 分别在直线 {l}_{1} : x + y - 6 = 0 和 {l}_{2} : x + y - 2 = 0 上,则 {AB} 的中点 M 到坐标原点的距离的最小值为 ( ) A. \\sqrt{2} B. 2\\sqrt{2} C. 3\\sqrt{2} D. 4\\sqrt{2}"
     },
@@ -36589,7 +36190,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-2_两条直线的位置关系与距离公式/9-2-10.md",
@@ -36669,7 +36269,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-3_圆的方程/9-3-5.md",
@@ -36702,7 +36301,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-3_圆的方程/9-3-7.md",
@@ -36825,7 +36423,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-4_直线与圆的位置关系/9-4-4.md",
@@ -36843,7 +36440,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-4_直线与圆的位置关系/9-4-5.md",
@@ -36876,7 +36472,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-4_直线与圆的位置关系/9-4-7.md",
@@ -36894,7 +36489,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-4_直线与圆的位置关系/9-4-8.md",
@@ -36990,9 +36584,7 @@
       "section": "全国卷真题",
       "kind": "全国卷真题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-4_直线与圆的位置关系/9-4-14.md",
       "excerpt": "1.(2020 全国卷Ⅰ 文, 6)已知圆 {x}^{2} + {y}^{2} - {6x} = 0 ，过点 (1,2) 的直线被该圆所截得的弦的长度的最小值为 ( ) A. 1 B. 2 C. 3 D. 4"
     },
@@ -37025,7 +36617,6 @@
       "kind": "全国卷真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "递推验证"
       ],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-4_直线与圆的位置关系/9-4-16.md",
@@ -37072,9 +36663,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-5_圆与圆的位置关系/9-5-3.md",
       "excerpt": "3. (2024 山西吕梁二模)已知 A ， B 分别是圆 {C}_{1} : {x}^{2} + {y}^{2} = 1 与圆 {C}_{2} : {\\left( x - a\\right) }^{2} + {\\left( y - 4\\right) }^{2} = {36}(a \\geq 0)上的动点，若 \\left| {AB}\\right| 的最大值为12，则 a 的值为 ( ) A. 0 B. 1 C. 2 D. 3"
     },
@@ -37090,7 +36679,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-5_圆与圆的位置关系/9-5-4.md",
@@ -37123,7 +36711,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-5_圆与圆的位置关系/9-5-6.md",
@@ -37141,7 +36728,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-5_圆与圆的位置关系/9-5-7.md",
@@ -37190,9 +36776,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-6_隐形圆问题/9-6-1.md",
       "excerpt": "1. 已知 P 是圆 O : {x}^{2} + {y}^{2} = 9 上的动点,点 Q 满足 \\overrightarrow{PQ} = \\left( {3, - 4}\\right) ,点 A\\left( {1,1}\\right) ,则 \\left| {AQ}\\right| 的最大值为 ( ) A. 8 B. 9 C. \\sqrt{29} + 3 D. \\sqrt{30} + 3"
     },
@@ -37208,7 +36792,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-6_隐形圆问题/9-6-2.md",
@@ -37270,9 +36853,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-6_隐形圆问题/9-6-6.md",
       "excerpt": "6.(2023 河北石家庄期末)已知 O 为坐标原点， A, B 在直线 x - y - 4 = 0 上， \\left| {AB}\\right| = 2\\sqrt{2} ，动点 M 满足 \\left| {MA}\\right| = 2\\left| {MB}\\right| ,则 \\left| {OM}\\right| 的最小值为___."
     },
@@ -37287,9 +36868,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-6_隐形圆问题/9-6-7.md",
       "excerpt": "7.(2024 河南郑州二模)在平面直角坐标系 {xOy} 中,设 A\\left( {2,4}\\right) , B\\left( {-2, - 4}\\right) ,动点 P 满足 \\overrightarrow{PO} . \\overrightarrow{PA} = - 1 ，则 \\tan \\angle {PBO} 的最大值为 0 ( ) A. \\frac{2\\sqrt{21}}{21} B. \\frac{4\\sqrt{29}}{29"
     },
@@ -37379,9 +36958,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-7_与圆有关的最值问题/9-7-2.md",
       "excerpt": "2.(2024 东北三省三校一模)已知圆 M : {\\left( x - 4\\right) }^{2} \\; + {y}^{2} = 9 ,直线 y = {kx} 交圆 M 于 A, B 两点,点 C \\; \\left( {6,0}\\right) ，则 \\bigtriangleup {ABC} 面积的最大值为___."
     },
@@ -37396,9 +36973,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-7_与圆有关的最值问题/9-7-3.md",
       "excerpt": "3.(2024 山东菏泽一模)已知圆 {C}_{1} ; {x}^{2} + {\\left( y - 3\\right) }^{2} \\; = 8 与圆 {C}_{2} : {\\left( x - a\\right) }^{2} + {y}^{2} = 8 相交于 A, B 两点,直线 {AB} 交 x 轴于点 P ,则 {S}_{\\bigtriangleup {C}_{1}P{C}_{2}} 的最小值为 ( ) A. \\frac{3}{2"
     },
@@ -37413,9 +36988,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-7_与圆有关的最值问题/9-7-4.md",
       "excerpt": "4.(2021 重庆市重庆八中适应性考试)过点 P\\left( {x, y}\\right) 作圆 {C}_{1} : {x}^{2} + {y}^{2} = 1 与圆 {C}_{2} : {\\left( x - 2\\right) }^{2} + \\; {\\left( y - 1\\right) }^{2} = 1 的切线，切点分别为 A, B ，若 \\left| {PA}\\right| \\; = \\left| {PB}\\right| ,则"
     },
@@ -37446,7 +37019,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-7_与圆有关的最值问题/9-7-6.md",
@@ -37463,9 +37035,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-7_与圆有关的最值问题/9-7-7.md",
       "excerpt": "7.(2024 湖南岳阳质监(二))已知 A\\left( {{x}_{1},{y}_{1}}\\right) ，B \\left( {{x}_{2},{y}_{2}}\\right) 是圆 {x}^{2} + {y}^{2} = {16} 上的两点. 若 \\angle {AOB} = \\; \\frac{\\pi }{2} ,则 \\left| {{x}_{1} + {y}_{1} - 2}\\right| + \\left| {{x}_{2} + {"
     },
@@ -37481,7 +37051,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-7_与圆有关的最值问题/9-7-8.md",
@@ -37499,7 +37068,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-7_与圆有关的最值问题/9-7-9.md",
@@ -37516,9 +37084,7 @@
       "section": "全国卷真题",
       "kind": "全国卷真题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-7_与圆有关的最值问题/9-7-10.md",
       "excerpt": "1.(2020全国卷Ⅲ文，8)点(0，-1)到直线 y = \\; k\\left( {x + 1}\\right) 的距离的最大值为 ( ) A. 1 B.2 C. \\sqrt{3} D. 2"
     },
@@ -37533,9 +37099,7 @@
       "section": "全国卷真题",
       "kind": "全国卷真题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-7_与圆有关的最值问题/9-7-11.md",
       "excerpt": "2.(2023 全国乙卷文，11)已知实数 x, y 满足 {x}^{2} + \\; {y}^{2} - {4x} - {2y} - 4 = 0 ，则 x - y 的最大值是( ) A. 1 + \\frac{3\\sqrt{2}}{2} B. 4 C. 1 + 3\\sqrt{2} D. 7"
     },
@@ -37550,9 +37114,7 @@
       "section": "全国卷真题",
       "kind": "全国卷真题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-7_与圆有关的最值问题/9-7-12.md",
       "excerpt": "3.(2023全国乙卷理，12)已知圆 O 的半径为 1， 直线 {PA} 与圆 O 相切于点 A ,直线 {PB} 与圆 C 交于 B, C 两点, D 为 {BC} 的中点. 若 \\left| {PO}\\right| = \\sqrt{2} ,则 \\overrightarrow{PA} \\cdot \\overrightarrow{PD} 的最大值为 ( ) A. \\frac{1 + \\sqrt{2}}{2} B. \\frac{1 + "
     },
@@ -37567,9 +37129,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-8_直线与圆中的对称问题/9-8-1.md",
       "excerpt": "1. (2021 河北邢台模拟)若直线 {l}_{1} : y = {kx} + 1 与直线 {l}_{2} 关于点 \\left( {2,3}\\right) 对称,则直线 {l}_{2} 恒过定点的坐标为___，直线 {l}_{1} 与 {l}_{2} 的距离的最大值是___."
     },
@@ -37644,9 +37204,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-8_直线与圆中的对称问题/9-8-6.md",
       "excerpt": "6.(2022 四川达州期中)在平面直角坐标系 {xOy} 中,若圆 {\\left( x - 2\\right) }^{2} + {\\left( y - 2\\right) }^{2} = 1 上存在点 M ,使得点 M 关于 x 轴的对称点 N 在直线 l : {kx} + y + 3=0 上，则实数 k 的最小值为___"
     },
@@ -37661,9 +37219,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-8_直线与圆中的对称问题/9-8-7.md",
       "excerpt": "7.(2023 福建福州二检)已知圆 {O}_{1} : {\\left( x - 2\\right) }^{2} + \\; {\\left( y - 3\\right) }^{2} = 4 . 圆 {O}_{1} 关于直线 {ax} + {2y} + 1 = 0 对称的圆记为圆 {O}_{2}, E, F 分别为圆 {O}_{1} ,圆 {O}_{2} 上的动点, {EF} 长度的最小值为 4,则 a = ( ) A. - \\frac{3}{"
     },
@@ -37693,9 +37249,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/9_直线与圆/9-8_直线与圆中的对称问题/9-8-9.md",
       "excerpt": "9.(2024 江西九师联盟 1 月质量检测)已知 A 为圆 C : {x}^{2} + {\\left( y - 1\\right) }^{2} = \\frac{1}{4} 上的动点， B 为圆 E;(x - \\; 3{)}^{2} + {y}^{2} = \\frac{1}{4} 上的动点, P 为直线 y = \\frac{1}{2}x 上的动点，则 \\left| {PB}\\right| - \\left| {PA}\\right| 的最大值"
     },
@@ -37728,7 +37282,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-1_椭圆的标准方程及简单的几何性质/10-1-2.md",
@@ -37780,7 +37333,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义",
         "选项排除"
       ],
@@ -37850,7 +37402,6 @@
       "kind": "新高考真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-1_椭圆的标准方程及简单的几何性质/10-1-9.md",
@@ -37902,7 +37453,6 @@
       "kind": "全国卷真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-1_椭圆的标准方程及简单的几何性质/10-1-12.md",
@@ -38076,7 +37626,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-2_双曲线的标准方程及简单的几何性质/10-2-8.md",
@@ -38281,7 +37830,6 @@
       "kind": "全国卷真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-2_双曲线的标准方程及简单的几何性质/10-2-20.md",
@@ -38350,7 +37898,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-3_抛物线的标准方程及简单的几何性质/10-3-4.md",
@@ -38368,7 +37915,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义",
         "选项排除"
       ],
@@ -38438,7 +37984,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-3_抛物线的标准方程及简单的几何性质/10-3-9.md",
@@ -38611,7 +38156,6 @@
       "kind": "全国卷真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-3_抛物线的标准方程及简单的几何性质/10-3-19.md",
@@ -38680,7 +38224,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义",
         "选项排除"
       ],
@@ -38716,7 +38259,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-4_直线与圆锥曲线的位置关系/10-4-6.md",
@@ -38922,7 +38464,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-5_涉及中点弦或弦中点问题/10-5-3.md",
@@ -39110,7 +38651,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-6_圆锥曲线中(离心率、长度、角度等)的计算问题/10-6-6.md",
@@ -39402,7 +38942,6 @@
       "kind": "新高考真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-7_圆锥曲线中的焦点三角形问题/10-7-7.md",
@@ -39504,9 +39043,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-8_圆锥曲线中的轨迹方程/10-8-2.md",
       "excerpt": "2.(2023 山西太原联考)折纸是一种将纸张折成各种不同形状的艺术活动，折纸大约起源于公元 1 世纪或者 2 世纪时的中国，折纸与自然科学结合在一起，不仅成为建筑学院的教具. 还发展出了折纸几何学，成为现代几何学的一个分支. 如图，现有一半径为 4 的圆纸片(A 为圆心， B 为圆内的一定点)，且 \\left| {AB}\\right| = 2 ，如图将圆折起一角，使圆周正好过点 B ，把纸片展开，并留下一条折痕，折痕上到 A ， B "
     },
@@ -39622,9 +39159,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-8_圆锥曲线中的轨迹方程/10-8-9.md",
       "excerpt": "9.(2024 广西南宁一模)已知点 F\\left( {2,0}\\right) 和圆 C : {\\left( x + 2\\right) }^{2} + {y}^{2} = {36}, M 为圆 C 上的一动点,线段 {MF} 的垂直平分线与线段 {MC} 相交于点 S ,记点 S 的轨迹为曲线 E . (1)求曲线 E 的方程. (2)已知点 N\\left( {0,1}\\right) ，若曲线 E 与 x 轴的左、右交点分别为 A, B"
     },
@@ -39654,9 +39189,7 @@
       "section": "新高考真题",
       "kind": "新高考真题",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-8_圆锥曲线中的轨迹方程/10-8-11.md",
       "excerpt": "2.(2024 新高考卷 I，11)设计一条美丽的丝带， 其造型 \\text{ ○ } 可以看作图中曲线 C 的一部分. 已知 C 过坐标原点 O ,且 C 上的点满足横坐标大于 -2, 到点 F\\left( {2,0}\\right) 的距离与到定直线 x = a\\left( {a < 0}\\right) 的距离之积为 4 , 则 ( ) ![[05_附件/images/163_350_810_225_319_0.jpg]] L a ="
     },
@@ -39841,7 +39374,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-9_圆锥曲线中的定点和定值问题/10-9-9.md",
@@ -39978,7 +39510,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-10_圆锥曲线中的范围或最值问题/10-10-2.md",
@@ -40013,9 +39544,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-10_圆锥曲线中的范围或最值问题/10-10-4.md",
       "excerpt": "4.(2024 广东广州一模)已知曲线 C 是平面内到定点 F\\left( {0, - 2}\\right) 与到定直线 l : y = 2 的距离之和等于 6 的点的轨迹,若点 P 在 C 上,对给定的点 T\\left( {-2, t}\\right) ,用 m\\left( t\\right) 表示 \\left| {PF}\\right| + \\left| {PT}\\right| 的最小值, 则 m\\left( t\\right) 的最小值为_"
     },
@@ -40082,7 +39611,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-10_圆锥曲线中的范围或最值问题/10-10-8.md",
@@ -40117,7 +39645,6 @@
       "kind": "新高考真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-10_圆锥曲线中的范围或最值问题/10-10-10.md",
@@ -40150,7 +39677,6 @@
       "kind": "全国卷真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-10_圆锥曲线中的范围或最值问题/10-10-12.md",
@@ -40168,7 +39694,6 @@
       "kind": "全国卷真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-10_圆锥曲线中的范围或最值问题/10-10-13.md",
@@ -40186,7 +39711,6 @@
       "kind": "全国卷真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/10_圆锥曲线/10-10_圆锥曲线中的范围或最值问题/10-10-14.md",
@@ -40571,7 +40095,6 @@
       "kind": "新高考真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "概率递推",
         "选项排除"
       ],
@@ -41138,7 +40661,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "概率递推",
         "选项排除"
       ],
@@ -41277,7 +40799,6 @@
       "kind": "全国卷真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "概率递推"
       ],
       "file": "高考数学五年经典/01_题目/11_概率与统计/11-4_二项式定理及其应用/11-4-12.md",
@@ -41312,7 +40833,6 @@
       "kind": "新高考真题",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "概率递推"
       ],
       "file": "高考数学五年经典/01_题目/11_概率与统计/11-5_随机事件、古典概型/11-5-2.md",
@@ -41983,7 +41503,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "概率递推",
         "选项排除"
       ],
@@ -42140,7 +41659,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "概率递推"
       ],
       "file": "高考数学五年经典/01_题目/11_概率与统计/11-9_超几何分布/11-9-6.md",
@@ -42313,7 +41831,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "概率递推"
       ],
       "file": "高考数学五年经典/01_题目/11_概率与统计/11-10_正态分布/11-10-8.md",
@@ -42452,7 +41969,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "概率递推"
       ],
       "file": "高考数学五年经典/01_题目/11_概率与统计/11-11_概率中的数列问题/11-11-6.md",
@@ -42593,7 +42109,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "概率递推"
       ],
       "file": "高考数学五年经典/01_题目/11_概率与统计/11-12_回归分析/11-12-8.md",
@@ -43122,7 +42637,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/12_新高考创新题型/12-1_数学文化题/12-1-6.md",
@@ -43220,9 +42734,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/12_新高考创新题型/12-2_情境题/12-2-3.md",
       "excerpt": "3.(2022 广东深圳一模)古希腊数学家托勒密于公元 150 年在他的名著《数学汇编》里给出了托勒密定理, 即圆的内接凸四边形的两对对边乘积的和等于两条对角线的乘积. 已知 {AC},{BD} 为圆的内接四边形 {ABCD} 的两条对角线,且 \\sin \\angle {ABD} : \\sin \\angle {ADB} : \\sin \\angle {BCD} = 2 : 3 : 4 , 若 A{C}^{2} = {\\lambda BC}"
     },
@@ -43255,9 +42767,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/12_新高考创新题型/12-2_情境题/12-2-5.md",
       "excerpt": "5.(2021江苏南京、盐城二模)牛顿迭代法又称牛顿-拉夫逊方法, 它是牛顿在 17 世纪提出的一种在实数集上近似求解方程根的一种方法. 具体步骤如下: 设 r 是函数 y = f\\left( x\\right) 的一个零点,任意选取 {x}_{0} 作为 r 的初始近似值,过点 \\left( {x}_{0}\\right. , f\\left( {x}_{0}\\right) )作曲线 y = f\\left( x\\right) 的切线 {l}"
     },
@@ -43272,9 +42782,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/12_新高考创新题型/12-2_情境题/12-2-6.md",
       "excerpt": "6.(2024 湖北武汉 2 月调研)法布里—贝罗研究多光束干涉在薄膜理论中的应用时, 用光波依次透过 n 层薄膜,记光波的初始功率为 {P}_{0},{P}_{k} 为光波经过第 k 层薄膜后的功率. 假设在经过第 k 层薄膜时光波的透过率 {T}_{k} = \\frac{{P}_{k}}{{P}_{k - 1}} = \\frac{1}{{2}^{k}} ,其中 k = 1 , 2,3,\\cdots , n . 若 \\frac{{P}"
     },
@@ -43290,7 +42798,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/12_新高考创新题型/12-2_情境题/12-2-7.md",
@@ -43413,7 +42920,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "选项排除"
       ],
       "file": "高考数学五年经典/01_题目/12_新高考创新题型/12-3_创新型压轴多选题/12-3-6.md",
@@ -43591,7 +43097,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "数形结合"
       ],
       "file": "高考数学五年经典/01_题目/12_新高考创新题型/12-4_逻辑推理题/12-4-7.md",
@@ -43723,7 +43228,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "导数单调性",
         "圆锥曲线定义"
       ],
@@ -43757,7 +43261,6 @@
       "kind": "模拟集训",
       "status": "todo",
       "methods": [
-        "基本不等式",
         "圆锥曲线定义"
       ],
       "file": "高考数学五年经典/01_题目/12_新高考创新题型/12-5_创新型压轴解答题/12-5-8.md",
@@ -43774,9 +43277,7 @@
       "section": "模拟集训",
       "kind": "模拟集训",
       "status": "todo",
-      "methods": [
-        "基本不等式"
-      ],
+      "methods": [],
       "file": "高考数学五年经典/01_题目/12_新高考创新题型/12-5_创新型压轴解答题/12-5-9.md",
       "excerpt": "9.(2024 甘肃兰州诊断)定义:如果在平面直角坐标系中,点 A, B 的坐标分别为 \\left( {{x}_{1},{y}_{1}}\\right) ,\\left( {x}_{2}\\right. , \\left. {y}_{2}\\right) ,那么称 d\\left( {A, B}\\right) = \\left| {{x}_{1} - {x}_{2}}\\right| + \\left| {{y}_{1} - {y}_{2}}\\right"
     },
